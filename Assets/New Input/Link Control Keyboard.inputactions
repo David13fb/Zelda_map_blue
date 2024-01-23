@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "run",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "b1205747-a468-442d-a320-c9e10e280c7e",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
