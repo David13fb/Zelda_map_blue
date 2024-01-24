@@ -15,7 +15,6 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
-        _transform = _transform;
         _rb = GetComponent<Rigidbody2D>();
     }
 

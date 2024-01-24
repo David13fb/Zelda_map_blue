@@ -7,6 +7,7 @@ public class LinkController : MonoBehaviour
     //el código de control del personaje como tal va aquí. Esto coje los inputs y los transforma en acciones
 
     private CharacterMovement _chMovement;
+    private InputManager _inputManager;
 
     void Start()
     {
@@ -28,13 +29,13 @@ public class LinkController : MonoBehaviour
     //devuelve el vector de input pero transformado en un vector unitario en una de las 4 direcciones
     Vector2 GetGreaterAxis()
     {
-        if(Mathf.Abs(InputManager.Instance.inputVector.x) >= Mathf.Abs(InputManager.Instance.inputVector.y))
+        if(Mathf.Abs(_inputManager.inputVector.x) >= Mathf.Abs(_inputManager.inputVector.y))
         {
-            return new Vector2(InputManager.Instance.inputVector.x, 0).normalized;
+            return new Vector2(_inputManager.inputVector.x, 0).normalized;
         }
         else
         {
-            return new Vector2(0, InputManager.Instance.inputVector.y).normalized;
+            return new Vector2(0, _inputManager.inputVector.y).normalized;
         }
     }
 }
