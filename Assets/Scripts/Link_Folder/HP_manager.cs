@@ -5,9 +5,10 @@ using UnityEngine;
 public class HP_manager : MonoBehaviour
 {
     [SerializeField]
-    int _startingMaxHp;
+    //cada corazon son 2 puntos de vida
+    int _startingMaxHp = 3;
     int _currentMaxHp;
-    int _currenthealth;
+    int _currentHealth;
 
 
     void Start()
@@ -15,9 +16,20 @@ public class HP_manager : MonoBehaviour
         _currentHealth = _currentMaxHp = _startingMaxHp;
     }
 
-    void takeDamage(int damage)
+    void changeHealthDamage(int damage)
     {
-        _currenthealth -= damage;
+        _currentHealth += damage;
+
     }
 
+    void changeMaxHealth(int mod)
+    {
+        _currentMaxHp += mod;
+    }
+
+    //actualiza la barra de vida visualmente
+    void changeHpGauge()
+    {
+
+    }
 }
