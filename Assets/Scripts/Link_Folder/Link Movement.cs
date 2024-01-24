@@ -2,29 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class LinkMovement : MonoBehaviour
 {
-    [SerializeField]
     private Transform _transform;
-    [SerializeField]
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
     [SerializeField]
     private float _speed = 1.0f;
-    [SerializeField]
-    private InputActionReference _Input;
+    //[SerializeField]
+    //private InputActionReference _Input;
     Vector2 actualspeed = Vector2.zero;
     Vector2 targetspeed = Vector2.zero;
     // Start is called before the first frame update
    
 
-    // Update is called once per frame
+    void Start()
+    {
+        _transform = _transform;
+        _rb = GetComponent<Rigidbody2D>();
+    }
+
+    /* Update is called once per frame
     void Update()
     {
 
-        Vector2 _vectormovimiento = GetInput();
-
+        //Vector2 _vectormovimiento = GetInput();
+        /*
         if (_vectormovimiento != Vector2.zero)
         {
             actualspeed = rb.velocity;
@@ -35,7 +38,7 @@ public class LinkMovement : MonoBehaviour
             actualspeed = Vector2.zero;
             targetspeed = Vector2.zero;
         }
-
+        
 
         Vector3 finalspeed = (targetspeed - actualspeed);
         finalspeed.z = 0;
@@ -43,6 +46,15 @@ public class LinkMovement : MonoBehaviour
         //   rb.AddForce(finalspeed * rb.mass / Time.fixedDeltaTime);
         transform.position += finalspeed * Time.deltaTime;
     }
+
+    */
+
+    private void setCharacterVelocity(Vector2 direction)
+    {
+        _rb.velocity = direction * _speed;
+    }
+
+    /*
     private void OnEnable()
     {
         _Input.action.Enable();
@@ -56,4 +68,5 @@ public class LinkMovement : MonoBehaviour
     {
         return _Input.action.ReadValue<Vector2>();
     }
+    */
 }
