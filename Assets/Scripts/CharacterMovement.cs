@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class LinkMovement : MonoBehaviour
+public class CharacterMovement : MonoBehaviour
 {
     private Transform _transform;
     private Rigidbody2D _rb;
@@ -49,7 +49,7 @@ public class LinkMovement : MonoBehaviour
 
     */
 
-    private void setCharacterVelocity(Vector2 direction)
+    public void SetCharacterVelocity(Vector2 direction)
     {
         _rb.velocity = direction * _speed;
     }

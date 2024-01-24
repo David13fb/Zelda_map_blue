@@ -6,17 +6,18 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class InputManager : MonoBehaviour
 {
-    static InputManager _instance;
+    public static InputManager Instance;
 
-    static Vector2 _inputVector;
+    //[HideInInspector]
+    public Vector2 inputVector;
 
 
     void Start()
     {
         //Singleton patern
-        if(_instance == null)
+        if(Instance == null)
         {
-            _instance = this;
+            Instance = this;
         }
         else
         {
@@ -26,7 +27,8 @@ public class InputManager : MonoBehaviour
 
     public void updateDirectionalInputVector(InputAction.CallbackContext context)
     {
-        _inputVector = context.ReadValue<Vector2>();
+        inputVector = context.ReadValue<Vector2>();
+        //Debug.Log(inputVector);
     }
 
 
