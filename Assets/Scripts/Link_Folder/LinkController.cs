@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
-
 public class LinkController : MonoBehaviour
 {
     //el código de control del personaje como tal va aquí. Esto coje los inputs y los transforma en acciones
