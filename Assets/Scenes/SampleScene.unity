@@ -279,9 +279,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 213783740}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: updateDirectionalInputVector
+      - m_Target: {fileID: 213783741}
+        m_TargetAssemblyTypeName: LinkController, Assembly-CSharp
+        m_MethodName: MoveLink
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db4da88f7b80574699adc608e4c5362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Instance: {fileID: 0}
   inputVector: {x: 0, y: 0}
 --- !u!114 &213783741
 MonoBehaviour:

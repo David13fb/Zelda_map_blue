@@ -12,7 +12,6 @@ public class CharacterMovement : MonoBehaviour
     Vector2 actualspeed = Vector2.zero;
     Vector2 targetspeed = Vector2.zero;
    
-
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
