@@ -31,9 +31,9 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                     ""name"": ""run"",
                     ""type"": ""Value"",
                     ""id"": ""b1205747-a468-442d-a320-c9e10e280c7e"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Analog"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": true
                 }
             ],

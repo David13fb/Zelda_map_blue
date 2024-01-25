@@ -10,18 +10,8 @@ public class LinkAttack : MonoBehaviour
     private Stopwatch _stopwatch;
     [SerializeField]
     private float _attackMiliSeconds = 250f;
-    public void Attack()
+    public void Attack(bool attacked)
     {
-        _sword.SetActive(true);
-        _stopwatch.Restart();
-    }
-    public void TakeSwordAway()
-    {
-        if (_stopwatch.ElapsedMilliseconds >= _attackMiliSeconds)
-        _sword.SetActive(false);
-    }
-    private void Update()
-    {
-        TakeSwordAway();
+        _sword.SetActive(attacked);
     }
 } 

@@ -16,9 +16,9 @@ public class LinkController : MonoBehaviour
     }
 
     //mueve al personaje en una de las 4 direcciones básicas según el input
-    public void MoveLink(InputAction.CallbackContext context)
+    public void MoveLink(Vector2 inputDirection)
     {
-        _chMovement.SetCharacterVelocity(GetGreaterAxis(context.ReadValue<Vector2>()));
+        _chMovement.SetCharacterVelocity(GetGreaterAxis(inputDirection));
     }
 
     //devuelve el vector de input pero transformado en un vector unitario en una de las 4 direcciones

@@ -24,7 +24,7 @@ public class RupeeScript : MonoBehaviour
         {
             _inventory.ChangeRupeeAmount(_value);
             //no sería mejor eliminarlas??
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
     private void Start()
