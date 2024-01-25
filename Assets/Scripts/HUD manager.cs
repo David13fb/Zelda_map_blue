@@ -27,7 +27,20 @@ public class HUDmanager : MonoBehaviour
     private TextMeshProUGUI _keyText;
     [SerializeField]
     private TextMeshProUGUI _bombText;
+    //------------------------
 
+    //--ItemEquiped-----------
+    [SerializeField]
+    private Image[] _itemSlots = new Image[2];
+    //sprites de los items en el orden de su Id.
+    //el 5 es el color del fondo
+    [SerializeField]
+    private Sprite[] _itemSprites = new Sprite[5];
+
+    public void EquipItem(int itemSlot, int newItemId)
+    {
+        _itemSlots[itemSlot].sprite = _itemSprites[newItemId];
+    }
 
     public void UpdateHPmaxHP(int newMaxHp)
     {
