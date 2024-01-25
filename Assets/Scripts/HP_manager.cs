@@ -24,7 +24,7 @@ public class HP_manager : MonoBehaviour
             changeHpGauge();
     }
 
-    void changeCurrentHealth(int damage)
+    public void changeCurrentHealth(int damage)
     {
         _currentHealth += damage;
         if(_currentHealth > _currentMaxHp)
@@ -37,7 +37,7 @@ public class HP_manager : MonoBehaviour
 
     }
 
-    void changeMaxHealth(int mod)
+    public void changeMaxHealth(int mod)
     {
         _currentMaxHp += mod;
         if (_thisIsPlayer)
@@ -45,7 +45,7 @@ public class HP_manager : MonoBehaviour
     }
 
     //actualiza la barra de vida visualmente
-    void changeHpGauge()
+    public void changeHpGauge()
     {
         _hudManager.UpdateCurrentHP(_currentHealth);
         _hudManager.UpdateHPmaxHP(_currentMaxHp);
