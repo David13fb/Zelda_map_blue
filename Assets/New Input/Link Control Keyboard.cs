@@ -29,9 +29,9 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""run"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""b1205747-a468-442d-a320-c9e10e280c7e"",
-                    ""expectedControlType"": ""Analog"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": true
@@ -183,12 +183,21 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
             ""id"": ""6bd8488a-4e87-4743-b1e8-ad2350d6ccf4"",
             ""actions"": [
                 {
-                    ""name"": ""attack"",
+                    ""name"": ""Attack"",
                     ""type"": ""Button"",
                     ""id"": ""abccd54e-389d-40a1-a938-6f227a809ef0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""8003448d-226e-4802-9cff-15eeb7942692"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -200,7 +209,18 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""attack"",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""584d3c68-33aa-4d2b-8739-4c10f21aa962"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -229,7 +249,8 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
         m_acionesaceptar_aceptar = m_acionesaceptar.FindAction("aceptar", throwIfNotFound: true);
         // Attack
         m_Attack = asset.FindActionMap("Attack", throwIfNotFound: true);
-        m_Attack_attack = m_Attack.FindAction("attack", throwIfNotFound: true);
+        m_Attack_Attack = m_Attack.FindAction("Attack", throwIfNotFound: true);
+        m_Attack_Attackcancel = m_Attack.FindAction("Attack cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -383,12 +404,14 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
     // Attack
     private readonly InputActionMap m_Attack;
     private List<IAttackActions> m_AttackActionsCallbackInterfaces = new List<IAttackActions>();
-    private readonly InputAction m_Attack_attack;
+    private readonly InputAction m_Attack_Attack;
+    private readonly InputAction m_Attack_Attackcancel;
     public struct AttackActions
     {
         private @LinkControlKeyboard m_Wrapper;
         public AttackActions(@LinkControlKeyboard wrapper) { m_Wrapper = wrapper; }
-        public InputAction @attack => m_Wrapper.m_Attack_attack;
+        public InputAction @Attack => m_Wrapper.m_Attack_Attack;
+        public InputAction @Attackcancel => m_Wrapper.m_Attack_Attackcancel;
         public InputActionMap Get() { return m_Wrapper.m_Attack; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -398,16 +421,22 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_AttackActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_AttackActionsCallbackInterfaces.Add(instance);
-            @attack.started += instance.OnAttack;
-            @attack.performed += instance.OnAttack;
-            @attack.canceled += instance.OnAttack;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Attackcancel.started += instance.OnAttackcancel;
+            @Attackcancel.performed += instance.OnAttackcancel;
+            @Attackcancel.canceled += instance.OnAttackcancel;
         }
 
         private void UnregisterCallbacks(IAttackActions instance)
         {
-            @attack.started -= instance.OnAttack;
-            @attack.performed -= instance.OnAttack;
-            @attack.canceled -= instance.OnAttack;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Attackcancel.started -= instance.OnAttackcancel;
+            @Attackcancel.performed -= instance.OnAttackcancel;
+            @Attackcancel.canceled -= instance.OnAttackcancel;
         }
 
         public void RemoveCallbacks(IAttackActions instance)
@@ -445,5 +474,6 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
     public interface IAttackActions
     {
         void OnAttack(InputAction.CallbackContext context);
+        void OnAttackcancel(InputAction.CallbackContext context);
     }
 }

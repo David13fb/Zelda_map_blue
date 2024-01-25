@@ -7,11 +7,20 @@ public class LinkAttack : MonoBehaviour
 {
     [SerializeField]
     private GameObject _sword;
-    private Stopwatch _stopwatch;
     [SerializeField]
-    private float _attackMiliSeconds = 250f;
+    Transform _swordPos;
+
+    private GameObject _swordInstance;
+    
     public void Attack(bool attacked)
     {
-        _sword.SetActive(attacked);
+        if(attacked)
+        {
+            _swordInstance = Instantiate(_sword, _swordPos.position, Quaternion.identity);
+        }
+        else
+        {
+            Destroy(_swordInstance);
+        }
     }
 } 

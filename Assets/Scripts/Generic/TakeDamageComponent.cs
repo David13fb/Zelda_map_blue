@@ -7,7 +7,7 @@ public class TakeDamageComponent : MonoBehaviour
 {
     //references
     HP_manager _hpManager;
-    Rigidbody _rb;
+    Rigidbody2D _rb;
     SpriteRenderer _spriteRenderer;
     [SerializeField]Transform _linkTransform; //taken to push everything in links looking direction
 
@@ -22,7 +22,7 @@ public class TakeDamageComponent : MonoBehaviour
     //methods
     private void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _hpManager = GetComponent<HP_manager>();
         //_stopwatch.Start();
