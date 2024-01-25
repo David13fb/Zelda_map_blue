@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HUDmanager : MonoBehaviour
 {
+
+    //--Health Meter----------
     [SerializeField]
     private Image[] _hearts;
     [SerializeField]
@@ -14,8 +17,17 @@ public class HUDmanager : MonoBehaviour
     [SerializeField]
     private Sprite _emptyHeart;
 
-
     private int _numberOfHeartsEnabled;
+    //------------------------
+
+    //--ResouceCount----------
+    [SerializeField]
+    private TextMeshProUGUI _ruppeText;
+    [SerializeField]
+    private TextMeshProUGUI _keyText;
+    [SerializeField]
+    private TextMeshProUGUI _bombText;
+
 
     public void UpdateHPmaxHP(int newMaxHp)
     {
@@ -53,4 +65,18 @@ public class HUDmanager : MonoBehaviour
             }
         }
     }
+
+    public void UpdateCurrentRupees(int newAmount)
+    {
+        _ruppeText.text = ("x" + newAmount);
+    }
+    public void UpdateCurrentKeys(int newAmount)
+    {
+        _keyText.text = ("x" + newAmount);
+    }
+    public void UpdateCurrentBombs(int newAmount)
+    {
+        _bombText.text = ("x" + newAmount);
+    }
+
 }

@@ -367,6 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingMaxHp: 6
+  _currentMaxHp: 0
+  _currentHealth: 0
   _thisIsPlayer: 1
   _hudManager: {fileID: 1571501507}
 --- !u!1 &262136945
@@ -1807,6 +1809,9 @@ MonoBehaviour:
   _fullHeart: {fileID: 21300000, guid: c33acfa64d2a60545aceffa933d27bad, type: 3}
   _halfHeart: {fileID: 21300000, guid: e7723802a527cdf4f8665f14c9998455, type: 3}
   _emptyHeart: {fileID: 21300000, guid: bacd953297efb2041831f1d9071b20d8, type: 3}
+  _ruppeText: {fileID: 1769202978}
+  _keyText: {fileID: 672717623}
+  _bombText: {fileID: 385141916}
 --- !u!1 &1769202976
 GameObject:
   m_ObjectHideFlags: 0
