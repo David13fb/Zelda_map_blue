@@ -9,6 +9,7 @@ public class LinkController : MonoBehaviour
     //el código de control del personaje como tal va aquí. Esto coje los inputs y los transforma en acciones
 
     private CharacterMovement _chMovement;
+    private bool _blockMovement;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class LinkController : MonoBehaviour
     //mueve al personaje en una de las 4 direcciones básicas según el input
     public void MoveLink(Vector2 inputDirection)
     {
-        _chMovement.SetCharacterVelocity(GetGreaterAxis(inputDirection));
+        if(!_blockMovement)
+            _chMovement.SetCharacterVelocity(GetGreaterAxis(inputDirection));
     }
 
     //devuelve el vector de input pero transformado en un vector unitario en una de las 4 direcciones
@@ -32,5 +34,11 @@ public class LinkController : MonoBehaviour
         {
             return new Vector2(0, direction.y).normalized;
         }
+    }
+
+    public void SetBlockMovement(bool newValue)
+    {
+        _blockMovement = newValue;
+        _chMovement.SetCharacterVelocity(Vector2.zero);
     }
 }

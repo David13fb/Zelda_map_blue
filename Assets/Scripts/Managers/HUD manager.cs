@@ -46,7 +46,6 @@ public class HUDmanager : MonoBehaviour
     {
         
         _numberOfHeartsEnabled = (newMaxHp / 2 + newMaxHp % 2);
-        Debug.Log(_numberOfHeartsEnabled);
         for (int i = 0; i < _hearts.Length; i++)
         {
             if(i < _numberOfHeartsEnabled)
@@ -62,7 +61,6 @@ public class HUDmanager : MonoBehaviour
 
     public void UpdateCurrentHP(int currentHp)
     {
-        Debug.Log("current");
         for(int i = 0; i < _numberOfHeartsEnabled; i++)
         {
             if(i < currentHp / 2)

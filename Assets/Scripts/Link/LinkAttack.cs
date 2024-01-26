@@ -11,16 +11,24 @@ public class LinkAttack : MonoBehaviour
     Transform _swordPos;
 
     private GameObject _swordInstance;
+    private LinkController _linkController;
     
+    void Start()
+    {
+        _linkController = GetComponent<LinkController>();
+    }
+
     public void Attack(bool attacked)
     {
         if(attacked)
         {
             _swordInstance = Instantiate(_sword, _swordPos.position, Quaternion.identity);
+            _linkController.SetBlockMovement(true);
         }
         else
         {
             Destroy(_swordInstance);
+            _linkController.SetBlockMovement(false);
         }
     }
 } 
