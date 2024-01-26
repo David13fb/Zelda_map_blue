@@ -11,10 +11,12 @@ public class InputManager : MonoBehaviour
 
     private LinkController _linkController;
     private LinkAttack _linkAttack;
+
     private void Start()
     {
         _linkController = FindObjectOfType<LinkController>();
         _linkAttack = FindObjectOfType<LinkAttack>();
+        
 
     }
     private void Awake()
@@ -50,6 +52,7 @@ public class InputManager : MonoBehaviour
     private void AttackActionPerformed(InputAction.CallbackContext obj)
     {
         _linkAttack.Attack(true);
+   
     }
 
     private void AttackCancelled(InputAction.CallbackContext obj)
