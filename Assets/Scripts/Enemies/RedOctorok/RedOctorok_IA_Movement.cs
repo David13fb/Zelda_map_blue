@@ -17,7 +17,7 @@ public class RedOctorok_IA_Movement : MonoBehaviour
 
     private void GiveRandomDirection()
     {
-        _movement = Random.Range(0, 3);
+        _movement = Random.Range(0, 4);
 
         if (_movement == 0)
             _chMovement.SetCharacterVelocity(Vector2.left);
