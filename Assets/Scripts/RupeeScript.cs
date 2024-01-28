@@ -18,10 +18,12 @@ public class RupeeScript : MonoBehaviour
     #region Methods
     private void OnTriggerEnter2D(Collider2D linkCollider)
     {
-        LinkMovement Link = linkCollider.gameObject.GetComponent<LinkMovement>();
+        //reemplazar por un componente que solo tenga link
+        LinkController Link = linkCollider.gameObject.GetComponent<LinkController>();
         if (Link != null)
         {
-            _inventory.GetRupee(_value);
+            _inventory.ChangeRupeeAmount(_value);
+            //no sería mejor eliminarlas??
             gameObject.SetActive(false);
         }
     }
