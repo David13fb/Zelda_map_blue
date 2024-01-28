@@ -21,27 +21,27 @@ public class RedOctorokIA : MonoBehaviour
     {
         _movement = Random.Range(0, 4);
 
-        Vector2 direction = Vector3.zero;
+        Vector2 direction = Vector2.zero;
         Vector3 rotAngle = Vector3.zero;
 
         if (_movement == 0)
         {
-            direction = Vector3.left;
+            direction = Vector2.left;
             rotAngle.z = -90;
         }
         else if (_movement == 1)
         {
-            direction = Vector3.right;
+            direction = Vector2.right;
             rotAngle.z = 90;
         }
         else if (_movement == 2)
         {
-            direction = Vector3.up;
+            direction = Vector2.up;
             rotAngle.z = 180;
         }
         else
         {
-            direction = Vector3.down;
+            direction = Vector2.down;
             rotAngle.z = 0;
         }
         

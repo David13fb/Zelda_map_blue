@@ -12,13 +12,14 @@ public class CharacterMovement : MonoBehaviour
     Vector2 actualspeed = Vector2.zero;
     Vector2 targetspeed = Vector2.zero;
    
-    void Start()
+    void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
 
     public void SetCharacterVelocity(Vector2 direction)
     {
+        
         _rb.velocity = direction * _speed;
     }
 }

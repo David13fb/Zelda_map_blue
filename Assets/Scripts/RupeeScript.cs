@@ -22,9 +22,11 @@ public class RupeeScript : MonoBehaviour
         LinkController Link = linkCollider.gameObject.GetComponent<LinkController>();
         if (Link != null)
         {
+            Debug.Log("a");
             _inventory.ChangeRupeeAmount(_value);
             //no sería mejor eliminarlas??
-            Destroy(gameObject);
+            Destroy(this);
+            
         }
     }
     private void Start()
