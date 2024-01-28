@@ -21,7 +21,7 @@ public class LinkController : MonoBehaviour
     public void MoveLink(Vector2 inputDirection)
     {
         // Debug.Log(inputDirection);
-        Debug.Log(_blockMovement);
+        //Debug.Log(_blockMovement);
         if(!_blockMovement)
             _chMovement.SetCharacterVelocity(GetGreaterAxis(inputDirection));
     }

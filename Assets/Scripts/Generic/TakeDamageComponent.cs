@@ -16,10 +16,7 @@ public class TakeDamageComponent : MonoBehaviour
    
     //parameters
     private Vector3 _pushDirection;
-    [SerializeField]
-    private int _colorQuantity = 0;
-    private int _loopIterations = 0;
-
+   
     // Comented code is a invul system
 
     //private Stopwatch _stopwatch = new Stopwatch();
@@ -41,7 +38,6 @@ public class TakeDamageComponent : MonoBehaviour
             if (_hpManager != null && _spriteRenderer != null && _rb != null)
             {
                 _hpManager.changeCurrentHealth(-damage); //damage taken is a negative, damage is a positive value
-                _loopIterations = _colorQuantity;
                 ColorLoop();
                 _pushDirection = -_linkTransform.up;
                 _rb.AddForce(_pushDirection);
@@ -50,16 +46,12 @@ public class TakeDamageComponent : MonoBehaviour
         //}
     }
 
-    void ColorLoop()
+    private void ColorLoop()
     {
-        
-     
         _spriteRenderer.color = Random.ColorHSV();
-           
+
+        //loop is supposed to atually do something 
+
         _spriteRenderer.color = UnityEngine.Color.white;
     }
-
-   
-    
-
 }

@@ -10,9 +10,9 @@ public class BulletMovement : MonoBehaviour
     private Vector3 _direction;
    
 
-    public void SetDirection(Vector3 direct)
+    public void SetDirection(Transform direct)
     {
-        _direction = direct.normalized * _speed;
+        _direction = direct.position - _myTransform.position;
     }
 
     void Start()
@@ -22,7 +22,7 @@ public class BulletMovement : MonoBehaviour
     }
     void Update()
     {
-        _myTransform.position += _direction * Time.deltaTime;
+        _myTransform.position += _direction.normalized * _speed * Time.deltaTime;
     }
 
 }

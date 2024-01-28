@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class BlueOctorok_IA_Movement : MonoBehaviour
+public class BlueOctorokIA : MonoBehaviour
 {
 
     private CharacterMovement _chMovement;
+    private Transform _myTransform;
 
     private int _movement = 0;
 
-    private int _timerToStop= 600;
-    private int _timer = 1200;
+    [SerializeField] private int _timerToStop= 600;
+    [SerializeField] private int _timerToMove = 1200;
 
     private Stopwatch _sw = new Stopwatch();
 
@@ -19,31 +20,41 @@ public class BlueOctorok_IA_Movement : MonoBehaviour
     private void GiveRandomDirection()
     {
         _movement = Random.Range(0, 4);
-
+        Vector2 direction = Vector2.zero;
+        Vector3 rotAngle = Vector3.zero;
 
         if (!_parada)
         {
             switch (_movement)
             {
                 case 0:
-                    _chMovement.SetCharacterVelocity(Vector2.left);
+                    direction = Vector2.left;
+                    rotAngle.z = -90;
                     break;
                 case 1:
-                    _chMovement.SetCharacterVelocity(Vector2.right);
+                    direction = Vector2.right;
+                    rotAngle.z = 90;
                     break;
                 case 2:
-                    _chMovement.SetCharacterVelocity(Vector2.up);
+                    direction = Vector2.up;
+                    rotAngle.z = 180;
                     break;
                 case 3:
-                    _chMovement.SetCharacterVelocity(Vector2.down);
+                    direction = Vector2.down;
+                    rotAngle.z = 0;
                     break;
             }
             _sw.Restart();
         }
         else
         {
-            _chMovement.SetCharacterVelocity(Vector2.zero);
+            direction = Vector2.zero;
         }
+
+        _chMovement.SetCharacterVelocity(direction);
+
+        _myTransform.rotation = Quaternion.identity;
+        _myTransform.rotation = Quaternion.Euler(rotAngle);
 
         /*if (_movement == 0)
             _chMovement.SetCharacterVelocity(Vector2.left);
@@ -54,13 +65,14 @@ public class BlueOctorok_IA_Movement : MonoBehaviour
         else
             _chMovement.SetCharacterVelocity(Vector2.down);
         */
-        
+
 
     }
 
     void Start()
     {
         _chMovement = GetComponent<CharacterMovement>();
+        _myTransform = transform;
         _sw.Start();
         GiveRandomDirection();
     }
@@ -69,7 +81,7 @@ public class BlueOctorok_IA_Movement : MonoBehaviour
     void Update()
     {
         
-        if (_sw.ElapsedMilliseconds > _timer)
+        if (_sw.ElapsedMilliseconds > _timerToMove)
         {
             _parada = false;
             GiveRandomDirection();
