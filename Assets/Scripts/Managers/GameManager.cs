@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     
     // This will be used to access the CameraController
     private CameraController _cameraController;
+
+    // This will be used to access the LinkController
+    [SerializeField] private LinkController _characterController;
     
     // Singleton pattern
     void Awake()
@@ -47,7 +50,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    void Update()
+    async void Update() 
     {
         // This will check if the player has moved to a new screen
         if ((previousScreenX != currentScreenX) || (previousScreenY != currentScreenY))
@@ -56,7 +59,7 @@ public class GameManager : MonoBehaviour
             previousScreenY = currentScreenY;
             Debug.Log("Screen changed to " + currentScreenX + ", " + currentScreenY);
             _cameraController.TransitionToScreen(currentScreenX, currentScreenY, 1f);
-            // TODO: Call method in LinkController to freeze character during transition
+            await _characterController.FreezeCharacter(1f);
         }
     }
 }
