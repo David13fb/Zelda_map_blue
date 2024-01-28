@@ -600,7 +600,7 @@ MonoBehaviour:
   verticalScreenOffset: 1.5
   currentScreenX: 0
   currentScreenY: 0
-  _characterController: {fileID: 0}
+  _characterController: {fileID: 5969944691202443042}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1663,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2229852516454524800, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
   m_PrefabInstance: {fileID: 8345860081772180914}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5969944691202443042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3889865737859402284, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+  m_PrefabInstance: {fileID: 8345860081772180914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e01a65ffc9a0040a5b0eda283cf116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8345860081772180914
 PrefabInstance:
   m_ObjectHideFlags: 0
