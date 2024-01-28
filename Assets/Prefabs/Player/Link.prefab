@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4556315636623372961}
   - component: {fileID: 6622979834776991807}
   - component: {fileID: 606864697371401387}
-  - component: {fileID: 1572248368955548788}
+  - component: {fileID: 7092138409874682264}
   m_Layer: 9
   m_Name: Link
   m_TagString: Untagged
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca67f4b475e9c3344914f961b19b35f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &1572248368955548788
+--- !u!70 &7092138409874682264
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +216,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
