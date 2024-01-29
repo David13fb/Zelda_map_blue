@@ -5,27 +5,30 @@ using UnityEngine;
 
 public class BlueOctorokIA : MonoBehaviour
 {
-
+    //References:
     private CharacterMovement _chMovement;
     private Transform _myTransform;
+    private ShootingComponent _shootingComponent;
 
-    private int _movement = 0;
-
+    //Timers to move and stop:
     [SerializeField] private int _timerToStop= 600;
     [SerializeField] private int _timerToMove = 1200;
-
     private Stopwatch _sw = new Stopwatch();
-
     private bool _parada = false;
+
+    //Stores previous direction to shoot only once per stop
+    private Vector2 _prevDirection;
+
+    //Method to choose moving direction or stop
     private void GiveRandomDirection()
     {
-        _movement = Random.Range(0, 4);
+        int movement = Random.Range(0, 4);
         Vector2 direction = Vector2.zero;
         Vector3 rotAngle = Vector3.zero;
 
         if (!_parada)
         {
-            switch (_movement)
+            switch (movement)
             {
                 case 0:
                     direction = Vector2.left;
@@ -44,36 +47,37 @@ public class BlueOctorokIA : MonoBehaviour
                     rotAngle.z = 0;
                     break;
             }
+            //Only rotates if not stopping
+            _myTransform.rotation = Quaternion.identity;
+            _myTransform.rotation = Quaternion.Euler(rotAngle);
+
             _sw.Restart();
         }
         else
         {
             direction = Vector2.zero;
+            if (_prevDirection != Vector2.zero) TryToShoot(); //Checks if it just stopped to shoot
         }
 
+        //Give direction to move or stop
+        _prevDirection = direction;
         _chMovement.SetCharacterVelocity(direction);
+    }
 
-        _myTransform.rotation = Quaternion.identity;
-        _myTransform.rotation = Quaternion.Euler(rotAngle);
-
-        /*if (_movement == 0)
-            _chMovement.SetCharacterVelocity(Vector2.left);
-        else if (_movement == 1)
-            _chMovement.SetCharacterVelocity(Vector2.right);
-        else if (_movement == 2)
-            _chMovement.SetCharacterVelocity(Vector2.up);
-        else
-            _chMovement.SetCharacterVelocity(Vector2.down);
-        */
-
-
+    //Method to shoot
+    private void TryToShoot()
+    {
+        if (Random.Range(0, 4) == 0) _shootingComponent.Shoot();
     }
 
     void Start()
     {
         _chMovement = GetComponent<CharacterMovement>();
         _myTransform = transform;
+        _shootingComponent = GetComponent<ShootingComponent>();
+
         _sw.Start();
+
         GiveRandomDirection();
     }
 

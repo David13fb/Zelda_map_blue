@@ -5,36 +5,41 @@ using UnityEngine;
 
 public class RedOctorokIA : MonoBehaviour
 {
-
+    //References:
     private CharacterMovement _chMovement;
     private Transform _myTransform;
     private ShootingComponent _shootingComponent;
 
-    private int _movement = 0;
-
+    //Responsible for movement:
+    private Stopwatch _sw = new Stopwatch();
     [SerializeField] private int _timerToMove = 600;
 
-    private Stopwatch _sw = new Stopwatch();
+    
+    //Responsible for shooting:
+    private Stopwatch _shootingSw = new Stopwatch();
+    private float _shootingTimer = 0f;
+    //Time to shoot mus be in milliseconds
+    [SerializeField] private float _timeToShoot1, _timeToShoot2, _timeToShoot3, _timeToShoot4;
 
-
+    //Method to choose moving direction
     private void GiveRandomDirection()
     {
-        _movement = Random.Range(0, 4);
+        int movement = Random.Range(0, 4);
 
         Vector2 direction = Vector2.zero;
         Vector3 rotAngle = Vector3.zero;
 
-        if (_movement == 0)
+        if (movement == 0)
         {
             direction = Vector2.left;
             rotAngle.z = -90;
         }
-        else if (_movement == 1)
+        else if (movement == 1)
         {
             direction = Vector2.right;
             rotAngle.z = 90;
         }
-        else if (_movement == 2)
+        else if (movement == 2)
         {
             direction = Vector2.up;
             rotAngle.z = 180;
@@ -53,12 +58,29 @@ public class RedOctorokIA : MonoBehaviour
         _sw.Restart();
     }
 
+    //Method to decide when to shoot
+    private void CreateRandomInterval()
+    {
+       int random = Random.Range(0, 4);
+
+        if (random == 0) _shootingTimer = _timeToShoot1;
+        else if (random == 1) _shootingTimer = _timeToShoot2;
+        else if (random == 2) _shootingTimer = _timeToShoot3;
+        else _shootingTimer = _timeToShoot4;
+
+        _shootingSw.Restart();
+    }
+
     void Start()
     {
         _chMovement = GetComponent<CharacterMovement>();
         _shootingComponent = GetComponent<ShootingComponent>();
         _myTransform = transform;
+
         _sw.Start();
+        _shootingSw.Start();
+
+        CreateRandomInterval();
         GiveRandomDirection();
     }
 
@@ -69,6 +91,11 @@ public class RedOctorokIA : MonoBehaviour
         {
             GiveRandomDirection();
         }
-        
+
+        if(_shootingSw.ElapsedMilliseconds >= _shootingTimer) 
+        {
+            _shootingComponent.Shoot();
+            CreateRandomInterval();
+        }
     }
 }
