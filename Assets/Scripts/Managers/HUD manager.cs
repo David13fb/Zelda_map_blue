@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class HUDmanager : MonoBehaviour
 {
+    //minimap
+    [SerializeField]
+    private Transform _greenblock;
+    Vector2 _position = Vector2.zero;
+
 
     //--Health Meter----------
     [SerializeField]
@@ -90,5 +96,26 @@ public class HUDmanager : MonoBehaviour
     {
         _bombText.text = ("x" + newAmount);
     }
+
+    private void Start()
+    {
+        _greenblock = transform;
+    }
+
+    /*public void UpdateMinimap(bool minimapa)
+    {
+        if (minimapa) 
+        {
+            _position.x = Vector2.Lerp();
+            _position.y = Vector2.Lerp();
+            _greenblock.position = _position;
+        }
+        
+    }
+    */
+
+
+
+
 
 }

@@ -607,6 +607,11 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!224 &788168009 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4752109400038874271, guid: b88a7c73ac1041c43aa56960ef9af874, type: 3}
+  m_PrefabInstance: {fileID: 2109780522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947716259
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9259ac0f1522dfd419d8a4a9763ccaa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _greenblock: {fileID: 788168009}
+  _target: {fileID: 1603836922}
   _hearts:
   - {fileID: 2109780532}
   - {fileID: 2109780531}

@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public bool linkOnCave;
     
+
+    
     // This defines the size of the screen in world units
     [HideInInspector] public float screenSizeWidth, screenSizeHeight;
 
@@ -26,7 +28,9 @@ public class GameManager : MonoBehaviour
 
     // This will be used to access the LinkController
     [SerializeField] private LinkController _characterController;
-    
+
+
+     Vector2 _direc = Vector2.right;
     // Singleton pattern
     void Awake()
     {
@@ -45,9 +49,11 @@ public class GameManager : MonoBehaviour
     // Reference to the CameraController and setting the screen size
     void Start()
     {
+        //_hudmanager = GetComponent<HUDmanager>();
         _cameraController = CameraController.instance;
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
+      
     }
 
 
@@ -63,6 +69,11 @@ public class GameManager : MonoBehaviour
             //Debug.Log("Screen changed to " + currentScreenX + ", " + currentScreenY);
             _cameraController.TransitionToScreen(currentScreenX, currentScreenY, 1f);
             await _characterController.FreezeCharacter(1f);
+
+            //Call to updateMiniMap as scene has changed
+            
+            //_hudmanager.UpdateMinimap(true);
+         
         }
     }
 }
