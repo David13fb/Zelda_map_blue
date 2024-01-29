@@ -1177,6 +1177,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.42
       objectReference: {fileID: 0}
@@ -1216,6 +1228,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558336457764300462, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 5969944691202443043}
     - target: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
       propertyPath: m_Name
       value: ZeldaSpriteRupy
@@ -1355,6 +1375,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2023120959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7149458318370985118, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+  m_PrefabInstance: {fileID: 8345860081772180914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2059818551 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3492350152590162793, guid: b88a7c73ac1041c43aa56960ef9af874, type: 3}
@@ -1601,6 +1626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 561167726395274070, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 5969944691202443043}
     - target: {fileID: 952767657521297661, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
       propertyPath: m_Name
       value: ZeldaSprite5Rupies
@@ -1608,6 +1637,18 @@ PrefabInstance:
     - target: {fileID: 4554922511334242567, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1649,6 +1690,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4554922511334242567, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
     m_RemovedGameObjects: []
@@ -1668,12 +1713,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3889865737859402284, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
   m_PrefabInstance: {fileID: 8345860081772180914}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2023120959}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0e01a65ffc9a0040a5b0eda283cf116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5969944691202443043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023120959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa6464e8ca9c6e44b33ca5e6bb620e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hudManager: {fileID: 1571501507}
+  _nRupees: 0
 --- !u!1001 &8345860081772180914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1737,7 +1796,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7149458318370985118, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5969944691202443043}
   m_SourcePrefab: {fileID: 100100000, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -13,6 +13,7 @@ public class RupeeScript : MonoBehaviour
     private int _value;
     #endregion
     #region references
+    [SerializeField]
     InventoryManager _inventory;
     #endregion
     #region Methods

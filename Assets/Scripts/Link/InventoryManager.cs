@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+
+    [SerializeField]
+    private HUDmanager _hudManager;
+
     [SerializeField]
     private int _nRupees = 0;
     private int _nBombs = 0;
+    private int _nKeys = 0;
     //espada, escudo especial(tienda), bombas (tienda), flechas(tienda)
     //Al crear la zona de conseguir cada item este le pasa un id al personaje
     //que es el que usa para identificarlos y desbloquearlos
@@ -19,12 +24,20 @@ public class InventoryManager : MonoBehaviour
     public void ChangeRupeeAmount(int value)
     {
         _nRupees += value;
+        _hudManager.UpdateCurrentRupees(_nRupees);
     }
 
     //al comprar las bombas en la tienda consigues 4 y a veces consigues 1 al matar enemigos. Esta 2a opción se desbloquea al comprarlas por 1a vez
     public void ChangeBombAmount(int value)
     {
         _nBombs += value;
+        _hudManager.UpdateCurrentBombs(_nBombs);
+    }
+
+    public void ChangeKeyAmount(int value)
+    {
+        _nKeys += value;
+        _hudManager.UpdateCurrentKeys(_nKeys);
     }
 
     public void UnlockItem(int itemId)
