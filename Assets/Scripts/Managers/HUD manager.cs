@@ -40,6 +40,7 @@ public class HUDmanager : MonoBehaviour
     public void EquipItem(int itemSlot, int newItemId)
     {
         _itemSlots[itemSlot].sprite = _itemSprites[newItemId];
+        
     }
 
     public void UpdateHPmaxHP(int newMaxHp)

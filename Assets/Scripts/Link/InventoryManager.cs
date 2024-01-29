@@ -5,49 +5,79 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
 
+    public static InventoryManager Instance;
+
     [SerializeField]
     private HUDmanager _hudManager;
 
-    [SerializeField]
-    private int _nRupees = 0;
-    private int _nBombs = 0;
-    private int _nKeys = 0;
+    public int nRupees { get; private set; } = 0;
+    public int nBombs { get; private set; } = 0;
+    public int nKeys { get; private set; } = 0;
     //espada, escudo especial(tienda), bombas (tienda), flechas(tienda)
     //Al crear la zona de conseguir cada item este le pasa un id al personaje
     //que es el que usa para identificarlos y desbloquearlos
-    private bool[] _itemsUnlocked = new bool[4];
+    public bool[] itemsUnlocked = new bool[4];
 
-    //objeto en el Botón A, objeto en el Boton B, el int corresponde al id del objeto
-    //inicializado a valores fuera del rango de item ID
-    private int[] itemsEquiped = {-1,-1}; 
+    //Entre 1 y 3 que son los valores de los items distintos a la espada.
+    private int itemEquiped = -1;
+
+    [SerializeField]
+    private int borrarEsto = 0;
+
+    void Start()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
+
+    void Update()
+    {
+        if(borrarEsto > 0)
+        {
+            ChangeRupeeAmount(borrarEsto);
+        }
+    }
 
     public void ChangeRupeeAmount(int value)
     {
-        _nRupees += value;
-        _hudManager.UpdateCurrentRupees(_nRupees);
+        nRupees += value;
+        _hudManager.UpdateCurrentRupees(nRupees);
     }
 
     //al comprar las bombas en la tienda consigues 4 y a veces consigues 1 al matar enemigos. Esta 2a opción se desbloquea al comprarlas por 1a vez
     public void ChangeBombAmount(int value)
     {
-        _nBombs += value;
-        _hudManager.UpdateCurrentBombs(_nBombs);
+        nBombs += value;
+        _hudManager.UpdateCurrentBombs(nBombs);
     }
 
     public void ChangeKeyAmount(int value)
     {
-        _nKeys += value;
-        _hudManager.UpdateCurrentKeys(_nKeys);
+        nKeys += value;
+        _hudManager.UpdateCurrentKeys(nKeys);
     }
 
     public void UnlockItem(int itemId)
     {
-        _itemsUnlocked[itemId] = true;
+        itemsUnlocked[itemId] = true;
+        if (itemId == 0)
+            _hudManager.EquipItem(0, 0);
+        if (itemId == 2)
+            ChangeBombAmount(4);
     }
 
     //se equipa automáticamente en el botón B, porque lo único que se equipa al botón A es a la espada.
-    public void ChangeItemEquiped(int itemId, int itemSlot)
+    public void ChangeItemEquiped(int itemId)
     {
-        itemsEquiped[itemSlot] = itemId;
+        itemEquiped = itemId;
+        if (itemId == 0) return;
+        _hudManager.EquipItem(1, itemId);
     }
 }

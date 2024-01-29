@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public bool linkOnCave;
     
     // This defines the size of the screen in world units
     [HideInInspector] public float screenSizeWidth, screenSizeHeight;
@@ -52,12 +53,14 @@ public class GameManager : MonoBehaviour
 
     async void Update() 
     {
+        if (linkOnCave) return;
+
         // This will check if the player has moved to a new screen
         if ((previousScreenX != currentScreenX) || (previousScreenY != currentScreenY))
         {
             previousScreenX = currentScreenX;
             previousScreenY = currentScreenY;
-            Debug.Log("Screen changed to " + currentScreenX + ", " + currentScreenY);
+            //Debug.Log("Screen changed to " + currentScreenX + ", " + currentScreenY);
             _cameraController.TransitionToScreen(currentScreenX, currentScreenY, 1f);
             await _characterController.FreezeCharacter(1f);
         }

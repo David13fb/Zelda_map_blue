@@ -20,6 +20,8 @@ public class LinkAttack : MonoBehaviour
 
     public void Attack(bool attacked)
     {
+        if (!InventoryManager.Instance.itemsUnlocked[0]) return;
+
         if(attacked)
         {
             _swordInstance = Instantiate(_sword, _swordPos.position, Quaternion.identity);
