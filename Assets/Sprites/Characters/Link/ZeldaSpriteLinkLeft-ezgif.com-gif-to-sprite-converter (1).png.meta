@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 16c1f598c3bd30c45865e38f2de7ca21
+guid: e985b6fada4dfc848afefc38c7fb1bf7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 45, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -110,55 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZeldaSpriteLinkBack-ezgif.com-gif-to-sprite-converter_0
+      name: ZeldaSpriteLinkLeft-ezgif.com-gif-to-sprite-converter (1)_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 12
+        width: 15
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e413b9f2acca3f74fac2860cafd5f302
-      internalID: -1033949379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZeldaSpriteLinkBack-ezgif.com-gif-to-sprite-converter_1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 0
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 851949bf6080d20498b0aada3bcb19a6
-      internalID: 2028253456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZeldaSpriteLinkBack-ezgif.com-gif-to-sprite-converter_2
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 0
-        width: 22
-        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +124,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59049d13bc8b60043bf89c43e4ddabe0
-      internalID: 132548323
+      spriteID: 80ce9fe0d91199144aadb08ada4347b6
+      internalID: -689413764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZeldaSpriteLinkLeft-ezgif.com-gif-to-sprite-converter (1)_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3bbaee28a1aa44b9c98449fbfd4fbc
+      internalID: 1816395530
       vertices: []
       indices: 
       edges: []
@@ -176,16 +155,15 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZeldaSpriteLinkBack-ezgif.com-gif-to-sprite-converter_0: -1033949379
-      ZeldaSpriteLinkBack-ezgif.com-gif-to-sprite-converter_1: 2028253456
-      ZeldaSpriteLinkBack-ezgif.com-gif-to-sprite-converter_2: 132548323
+      ZeldaSpriteLinkLeft-ezgif.com-gif-to-sprite-converter (1)_0: -689413764
+      ZeldaSpriteLinkLeft-ezgif.com-gif-to-sprite-converter (1)_1: 1816395530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
