@@ -23,21 +23,21 @@ public class LinkController : MonoBehaviour
         // Debug.Log(inputDirection);
         //Debug.Log(_blockMovement);
         if(!_blockMovement)
-            _chMovement.SetCharacterVelocity(GetGreaterAxis(inputDirection));
+            _chMovement.SetCharacterVelocity(inputDirection);
     }
 
     //devuelve el vector de input pero transformado en un vector unitario en una de las 4 direcciones
-    Vector2 GetGreaterAxis(Vector2 direction)
-    {
-        if(Mathf.Abs(direction.x) >= Mathf.Abs(direction.y))
-        {
-            return new Vector2(direction.x, 0).normalized;
-        }
-        else
-        {
-            return new Vector2(0, direction.y).normalized;
-        }
-    }
+    //Vector2 GetGreaterAxis(Vector2 direction)
+    //{
+    //    if(Mathf.Abs(direction.x) >= Mathf.Abs(direction.y))
+    //    {
+    //        return new Vector2(direction.x, 0).normalized;
+    //    }
+    //    else
+    //    {
+    //        return new Vector2(0, direction.y).normalized;
+    //    }
+    //}
 
     // this method is called when we need to freeze the character for a certain amount of time
     public async Task FreezeCharacter(float seconds)
