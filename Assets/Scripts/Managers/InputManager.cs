@@ -49,7 +49,7 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         _linkController.MoveLink(_movementInput.action.ReadValue<Vector2>());
-        _linkAnim.UpdateMoveAnimation(_movementInput.action.ReadValue<Vector2>());
+        //_linkAnim.UpdateMoveAnimation(_movementInput.action.ReadValue<Vector2>());
     }
 
     private void AttackActionPerformed(InputAction.CallbackContext obj)

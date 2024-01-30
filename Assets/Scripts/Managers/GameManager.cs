@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     // Reference to the CameraController and setting the screen size
     void Start()
     {
-        _hudmanager = GetComponent<HUDmanager>();
+        _hudmanager = FindObjectOfType<HUDmanager>();
         _cameraController = CameraController.instance;
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
