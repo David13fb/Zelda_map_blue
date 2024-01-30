@@ -14,9 +14,15 @@ public class TakeDamageComponent : MonoBehaviour
     SpriteRenderer _spriteRenderer;
     [SerializeField]Transform _linkTransform; //taken to push everything in links looking direction
    
-    //parameters
+    //getting pushed related parameters:
     private Vector3 _pushDirection;
-   
+
+    //Color change related parameters
+    private Stopwatch _changeColorTimer = new Stopwatch();
+    private float _timeUntilNextColor = 333f;
+    [SerializeField] private int _colorAmount = 3;
+
+
     // Comented code is a invul system
 
     //private Stopwatch _stopwatch = new Stopwatch();
@@ -48,10 +54,19 @@ public class TakeDamageComponent : MonoBehaviour
 
     private void ColorLoop()
     {
-        _spriteRenderer.color = Random.ColorHSV();
+        _changeColorTimer.Restart();
 
-        //loop is supposed to atually do something 
+        UnityEngine.Color originalColor = _spriteRenderer.color;
+        int i = 0;
+        while (i < _colorAmount && _changeColorTimer.ElapsedMilliseconds >= _timeUntilNextColor)
+        {
+            _spriteRenderer.color = Random.ColorHSV();
+            _changeColorTimer.Restart();
+            i++;
+        }
+        _spriteRenderer.color = originalColor;
 
-        _spriteRenderer.color = UnityEngine.Color.white;
+        _changeColorTimer.Stop();
+        
     }
 }
