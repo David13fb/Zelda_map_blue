@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 42b7679cd4d268241b36a0d89463fb51
+guid: 95f8b79e7369d9d438c59dc3140fe243
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,7 +108,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ZeldaSpriteOctorokRedLeft-ezgif.com-gif-to-sprite-converter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3efbbff89d530449c11e8799f8e4bf
+      internalID: -1982008626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZeldaSpriteOctorokRedLeft-ezgif.com-gif-to-sprite-converter_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f1a96763ab7fb44b9c11d2edd3f4e5
+      internalID: -1872198042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +161,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ZeldaSpriteOctorokRedLeft-ezgif.com-gif-to-sprite-converter_0: -1982008626
+      ZeldaSpriteOctorokRedLeft-ezgif.com-gif-to-sprite-converter_1: -1872198042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
