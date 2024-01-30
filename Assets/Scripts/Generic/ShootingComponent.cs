@@ -18,9 +18,9 @@ public class ShootingComponent : MonoBehaviour
 
     public void Shoot()
     {
-            GameObject newBala = Instantiate(_bullet, _myTransform.position, Quaternion.identity);
-            BulletMovement bulletMovement = newBala.GetComponent<BulletMovement>();
-            bulletMovement.SetDirection(_targetPosition);
+            GameObject newBullet = Instantiate(_bullet, _myTransform.position, Quaternion.identity);
+            BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
+            bulletComponent.SetDirection(_targetPosition);
     }
 
 }
