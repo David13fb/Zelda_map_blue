@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool linkOnCave;
-    
-
+    Vector2 direc;
+    private HUDmanager _hudmanager;
     
     // This defines the size of the screen in world units
     [HideInInspector] public float screenSizeWidth, screenSizeHeight;
@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LinkController _characterController;
 
 
-     Vector2 _direc = Vector2.right;
     // Singleton pattern
     void Awake()
     {
@@ -49,7 +48,7 @@ public class GameManager : MonoBehaviour
     // Reference to the CameraController and setting the screen size
     void Start()
     {
-        //_hudmanager = GetComponent<HUDmanager>();
+        _hudmanager = GetComponent<HUDmanager>();
         _cameraController = CameraController.instance;
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
@@ -71,8 +70,10 @@ public class GameManager : MonoBehaviour
             await _characterController.FreezeCharacter(1f);
 
             //Call to updateMiniMap as scene has changed
+            //declarar lo que vale direc, nose como hacerlo
+                _hudmanager.UpdateMinimap(true, direc);
             
-            //_hudmanager.UpdateMinimap(true);
+            
          
         }
     }

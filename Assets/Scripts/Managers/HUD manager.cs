@@ -7,8 +7,8 @@ public class HUDmanager : MonoBehaviour
 {
     //minimap
     [SerializeField]
-    private Transform _greenblock;
-    Vector2 _position = Vector2.zero;
+    private RectTransform _greenblock;
+
 
 
     //--Health Meter----------
@@ -95,22 +95,17 @@ public class HUDmanager : MonoBehaviour
         _bombText.text = ("x" + newAmount);
     }
 
-    private void Start()
+  
+    public void UpdateMinimap(bool minimapa, Vector2 direction)
     {
-        _greenblock = transform;
-    }
-
-    /*public void UpdateMinimap(bool minimapa)
-    {
-        if (minimapa) 
+        if (minimapa)
         {
-            _position.x = Vector2.Lerp();
-            _position.y = Vector2.Lerp();
-            _greenblock.position = _position;
+
+            Vector2 newPosition = _greenblock.anchoredPosition + direction;
+            _greenblock.anchoredPosition = newPosition;
         }
-        
+
     }
-    */
 
 
 
