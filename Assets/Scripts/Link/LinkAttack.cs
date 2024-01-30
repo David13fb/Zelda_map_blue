@@ -28,7 +28,7 @@ public class LinkAttack : MonoBehaviour
         {
             _swordInstance = Instantiate(_sword, _swordPos.position, Quaternion.identity);
             _linkController.SetBlockMovement(true);
-            _anim.UpdateAttackSword(attacked);
+            _anim.UpdateAttackSword(true);
         }
         else
         {
