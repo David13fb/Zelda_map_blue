@@ -9,6 +9,7 @@ public class LinkAttack : MonoBehaviour
     private GameObject _sword;
     [SerializeField]
     Transform _swordPos;
+    LinkAnimatorComponent _anim;
 
     private GameObject _swordInstance;
     private LinkController _linkController;
@@ -16,6 +17,7 @@ public class LinkAttack : MonoBehaviour
     void Start()
     {
         _linkController = GetComponent<LinkController>();
+        _anim = FindAnyObjectByType<LinkAnimatorComponent>();
     }
 
     public void Attack(bool attacked)
@@ -26,11 +28,13 @@ public class LinkAttack : MonoBehaviour
         {
             _swordInstance = Instantiate(_sword, _swordPos.position, Quaternion.identity);
             _linkController.SetBlockMovement(true);
+            _anim.UpdateAttackSword(attacked);
         }
         else
         {
             Destroy(_swordInstance);
             _linkController.SetBlockMovement(false);
+            _anim.UpdateAttackSword(false);
         }
     }
 } 
