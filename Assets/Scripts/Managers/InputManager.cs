@@ -11,11 +11,13 @@ public class InputManager : MonoBehaviour
 
     private LinkController _linkController;
     private LinkAttack _linkAttack;
+    private LinkAnimatorComponent _linkAnim;
 
     private void Start()
     {
         _linkController = FindObjectOfType<LinkController>();
         _linkAttack = FindObjectOfType<LinkAttack>();
+        _linkAnim = FindObjectOfType<LinkAnimatorComponent>();
         
 
     }
@@ -47,6 +49,7 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         _linkController.MoveLink(_movementInput.action.ReadValue<Vector2>());
+        _linkAnim.UpdateMoveAnimation(_movementInput.action.ReadValue<Vector2>());
     }
 
     private void AttackActionPerformed(InputAction.CallbackContext obj)

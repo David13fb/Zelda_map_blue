@@ -16,7 +16,6 @@ public class HP_manager : MonoBehaviour
     [SerializeField]
     private HUDmanager _hudManager;
 
-
     void Start()
     {
         _currentHealth = _currentMaxHp = _startingMaxHp;
@@ -34,6 +33,10 @@ public class HP_manager : MonoBehaviour
         if (_thisIsPlayer)
             changeHpGauge();
 
+        if (_currentHealth <= 0)
+        {
+            Die();
+        }
 
     }
 
@@ -49,5 +52,17 @@ public class HP_manager : MonoBehaviour
     {
         _hudManager.UpdateCurrentHP(_currentHealth);
         _hudManager.UpdateHPmaxHP(_currentMaxHp);
+    }
+
+    public void Die()
+    {
+        if (_thisIsPlayer)
+        {
+
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

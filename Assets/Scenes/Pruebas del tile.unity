@@ -213,6 +213,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 739492836687304882, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1045192897674664883, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -225,6 +229,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3641676416032293087, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
+      propertyPath: _linkTransform
+      value: 
+      objectReference: {fileID: 1603836922}
     - target: {fileID: 6597376129299556783, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
       propertyPath: m_Name
       value: Blue Octorock Variant
@@ -298,6 +306,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: eb00d7a2bf3ec3b49bc62be49460f820, type: 3}
+    - target: {fileID: 1606597536757509612, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.875
+      objectReference: {fileID: 0}
     - target: {fileID: 2189707357572726297, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
       propertyPath: m_Name
       value: Bomb
@@ -361,6 +373,22 @@ PrefabInstance:
     - target: {fileID: 5769346423779346131, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
       propertyPath: _itemPrice
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _newLinkPosition.x
+      value: 143.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _newLinkPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398474106182608295, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398474106182608295, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 8626714156282673274, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -858,6 +886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hudManager: {fileID: 1043487593}
   itemsUnlocked: 00000000
+  borrarEsto: 0
 --- !u!1 &1015790615
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +980,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: 3
   _itemPrice: 80
-  _itemImage: {fileID: 21300000, guid: 91f2c093e82307047b8cd26eac8a9a14, type: 3}
 --- !u!212 &1015790619
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1034,7 +1062,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _greenblock: {fileID: 788168009}
-  _target: {fileID: 1603836922}
   _hearts:
   - {fileID: 2109780532}
   - {fileID: 2109780531}
@@ -1558,6 +1585,10 @@ PrefabInstance:
     - target: {fileID: 4676954395088894682, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Color.g
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910489882958248411, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6762804178274373987, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Layer
@@ -20446,6 +20477,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1603836956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485723450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fe0e40884033a4592ab55f6a74b76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
 --- !u!1 &1755275753
 GameObject:
   m_ObjectHideFlags: 0
@@ -20586,7 +20630,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: 1
   _itemPrice: 130
-  _itemImage: {fileID: 21300000, guid: 91f2c093e82307047b8cd26eac8a9a14, type: 3}
 --- !u!212 &1778463131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20694,6 +20737,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1891422864204573285, guid: b88a7c73ac1041c43aa56960ef9af874, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 12ed5c0c4de23f648bae06f7d80c6838, type: 3}
     - target: {fileID: 4057000900538856056, guid: b88a7c73ac1041c43aa56960ef9af874, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -20923,11 +20970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.28
+      value: 5.2
       objectReference: {fileID: 0}
     - target: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.11
+      value: 5.21
       objectReference: {fileID: 0}
     - target: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20969,6 +21016,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4378284227083227143, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1603836956}
     - targetCorrespondingSourceObject: {fileID: 4378284227083227143, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1603836941}

@@ -8,13 +8,17 @@ public class ItemComponent : MonoBehaviour
     private int _itemId;
     [SerializeField]
     private int _itemPrice;
-    [SerializeField]
+    /*
+     * [SerializeField]
     private Sprite _itemImage;
+    
 
     void Start()
     {
         GetComponent<SpriteRenderer>().sprite = _itemImage;
     }
+    */
+
 
     void OnTriggerEnter2D(Collider2D linkCollider)
     {

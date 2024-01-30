@@ -5,43 +5,30 @@ using UnityEngine;
 public class LinkAnimatorComponent : MonoBehaviour
 {
     [SerializeField]
-    private Animator animator;
-    [SerializeField]
-    private Transform _transform;
-     Vector3 lastposition;
+    private Animator _animator;
+
+    //private Rigidbody2D _rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        _transform = transform;
-         lastposition = transform.position;
+        //_rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_transform.position!= lastposition && animator != null)
-        {
-            animator.SetBool("moving",true);
-            if (transform.position.x<lastposition.x)
-            {
-                animator.SetBool("xpositive", false);
-            }
-            else if (transform.position.x >lastposition.x)
-            {
-                animator.SetBool("xpositive", true);
-            }
-             if (transform.position.y > lastposition.y)
-            {
-                animator.SetBool("ypositive", true);
-            }
-            else if (transform.position.y < lastposition.y)
-            {
-                animator.SetBool("ypositive", false);
-            }
+        /*
+        _animator.SetInteger("xMove", (int)Mathf.Round(_rb.velocity.x));
+        _animator.SetInteger("yMove", (int)Mathf.Round(_rb.velocity.y));
+        */
+    }
 
-
-        }
-        lastposition = transform.position;
+    public void UpdateMoveAnimation(Vector2 input)
+    {
+        Debug.Log(input);
+        _animator.SetInteger("xMove", (int)Mathf.Round(input.x));
+        _animator.SetInteger("yMove", (int)Mathf.Round(input.y));
     }
 }
