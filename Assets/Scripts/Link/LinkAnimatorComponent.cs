@@ -16,7 +16,6 @@ public class LinkAnimatorComponent : MonoBehaviour
 
     public void UpdateMoveAnimation(Vector2 input)
     {
-        Debug.Log(input);
         _animator.SetInteger("xMove", (int)Mathf.Round(input.x));
         _animator.SetInteger("yMove", (int)Mathf.Round(input.y));
     }
