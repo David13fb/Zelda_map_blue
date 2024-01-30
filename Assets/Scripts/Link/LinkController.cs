@@ -53,4 +53,9 @@ public class LinkController : MonoBehaviour
         _blockMovement = newValue;
         _chMovement.SetCharacterVelocity(Vector2.zero);
     }
+
+    public void DisableLink()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

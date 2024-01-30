@@ -19,7 +19,8 @@ public class CharacterMovement : MonoBehaviour
 
     public void SetCharacterVelocity(Vector2 direction)
     {
-        
+        if (_rb == null) return;
+
         _rb.velocity = direction * _speed;
     }
 }

@@ -7,6 +7,9 @@ public class ChangeToRedDeadScreen : MonoBehaviour
 {
     Image _image;
 
+    [SerializeField]
+    private GameObject _loseGameScreen;
+
     private float _timer;
 
     private float _animationDuration;
@@ -25,18 +28,19 @@ public class ChangeToRedDeadScreen : MonoBehaviour
 
     public void DeathScreenColorChange()
     {
-        if (Time.time - _timer > _animationDuration)
+        if (Time.unscaledTime - _timer > _animationDuration)
         {
             byte red = (byte)(255 - Mathf.Lerp(0, 255, (_initialAnimationDuration - _animationDuration) / _initialAnimationDuration));
             _image.color = new Color32(red, 0, 0, 255);
-            Debug.Log(_image.color);
+            //Debug.Log(_image.color);
             //_cg.colorFilter.value = Color.black;
             _animationDuration *= _shortenAnimationBy;
-            _timer = Time.time;
+            _timer = Time.unscaledTime;
             if (_animationDuration < 0.01f)
             {
                 _dontTransition = true;
                 _animationDuration = _initialAnimationDuration;
+                GameManager.instance.DeathAnimationFinished();
             }
         }
     }
@@ -45,9 +49,19 @@ public class ChangeToRedDeadScreen : MonoBehaviour
     {
         if (_dontTransition)
         {
-            _timer = Time.time;
+            _timer = Time.unscaledTime;
         }
         else
             DeathScreenColorChange();
+    }
+
+    public void SetDeathScreenColorChange()
+    {
+        _dontTransition = false;
+    }
+
+    public void SpawnLoseGame()
+    {
+        Instantiate(_loseGameScreen);
     }
 }

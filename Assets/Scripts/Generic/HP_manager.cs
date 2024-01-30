@@ -58,7 +58,7 @@ public class HP_manager : MonoBehaviour
     {
         if (_thisIsPlayer)
         {
-
+            GameManager.instance.LinkHasDied();
         }
         else
         {

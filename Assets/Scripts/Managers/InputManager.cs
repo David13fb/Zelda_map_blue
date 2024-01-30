@@ -62,6 +62,5 @@ public class InputManager : MonoBehaviour
     private void AttackCancelled(InputAction.CallbackContext obj)
     {
         _linkAttack.Attack(false);
-       
     }
 }

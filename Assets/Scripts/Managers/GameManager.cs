@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
     private CameraController _cameraController;
 
     // This will be used to access the LinkController
-    [SerializeField] private LinkController _characterController;
-
+    private LinkController _characterController;
+    private ChangeToRedDeadScreen _changeRedScreen;
 
     // Singleton pattern
     void Awake()
@@ -52,7 +52,8 @@ public class GameManager : MonoBehaviour
         _cameraController = CameraController.instance;
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
-      
+        _changeRedScreen = FindAnyObjectByType<ChangeToRedDeadScreen>();
+        _characterController = FindAnyObjectByType<LinkController>();
     }
 
 
@@ -76,5 +77,17 @@ public class GameManager : MonoBehaviour
             
          
         }
+    }
+
+    public void LinkHasDied()
+    {
+        _changeRedScreen.SetDeathScreenColorChange();
+        Time.timeScale = 0;
+    }
+
+    public void DeathAnimationFinished()
+    {
+        _characterController.DisableLink();
+        _changeRedScreen.SpawnLoseGame();
     }
 }
