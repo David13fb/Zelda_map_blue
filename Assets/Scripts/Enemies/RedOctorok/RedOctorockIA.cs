@@ -14,6 +14,9 @@ public class RedOctorokIA : MonoBehaviour
     private Stopwatch _sw = new Stopwatch();
     [SerializeField] private int _timerToMove = 600;
 
+    //Responsible for shooting target movement
+    [SerializeField] private Transform _targetPoint;
+
     
     //Responsible for shooting:
     private Stopwatch _shootingSw = new Stopwatch();
@@ -27,33 +30,31 @@ public class RedOctorokIA : MonoBehaviour
         int movement = Random.Range(0, 4);
 
         Vector2 direction = Vector2.zero;
-        Vector3 rotAngle = Vector3.zero;
+        Vector3 newTargetOffset = Vector3.zero;
 
         if (movement == 0)
         {
             direction = Vector2.left;
-            rotAngle.z = -90;
+            newTargetOffset = new Vector3(-1.5f, 0f);
         }
         else if (movement == 1)
         {
             direction = Vector2.right;
-            rotAngle.z = 90;
+            newTargetOffset = new Vector3(1.5f, 0f);
         }
         else if (movement == 2)
         {
             direction = Vector2.up;
-            rotAngle.z = 180;
+            newTargetOffset = new Vector3(0f, 1.5f);
         }
         else
         {
             direction = Vector2.down;
-            rotAngle.z = 0;
+            newTargetOffset = new Vector3(0f, -1.5f);
         }
         
         _chMovement.SetCharacterVelocity(direction);
-
-        _myTransform.rotation = Quaternion.identity;
-        _myTransform.rotation = Quaternion.Euler(rotAngle);
+        _targetPoint.position = _myTransform.position + newTargetOffset;
 
         _sw.Restart();
     }

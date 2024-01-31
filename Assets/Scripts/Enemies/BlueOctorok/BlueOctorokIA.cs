@@ -9,6 +9,7 @@ public class BlueOctorokIA : MonoBehaviour
     private CharacterMovement _chMovement;
     private Transform _myTransform;
     private ShootingComponent _shootingComponent;
+    [SerializeField] private Transform _targetPoint;
 
     //Timers to move and stop:
     [SerializeField] private int _timerToStop= 600;
@@ -24,7 +25,7 @@ public class BlueOctorokIA : MonoBehaviour
     {
         int movement = Random.Range(0, 4);
         Vector2 direction = Vector2.zero;
-        Vector3 rotAngle = Vector3.zero;
+        Vector3 newShootingOffset = Vector3.zero;
 
         if (!_parada)
         {
@@ -32,25 +33,21 @@ public class BlueOctorokIA : MonoBehaviour
             {
                 case 0:
                     direction = Vector2.left;
-                    rotAngle.z = -90;
+                    newShootingOffset = new Vector3(-1.5f, 0f);
                     break;
                 case 1:
                     direction = Vector2.right;
-                    rotAngle.z = 90;
+                    newShootingOffset = new Vector3(1.5f, 0f);
                     break;
                 case 2:
                     direction = Vector2.up;
-                    rotAngle.z = 180;
+                    newShootingOffset =  new Vector3(0f, 1.5f);
                     break;
                 case 3:
                     direction = Vector2.down;
-                    rotAngle.z = 0;
+                    newShootingOffset = new Vector3(0, -1.5f);
                     break;
             }
-            //Only rotates if not stopping
-            _myTransform.rotation = Quaternion.identity;
-            _myTransform.rotation = Quaternion.Euler(rotAngle);
-
             _sw.Restart();
         }
         else
@@ -61,6 +58,8 @@ public class BlueOctorokIA : MonoBehaviour
 
         //Give direction to move or stop
         _prevDirection = direction;
+
+        _targetPoint.position = _myTransform.position + newShootingOffset;
         _chMovement.SetCharacterVelocity(direction);
     }
 
