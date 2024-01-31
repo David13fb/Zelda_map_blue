@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7988033313172404553, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 6000145366265809056}
     m_RemovedComponents:
     - {fileID: 3232211341750340270, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
     m_RemovedGameObjects: []
@@ -89,6 +93,11 @@ PrefabInstance:
       insertIndex: 8
       addedObject: {fileID: 1701862776502612973}
   m_SourcePrefab: {fileID: 100100000, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+--- !u!95 &6000145366265809056 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2099354942860667337, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+  m_PrefabInstance: {fileID: 5649383485787431273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6597376129299556783 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1578567725743851718, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
@@ -106,5 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a067d975771e704eaca464c9e27ec8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetPoint: {fileID: 6816293221569787477}
   _timerToStop: 600
   _timerToMove: 1200
+--- !u!4 &6816293221569787477 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1224683102966683452, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+  m_PrefabInstance: {fileID: 5649383485787431273}
+  m_PrefabAsset: {fileID: 0}

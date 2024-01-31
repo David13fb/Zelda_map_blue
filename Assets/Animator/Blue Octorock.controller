@@ -206,7 +206,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Red Octorock
+  m_Name: Blue Octorock
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: xMove
@@ -214,13 +214,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: yMove
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -313,7 +313,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7e3e7f489f70fff4a8fb91765c6ef145, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3d4e45e9b2717944e88879dfbb6c1bd3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -342,7 +342,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 18b482ecbf16efc46a918c2f01ac56fa, type: 2}
+  m_Motion: {fileID: 7400000, guid: 076e25c421ba6974c920d75c7af43db7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -371,7 +371,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7c127b24f8e84c1409644fddb85ca660, type: 2}
+  m_Motion: {fileID: 7400000, guid: aaaf961e349f141418c86b222f4c4b9d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -425,7 +425,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 447ea0a16f13d58409752223b7a0289d, type: 2}
+  m_Motion: {fileID: 7400000, guid: c731699ab7b0e674cab2defce9dd0943, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
