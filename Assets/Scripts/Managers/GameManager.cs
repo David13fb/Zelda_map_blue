@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public bool linkOnCave;
     Vector2 direc;
+    [SerializeField]
+    private Camera cam;
     private HUDmanager _hudmanager;
     
     // This defines the size of the screen in world units
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
         _changeRedScreen = FindAnyObjectByType<ChangeToRedDeadScreen>();
         _characterController = FindAnyObjectByType<LinkController>();
+        cam = Camera.main;
     }
 
 
@@ -72,11 +75,12 @@ public class GameManager : MonoBehaviour
 
             //Call to updateMiniMap as scene has changed
             //declarar lo que vale direc, nose como hacerlo
-                _hudmanager.UpdateMinimap(true, direc);
+                _hudmanager.UpdateMinimap(true, Camera.main.transform.position);
             
             
          
         }
+      //  Debug.Log(cam.transform.position);
     }
 
     public void LinkHasDied()

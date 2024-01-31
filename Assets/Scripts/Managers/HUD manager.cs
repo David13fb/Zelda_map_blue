@@ -9,7 +9,10 @@ public class HUDmanager : MonoBehaviour
     [SerializeField]
     private RectTransform _greenblock;
 
-
+    private Vector3 _lastCameraPosition;
+   
+   
+   
 
     //--Health Meter----------
     [SerializeField]
@@ -94,21 +97,49 @@ public class HUDmanager : MonoBehaviour
     {
         _bombText.text = ("x" + newAmount);
     }
-
-  
-    public void UpdateMinimap(bool minimapa, Vector2 direction)
+    private void Start()
     {
+           _lastCameraPosition = Camera.main.transform.position;
+          // _lastCameraPosition.y = 376.04F;
+        Debug.Log("primara posicion"+_lastCameraPosition);
+    }
+    bool primerapantalla = true;
+    public void UpdateMinimap(bool minimapa, Vector3 direction)
+    {
+        
         if (minimapa)
-        {
 
-            Vector2 newPosition = _greenblock.anchoredPosition + direction;
-            _greenblock.anchoredPosition = newPosition;
+        {
+            if (direction!=_lastCameraPosition)
+            {
+               if ((direction.y > _lastCameraPosition.y)&&!primerapantalla)
+               {
+                   _greenblock.position += new Vector3(0, 20/2, 0);
+                }
+                else if ((direction.y < _lastCameraPosition.y) && !primerapantalla)
+               {
+                   _greenblock.position += new Vector3(0, -20/2, 0);
+               }
+                if (direction.x > _lastCameraPosition.x)
+                {
+                 _greenblock.position  +=   new Vector3((31/2),0,0);
+                    primerapantalla=false;
+                }
+                else if (direction.x < _lastCameraPosition.x)
+                {
+                    _greenblock.position += new Vector3((-31/2), 0, 0);
+                    primerapantalla=false;
+                }
+                
+                _lastCameraPosition=direction;
+              
+              Debug.Log("posicionactual"+_greenblock.position);
+             }
         }
+        
 
     }
-
-
-
+    
 
 
 }
