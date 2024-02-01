@@ -23,22 +23,18 @@ public class LinkAnimatorComponent : MonoBehaviour
 
        if (_lastposition!= _transform.position) 
         {
-        _animator.speed = 1;
+    
 
         _animator.SetInteger("xMove", (int)Mathf.Round(input.x));
         _animator.SetInteger("yMove", (int)Mathf.Round(input.y));
         }
-      else _animator.speed = 0;
+     
 
         _lastposition = _transform.position;
     }
     public void UpdateAttackSword(bool attack)
     {
         _animator.SetBool("attacking", attack);
-        if (attack)
-        {
-            _animator.speed = 0;
-        }
-        else _animator.speed = 1;
+      
     }
 }
