@@ -23,13 +23,11 @@ public class LinkAnimatorComponent : MonoBehaviour
     public void LateUpdateMoveAnimation(Vector2 input)
     {
 
-       if (_lastposition!= _transform.position) 
-        {
-    
-
+       //if (_lastposition!= _transform.position) 
+       // {
         _animator.SetInteger("xMove", (int)Mathf.Round(input.x));
         _animator.SetInteger("yMove", (int)Mathf.Round(input.y));
-        }
+        //}
      
 
         _lastposition = _transform.position;

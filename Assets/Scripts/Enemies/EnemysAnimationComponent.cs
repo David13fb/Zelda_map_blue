@@ -8,9 +8,6 @@ public class EnemysAnimationComponent : MonoBehaviour
 {
     [SerializeField]
     private Animator _animator;
-    [SerializeField]
-    private float _animatorSpeed;
-    
     private Rigidbody2D _myRigidbody;
     Vector2 _prevVelocity; //velocidad anterior
 
@@ -28,8 +25,6 @@ public class EnemysAnimationComponent : MonoBehaviour
         {
             _animator.SetFloat("xMove", _myRigidbody.velocity.x);
             _animator.SetFloat("yMove", _myRigidbody.velocity.y);
-            Debug.Log(_myRigidbody.velocity + " velocity ");
-            Debug.Log(_prevVelocity + " prev ");
         }
         _prevVelocity = _myRigidbody.velocity;
     }

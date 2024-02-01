@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Octorock
       objectReference: {fileID: 0}
+    - target: {fileID: 2099354942860667337, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3093bcc896ace7047832a2097757d1e9, type: 2}
     - target: {fileID: 2444097369972698348, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.03

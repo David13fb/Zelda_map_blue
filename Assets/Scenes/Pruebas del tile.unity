@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2359206298197809184, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 474094498}
     - target: {fileID: 3641676416032293087, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
       propertyPath: _linkTransform
       value: 
@@ -691,7 +695,7 @@ Animator:
   m_GameObject: {fileID: 474094497}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bd55b6ee8c604904dbb5fd08b14f85a9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3093bcc896ace7047832a2097757d1e9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -737,11 +741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.600002
+      value: 31.31
       objectReference: {fileID: 0}
     - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.2
+      value: 2.87
       objectReference: {fileID: 0}
     - target: {fileID: 6491475115649693221, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1152,11 +1156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.77
+      value: 31.34
       objectReference: {fileID: 0}
     - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.79
+      value: 5.83
       objectReference: {fileID: 0}
     - target: {fileID: 841275300662434471, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
       propertyPath: m_LocalPosition.z
