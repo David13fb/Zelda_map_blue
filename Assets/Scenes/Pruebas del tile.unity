@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 440087509}
   - component: {fileID: 440087508}
   - component: {fileID: 440087507}
+  - component: {fileID: 440087511}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -654,6 +655,27 @@ RectTransform:
   m_AnchoredPosition: {x: 82, y: 144}
   m_SizeDelta: {x: 595.60004, y: 335}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &440087511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440087506}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &474094497 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6597376129299556783, guid: 1ac2b4fc4d9556148bee85a2bf6376d0, type: 3}
@@ -2165,6 +2187,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2143587980}
   m_SourcePrefab: {fileID: 100100000, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+--- !u!1 &1534450645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2189707357572726297, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+  m_PrefabInstance: {fileID: 5451701530836563474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1543558023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21886,6 +21913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5769346423779346131, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _sword
+      value: 
+      objectReference: {fileID: 1534450645}
     - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
       propertyPath: _camera
       value: 

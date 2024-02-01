@@ -7,6 +7,7 @@ public class LinkAnimatorComponent : MonoBehaviour
     [SerializeField]
     private Animator _animator;
     [SerializeField] Transform _transform;
+    private LinkController _controller;
     Vector3 _lastposition;
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class LinkAnimatorComponent : MonoBehaviour
         _animator = GetComponent<Animator>();
         _transform = transform;
         _lastposition = _transform.position;
+        _controller = GetComponent<LinkController>();
     }
 
 
@@ -37,4 +39,25 @@ public class LinkAnimatorComponent : MonoBehaviour
         _animator.SetBool("attacking", attack);
       
     }
+
+    public void ItemPicked(int typeItem)
+    {
+        if (typeItem == 1)
+        {
+
+            _animator.SetTrigger("ItemHeart");
+           
+
+        }
+        else if (typeItem == 2) 
+        {
+            _animator.SetTrigger("ItemSword");
+          
+        }
+            
+       
+
+    }
+
+
 }
