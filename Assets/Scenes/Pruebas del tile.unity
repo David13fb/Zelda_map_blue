@@ -2175,19 +2175,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1
+      value: 1.305
       objectReference: {fileID: 0}
     - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1
+      value: 0.775
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.690909
       objectReference: {fileID: 0}
     - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.05
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: -2.3
       objectReference: {fileID: 0}
     - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2219,6 +2223,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3326520634119175899, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4745153563348224816, guid: dcffa7f95eb516e4b9035417e20fecdb, type: 3}
@@ -20972,41 +20980,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
   m_PrefabInstance: {fileID: 2084760625634074595}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &1603836941
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485723450}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.9375, y: 1}
-  m_Direction: 0
 --- !u!95 &1603836947
 Animator:
   serializedVersion: 5
@@ -21768,15 +21741,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4672489784706543343, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_Size.x
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4672489784706543343, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_Size.y
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4672489784706543343, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4685774634094912281, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21841,9 +21822,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4378284227083227143, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1603836956}
-    - targetCorrespondingSourceObject: {fileID: 4378284227083227143, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1603836941}
     - targetCorrespondingSourceObject: {fileID: 4378284227083227143, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1603836947}
