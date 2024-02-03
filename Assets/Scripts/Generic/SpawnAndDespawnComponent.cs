@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class SpawnAndDespawnComponent : MonoBehaviour
 {
-    private void OnWillRenderObject()
+    RedOctorokIA _movementIA;
+    ShootingComponent _shootingComponent;
+
+    private void Awake()
     {
-        gameObject.SetActive(true);
+        _movementIA = GetComponent<RedOctorokIA>();
+        _shootingComponent = GetComponent<ShootingComponent>();
+        _movementIA.enabled = false;
+        _shootingComponent.enabled = false;
+    }
+    private void OnBecameVisible()
+    {
+        _movementIA.enabled = true;
+        _shootingComponent.enabled = true;
     }
 
     private void OnBecameInvisible()
     {
-        gameObject.SetActive(false);
+        _movementIA.enabled = false;
+        _shootingComponent.enabled = false;
     }
 }

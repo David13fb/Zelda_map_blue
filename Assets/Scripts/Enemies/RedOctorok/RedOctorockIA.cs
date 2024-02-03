@@ -59,6 +59,12 @@ public class RedOctorokIA : MonoBehaviour
         _sw.Restart();
     }
 
+    public void StopDirection()
+    {
+        Vector2 direction = Vector2.zero;
+        _targetPoint.position = _myTransform.position;
+        _chMovement.SetCharacterVelocity(direction);
+    }
     //Method to decide when to shoot
     private void CreateRandomInterval()
     {
