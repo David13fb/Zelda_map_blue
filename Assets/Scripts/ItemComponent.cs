@@ -9,6 +9,9 @@ public class ItemComponent : MonoBehaviour
     [SerializeField]
     private int _itemPrice;
 
+    [SerializeField]
+    private GameObject _item;
+
     /*
      * [SerializeField]
     private Sprite _itemImage;
@@ -33,7 +36,8 @@ public class ItemComponent : MonoBehaviour
             InventoryManager.Instance.UnlockItem(_itemId);
             InventoryManager.Instance.ChangeItemEquiped(_itemId);
 
-
+            //para la collision con el corazon seria el 2
+            GameManager.instance.PickItem(1);
             Destroy(gameObject);
         }
     }
