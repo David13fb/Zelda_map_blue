@@ -16,11 +16,11 @@ GameObject:
   - component: {fileID: 9002538694775972278}
   - component: {fileID: 3742496855735749239}
   - component: {fileID: 5752949175767135304}
-  - component: {fileID: 3232211341750340270}
+  - component: {fileID: 6093509571171028937}
   - component: {fileID: 6353977900426453911}
   - component: {fileID: 7988033313172404553}
-  - component: {fileID: 2099354942860667337}
   - component: {fileID: 5293510377640294011}
+  - component: {fileID: 2099354942860667337}
   m_Layer: 8
   m_Name: Red Octorock
   m_TagString: Untagged
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
---- !u!114 &3232211341750340270
+--- !u!114 &6093509571171028937
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,15 +224,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578567725743851718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c82fa7a71629742a36cf5488174e7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a067d975771e704eaca464c9e27ec8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timerToMove: 600
-  _targetPoint: {fileID: 1224683102966683452}
-  _timeToShoot1: 2000
-  _timeToShoot2: 3000
-  _timeToShoot3: 4000
-  _timeToShoot4: 5000
+  _targetPoint: {fileID: 0}
+  _timerToStop: 600
+  _timerToMove: 1200
 --- !u!114 &6353977900426453911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 0}
+--- !u!114 &5293510377640294011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578567725743851718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &2099354942860667337
 Animator:
   serializedVersion: 5
@@ -281,18 +290,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5293510377640294011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578567725743851718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6762804178274373987
 GameObject:
   m_ObjectHideFlags: 0
