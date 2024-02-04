@@ -96,8 +96,6 @@ public class GameManager : MonoBehaviour
         _changeRedScreen.SpawnLoseGame();
     }
 
-    public void PickItem(int item)
-    {
-        _linkAnimatorComponent.ItemPicked(item);
-    }
+   
 }
+

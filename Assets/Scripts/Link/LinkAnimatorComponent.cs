@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class LinkAnimatorComponent : MonoBehaviour
 {
@@ -38,19 +39,22 @@ public class LinkAnimatorComponent : MonoBehaviour
       
     }
 
-    public void ItemPicked(int typeItem)
+    public async void ItemPicked(int typeItem)
     {
         if (typeItem == 2)
         {
 
             _animator.SetTrigger("ItemHeart");
-           
+           // await _controller.FreezeCharacter(1);
+            
 
         }
         else if (typeItem == 1) 
         {
             _animator.SetTrigger("ItemSword");
-          
+  
+           // await _controller.FreezeCharacter(1);
+         
         }
             
        
