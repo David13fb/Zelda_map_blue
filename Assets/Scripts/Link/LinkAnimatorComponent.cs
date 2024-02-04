@@ -24,10 +24,10 @@ public class LinkAnimatorComponent : MonoBehaviour
     {
 
        //if (_lastposition!= _transform.position) 
-       // {
+      //  {
         _animator.SetInteger("xMove", (int)Mathf.Round(input.x));
         _animator.SetInteger("yMove", (int)Mathf.Round(input.y));
-        //}
+      //  }
      
 
         _lastposition = _transform.position;

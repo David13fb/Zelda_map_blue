@@ -59,7 +59,7 @@ public class OctorokIA : MonoBehaviour
         //Give direction to move or stop
         _prevDirection = direction;
 
-        _targetPoint.position = _myTransform.position + newShootingOffset;
+       // _targetPoint.position = _myTransform.position + newShootingOffset;
         _chMovement.SetCharacterVelocity(direction);
     }
 
@@ -68,7 +68,7 @@ public class OctorokIA : MonoBehaviour
     {
         _sw.Stop();
         Vector2 direction = Vector2.zero;
-        _targetPoint.position = _myTransform.position;
+       // _targetPoint.position = _myTransform.position;
         _chMovement.SetCharacterVelocity(direction);
     }
     public void StartMoving()
