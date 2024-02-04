@@ -25,9 +25,11 @@ public class LinkAttack : MonoBehaviour
     private Rigidbody2D _myRb;
 
     private Vector3 _attackDirection = Vector3.right;
+    private Vector2 _oldInput = Vector2.zero;
 
     private GameObject _swordInstance;
     private LinkController _linkController;
+    
     
     void Start()
     {
@@ -35,40 +37,46 @@ public class LinkAttack : MonoBehaviour
         _anim = FindAnyObjectByType<LinkAnimatorComponent>();
         _linkTransform = transform;
         _myRb = GetComponent<Rigidbody2D>();
-
     }
 
-    public void Attack(bool attacked)
+    public void Attack(bool attacked, Vector2 Input)
     {
         if (!InventoryManager.Instance.itemsUnlocked[0]) return;
 
         if(attacked)
         {
-            if (_myRb.velocity.x != 0 || _myRb.velocity.y !=0)
-            {
-                if (_myRb.velocity.x > 0)
+            // if ( Input != _oldInput )
+           // {
+                if (Input != Vector2.zero)
+                {
+                    _oldInput = Input;
+                UnityEngine.Debug.Log(_oldInput);
+                }
+                if (_oldInput.x > 0)
                 {
                     _attackDirection = Vector3.right;
                 }
 
-                else if (_myRb.velocity.x < 0)
+                else if (_oldInput.x < 0)
                 {
                     _attackDirection = Vector3.left;
                 }
 
-                else if (_myRb.velocity.y > 0)
+                else if (_oldInput.y > 0)
                 {
                     _attackDirection = Vector3.up;
                 }
 
-                else if (_myRb.velocity.y < 0)
+                else if (_oldInput.y < 0)
                 {
                    _attackDirection = Vector3.down;
                 }
-                     
-            }
 
-            if (_hpManager.IsFullHP())
+               
+                     
+            //}
+
+          //  if (_hpManager.IsFullHP())
            // {
               //  _shootingComponent.Shoot();
            // }

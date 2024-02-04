@@ -55,12 +55,12 @@ public class InputManager : MonoBehaviour
 
     private void AttackActionPerformed(InputAction.CallbackContext obj)
     {
-        _linkAttack.Attack(true);
+        _linkAttack.Attack(true,_movementInput.action.ReadValue<Vector2>());
        
     }
 
     private void AttackCancelled(InputAction.CallbackContext obj)
     {
-        _linkAttack.Attack(false);
+        _linkAttack.Attack(false, _movementInput.action.ReadValue<Vector2>());
     }
 }
