@@ -9,6 +9,9 @@ public class ItemComponent : MonoBehaviour
     [SerializeField]
     private int _itemPrice;
 
+    [SerializeField]
+    private GameObject _item;
+    private LinkAnimatorComponent _link;
     /*
      * [SerializeField]
     private Sprite _itemImage;
@@ -19,7 +22,10 @@ public class ItemComponent : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = _itemImage;
     }
     */
-
+    private void Start()
+    {
+        _link = FindAnyObjectByType<LinkAnimatorComponent>();
+    }
 
     void OnTriggerEnter2D(Collider2D linkCollider)
     {
@@ -29,11 +35,12 @@ public class ItemComponent : MonoBehaviour
            
             if (InventoryManager.Instance.nRupees < _itemPrice) return;
             InventoryManager.Instance.ChangeRupeeAmount(-_itemPrice);
-
+            _link.ItemPicked(1);
             InventoryManager.Instance.UnlockItem(_itemId);
             InventoryManager.Instance.ChangeItemEquiped(_itemId);
 
-
+            //para la collision con el corazon seria el 2
+          //  GameManager.instance.PickItem(1);
             Destroy(gameObject);
         }
     }

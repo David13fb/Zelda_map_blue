@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class BlueOctorokIA : MonoBehaviour
+public class OctorokIA : MonoBehaviour
 {
     //References:
     private CharacterMovement _chMovement;
@@ -59,15 +59,21 @@ public class BlueOctorokIA : MonoBehaviour
         //Give direction to move or stop
         _prevDirection = direction;
 
-        _targetPoint.position = _myTransform.position + newShootingOffset;
+       // _targetPoint.position = _myTransform.position + newShootingOffset;
         _chMovement.SetCharacterVelocity(direction);
     }
 
-    public void StopDirection()
+    //Method to stop moving when out of the screen. Also stops the timer so it does not shoot
+    public void StopMoving()
     {
+        _sw.Stop();
         Vector2 direction = Vector2.zero;
-        _targetPoint.position = _myTransform.position;
+       // _targetPoint.position = _myTransform.position;
         _chMovement.SetCharacterVelocity(direction);
+    }
+    public void StartMoving()
+    {
+        _sw.Start();
     }
 
     //Method to shoot

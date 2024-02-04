@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     // This will be used to access the LinkController
     private LinkController _characterController;
     private ChangeToRedDeadScreen _changeRedScreen;
+    private LinkAnimatorComponent _linkAnimatorComponent;
 
     // Singleton pattern
     void Awake()
@@ -93,5 +94,10 @@ public class GameManager : MonoBehaviour
     {
         _characterController.DisableLink();
         _changeRedScreen.SpawnLoseGame();
+    }
+
+    public void PickItem(int item)
+    {
+        _linkAnimatorComponent.ItemPicked(item);
     }
 }

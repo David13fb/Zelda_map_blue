@@ -65,4 +65,9 @@ public class HP_manager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public bool IsFullHP()
+    {
+        return _currentHealth == _currentMaxHp;
+    }
 }
