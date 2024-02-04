@@ -50,17 +50,18 @@ public class InputManager : MonoBehaviour
     {
         _linkController.MoveLink(_movementInput.action.ReadValue<Vector2>());
         _linkAnim.LateUpdateMoveAnimation(_movementInput.action.ReadValue<Vector2>());
+        _linkAttack.inputvector(_movementInput.action.ReadValue<Vector2>());
         
     }
 
     private void AttackActionPerformed(InputAction.CallbackContext obj)
     {
-        _linkAttack.Attack(true,_movementInput.action.ReadValue<Vector2>());
+        _linkAttack.Attack(true);
        
     }
 
     private void AttackCancelled(InputAction.CallbackContext obj)
     {
-        _linkAttack.Attack(false, _movementInput.action.ReadValue<Vector2>());
+        _linkAttack.Attack(false);
     }
 }

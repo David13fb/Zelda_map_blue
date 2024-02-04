@@ -114,20 +114,20 @@ public class HUDmanager : MonoBehaviour
             {
                if ((direction.y > _lastCameraPosition.y)&&!primerapantalla)
                {
-                   _greenblock.position += new Vector3(0, 20/2, 0);
+                   _greenblock.position += new Vector3(0, 20/3, 0);
                 }
                 else if ((direction.y < _lastCameraPosition.y) && !primerapantalla)
                {
-                   _greenblock.position += new Vector3(0, -20/2, 0);
+                   _greenblock.position += new Vector3(0, -20/3, 0);
                }
                 if (direction.x > _lastCameraPosition.x)
                 {
-                 _greenblock.position  +=   new Vector3((31/2),0,0);
+                 _greenblock.position  +=   new Vector3((31/3),0,0);
                     primerapantalla=false;
                 }
                 else if (direction.x < _lastCameraPosition.x)
                 {
-                    _greenblock.position += new Vector3((-31/2), 0, 0);
+                    _greenblock.position += new Vector3((-31/3), 0, 0);
                     primerapantalla=false;
                 }
                 

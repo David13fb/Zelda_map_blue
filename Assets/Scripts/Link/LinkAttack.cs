@@ -26,7 +26,7 @@ public class LinkAttack : MonoBehaviour
 
     private Vector3 _attackDirection = Vector3.right;
     private Vector2 _oldInput = Vector2.zero;
-
+    private Vector2 _input = Vector2.zero;
     private GameObject _swordInstance;
     private LinkController _linkController;
     
@@ -38,36 +38,45 @@ public class LinkAttack : MonoBehaviour
         _linkTransform = transform;
         _myRb = GetComponent<Rigidbody2D>();
     }
-
-    public void Attack(bool attacked, Vector2 Input)
+    public void inputvector(Vector2 input)
     {
-        if (!InventoryManager.Instance.itemsUnlocked[0]) return;
+        _input = input;
+        if (_input != Vector2.zero)
+        {
+            _oldInput = _input;
 
+        }
+
+    }
+    public void Attack(bool attacked)
+    {
+        UnityEngine.Debug.Log(_input+"input");
+        
+        UnityEngine.Debug.Log(_oldInput + "old");
+        if (!InventoryManager.Instance.itemsUnlocked[0]) return;
+        
         if(attacked)
         {
             // if ( Input != _oldInput )
            // {
-                if (Input != Vector2.zero)
-                {
-                    _oldInput = Input;
-                UnityEngine.Debug.Log(_oldInput);
-                }
-                if (_oldInput.x > 0)
+              
+                
+                if (_oldInput.x == 1)
                 {
                     _attackDirection = Vector3.right;
                 }
 
-                else if (_oldInput.x < 0)
+                else if (_oldInput.x == -1)
                 {
                     _attackDirection = Vector3.left;
                 }
 
-                else if (_oldInput.y > 0)
+                else if (_oldInput.y == 1)
                 {
                     _attackDirection = Vector3.up;
                 }
 
-                else if (_oldInput.y < 0)
+                else if (_oldInput.y == -1)
                 {
                    _attackDirection = Vector3.down;
                 }
