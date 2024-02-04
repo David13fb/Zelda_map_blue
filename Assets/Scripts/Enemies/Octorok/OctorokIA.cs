@@ -60,7 +60,7 @@ public class OctorokIA : MonoBehaviour
         _prevDirection = direction;
 
        // _targetPoint.position = _myTransform.position + newShootingOffset;
-        _chMovement.SetCharacterVelocity(direction);
+        _chMovement.MoveCharacter(direction);
     }
 
     //Method to stop moving when out of the screen. Also stops the timer so it does not shoot
@@ -69,7 +69,7 @@ public class OctorokIA : MonoBehaviour
         _sw.Stop();
         Vector2 direction = Vector2.zero;
        // _targetPoint.position = _myTransform.position;
-        _chMovement.SetCharacterVelocity(direction);
+        _chMovement.MoveCharacter(direction);
     }
     public void StartMoving()
     {

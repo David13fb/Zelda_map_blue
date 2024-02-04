@@ -5,22 +5,48 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private Transform _transform;
-    private Rigidbody2D _rb;
+
     [SerializeField]
     private float _speed = 1.0f;
-    Vector2 actualspeed = Vector2.zero;
-    Vector2 targetspeed = Vector2.zero;
+
+    private float collisionOffset = 0.05f;
+
+    public ContactFilter2D movementFilter;
+
+    private Transform _transform;
+    private Rigidbody2D _rb;
+    private Vector2 _moveDirection;
+    private List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+
+    
    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    public void SetCharacterVelocity(Vector2 direction)
+    public bool MoveCharacter(Vector2 direction)
     {
-        if (_rb == null) return;
+        int count = _rb.Cast(
+            direction,
+            movementFilter,
+            castCollisions,
+            _speed * Time.deltaTime + collisionOffset
+        );
+        if (count == 0)
+        {
+            Vector2 moveVector = direction * _speed * Time.fixedDeltaTime;
 
-        _rb.velocity = direction * _speed;
+            _rb.MovePosition(_rb.position + moveVector);
+            return true;
+        }
+        else
+        {
+            foreach (RaycastHit2D hit in castCollisions)
+            {
+                Debug.Log(hit.ToString());
+            }
+            return false;
+        }
     }
 }
