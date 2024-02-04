@@ -1415,7 +1415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: 3
   _itemPrice: 80
-  _item: {fileID: 0}
 --- !u!212 &1015790619
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21249,7 +21248,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: 1
   _itemPrice: 130
-  _item: {fileID: 0}
 --- !u!212 &1778463131
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22013,6 +22011,22 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 1497397035}
+    - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _newLinkPosition.x
+      value: 5.822
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _newLinkPosition.y
+      value: 5.862
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _newCameraPosition.x
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248736270156361747, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
+      propertyPath: _newCameraPosition.y
+      value: 5.57
+      objectReference: {fileID: 0}
     - target: {fileID: 7398474106182608295, guid: d24993a3e4e88f046bf948245d8e17dc, type: 3}
       propertyPath: m_Enabled
       value: 1

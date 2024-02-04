@@ -69,16 +69,16 @@ public class LinkAttack : MonoBehaviour
             }
 
             if (_hpManager.IsFullHP())
-            {
-                //_shootingComponent.Shoot();
-            }
-         //   else
            // {
+              //  _shootingComponent.Shoot();
+           // }
+         // else
+          // {
                  _swordInstance = Instantiate(_sword, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                  _linkController.SetBlockMovement(true);
                  _anim.UpdateAttackSword(true);
                 
-           // }
+         //  }
         }
         else
         {
