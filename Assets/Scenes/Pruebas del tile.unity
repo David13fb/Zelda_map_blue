@@ -21918,6 +21918,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1115469591
       objectReference: {fileID: 0}
+    - target: {fileID: 6380454992037108861, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: _hpManager
       value: 
