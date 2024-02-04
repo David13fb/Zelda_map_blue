@@ -40,14 +40,14 @@ public class LinkAnimatorComponent : MonoBehaviour
 
     public void ItemPicked(int typeItem)
     {
-        if (typeItem == 1)
+        if (typeItem == 2)
         {
 
             _animator.SetTrigger("ItemHeart");
            
 
         }
-        else if (typeItem == 2) 
+        else if (typeItem == 1) 
         {
             _animator.SetTrigger("ItemSword");
           
