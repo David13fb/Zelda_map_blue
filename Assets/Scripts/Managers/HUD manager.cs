@@ -101,7 +101,7 @@ public class HUDmanager : MonoBehaviour
     {
            _lastCameraPosition = Camera.main.transform.position;
           // _lastCameraPosition.y = 376.04F;
-        Debug.Log("primara posicion"+_lastCameraPosition);
+        //Debug.Log("primara posicion"+_lastCameraPosition);
     }
     bool primerapantalla = true;
     public void UpdateMinimap(bool minimapa, Vector3 direction)
@@ -133,7 +133,7 @@ public class HUDmanager : MonoBehaviour
                 
                 _lastCameraPosition=direction;
               
-              Debug.Log("posicionactual"+_greenblock.position);
+              //Debug.Log("posicionactual"+_greenblock.position);
              }
         }
         

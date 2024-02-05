@@ -50,9 +50,9 @@ public class LinkAttack : MonoBehaviour
     }
     public void Attack(bool attacked)
     {
-        UnityEngine.Debug.Log(_input+"input");
+        //UnityEngine.Debug.Log(_input+"input");
         
-        UnityEngine.Debug.Log(_oldInput + "old");
+        //UnityEngine.Debug.Log(_oldInput + "old");
         if (!InventoryManager.Instance.itemsUnlocked[0]) return;
         
         if(attacked)

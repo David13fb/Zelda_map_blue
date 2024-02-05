@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
+//using System.Diagnostics;
+//using System.Drawing;
 using UnityEngine;
 
 
@@ -16,11 +16,12 @@ public class TakeDamageComponent : MonoBehaviour
    
     //getting pushed related parameters:
     private Vector3 _pushDirection;
+    private Color[] sequenceOfColors = new Color[] { Color.white, Color.red, Color.blue, Color.green};
 
-    //Color change related parameters
-    private Stopwatch _changeColorTimer = new Stopwatch();
-    private float _timeUntilNextColor = 333f;
-    [SerializeField] private int _colorAmount = 3;
+    private bool _colorLoopEnabled;
+    private static float _singleColorDuration = 0.1f;
+    [SerializeField] private int _currentColorCount = 0;
+    private float _timer = 0;
 
 
     // Comented code is a invul system
@@ -39,34 +40,40 @@ public class TakeDamageComponent : MonoBehaviour
     }
     public void TakeDamage(int damage) 
     { 
-        //if(_stopwatch.ElapsedMilliseconds > _invulMiliseconds) 
-        //{
-            if (_hpManager != null && _spriteRenderer != null && _rb != null)
+            if (_hpManager != null && _spriteRenderer != null && _rb != null && !_colorLoopEnabled)
             {
                 _hpManager.changeCurrentHealth(-damage); //damage taken is a negative, damage is a positive value
                 ColorLoop();
                 _pushDirection = -_linkTransform.up;
                 _rb.AddForce(_pushDirection);
             }
-        //    _stopwatch.Restart();
-        //}
+    }
+
+    private void Update()
+    {
+        if (_colorLoopEnabled && _hpManager.CurrentHealth != 0)
+        {
+            if (Time.unscaledTime - _timer > _singleColorDuration)
+            {
+                if (_currentColorCount % 12 == 11)
+                {
+                    _colorLoopEnabled = false;
+                    _spriteRenderer.color = Color.white;
+                }
+                else
+                {
+                    _spriteRenderer.color = sequenceOfColors[_currentColorCount % sequenceOfColors.Length];
+                    _timer = Time.unscaledTime;
+                }
+                _currentColorCount++;
+            }
+
+        }
     }
 
     private void ColorLoop()
     {
-        _changeColorTimer.Restart();
-
-        UnityEngine.Color originalColor = _spriteRenderer.color;
-        int i = 0;
-        while (i < _colorAmount && _changeColorTimer.ElapsedMilliseconds >= _timeUntilNextColor)
-        {
-            _spriteRenderer.color = Random.ColorHSV();
-            _changeColorTimer.Restart();
-            i++;
-        }
-        _spriteRenderer.color = originalColor;
-
-        _changeColorTimer.Stop();
-        
+        _colorLoopEnabled = true;
+        _timer = Time.unscaledTime;        
     }
 }

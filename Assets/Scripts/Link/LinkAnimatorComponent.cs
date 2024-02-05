@@ -39,7 +39,7 @@ public class LinkAnimatorComponent : MonoBehaviour
       
     }
 
-    public async void ItemPicked(int typeItem)
+    public void ItemPicked(int typeItem)
     {
         if (typeItem == 2)
         {

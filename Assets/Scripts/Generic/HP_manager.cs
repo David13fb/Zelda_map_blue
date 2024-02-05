@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HP_manager : MonoBehaviour
 {
+    public int CurrentHealth { get { return _currentHealth; } } 
+
     [SerializeField]
     //cada corazon son 2 puntos de vida
     int _startingMaxHp = 6;
