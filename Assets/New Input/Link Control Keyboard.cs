@@ -296,6 +296,17 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                     ""action"": ""b"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""32fabc90-d011-4f2d-8b01-ddb6ff850394"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""b"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },

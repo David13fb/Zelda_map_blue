@@ -9,6 +9,8 @@ public class LinkAttack : MonoBehaviour
     [SerializeField]
     private GameObject _sword;
     [SerializeField]
+    private GameObject _bomb;
+    [SerializeField]
     Transform _swordPos;
     LinkAnimatorComponent _anim;
 
@@ -28,15 +30,18 @@ public class LinkAttack : MonoBehaviour
     private Vector2 _oldInput = Vector2.zero;
     private Vector2 _input = Vector2.zero;
     private GameObject _swordInstance;
+    private GameObject _bombInstance;
     private LinkController _linkController;
-    
-    
+
+
+
     void Start()
     {
         _linkController = GetComponent<LinkController>();
         _anim = FindAnyObjectByType<LinkAnimatorComponent>();
         _linkTransform = transform;
         _myRb = GetComponent<Rigidbody2D>();
+        _shootingComponent = GetComponent<ShootingComponent>();
     }
     public void inputvector(Vector2 input)
     {
@@ -48,60 +53,51 @@ public class LinkAttack : MonoBehaviour
         }
 
     }
-    public void Attack(bool attacked)
+    public void Attack(bool attacked, bool bomb)
     {
-        //UnityEngine.Debug.Log(_input+"input");
-        
-        //UnityEngine.Debug.Log(_oldInput + "old");
         if (!InventoryManager.Instance.itemsUnlocked[0]) return;
-        
-        if(attacked)
+
+        if (attacked || bomb)
         {
-            // if ( Input != _oldInput )
-           // {
-              
-                
-                if (_oldInput.x == 1)
-                {
-                    _attackDirection = Vector3.right;
-                }
+            if (_oldInput.x == 1)
+            {
+                _attackDirection = Vector3.right;
+            }
 
-                else if (_oldInput.x == -1)
-                {
-                    _attackDirection = Vector3.left;
-                }
+            else if (_oldInput.x == -1)
+            {
+                _attackDirection = Vector3.left;
+            }
 
-                else if (_oldInput.y == 1)
-                {
-                    _attackDirection = Vector3.up;
-                }
+            else if (_oldInput.y == 1)
+            {
+                _attackDirection = Vector3.up;
+            }
 
-                else if (_oldInput.y == -1)
-                {
-                   _attackDirection = Vector3.down;
-                }
-
-               
-                     
-            //}
-
-          //  if (_hpManager.IsFullHP())
-           // {
-              //  _shootingComponent.Shoot();
-           // }
-         // else
-          // {
-                 _swordInstance = Instantiate(_sword, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
-                 _linkController.SetBlockMovement(true);
-                 _anim.UpdateAttackSword(true);
-                
-         //  }
+            else if (_oldInput.y == -1)
+            {
+                _attackDirection = Vector3.down;
+            }
+            if (_hpManager.IsFullHP())
+            {
+                _shootingComponent.Shoot();
+            }
+            if (attacked && !bomb)
+            {
+                _swordInstance = Instantiate(_sword, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                _anim.UpdateAttackSword(true);
+                _linkController.SetBlockMovement(true);
+            }
+            else if (!attacked && bomb)
+            {
+                _bombInstance = Instantiate(_bomb, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+            }
         }
-        else
+        else if (!attacked && !bomb)
         {
             Destroy(_swordInstance);
             _linkController.SetBlockMovement(false);
             _anim.UpdateAttackSword(false);
         }
     }
-} 
+}

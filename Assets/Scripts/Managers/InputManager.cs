@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private InputActionReference _movementInput;
     [SerializeField] private InputActionReference _attackInput;
     [SerializeField] private InputActionReference _attackCancelInput;
+    [SerializeField] private InputActionReference _ItemInput;
 
     private LinkController _linkController;
     private LinkAttack _linkAttack;
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour
     {
         _attackInput.action.performed += AttackActionPerformed;
         _attackCancelInput.action.performed += AttackCancelled;
+        _ItemInput.action.performed += ItemActionPerformed;
     }
 
     private void OnEnable()
@@ -32,6 +34,7 @@ public class InputManager : MonoBehaviour
         _movementInput.action.Enable();
         _attackInput.action.Enable();
         _attackCancelInput.action.Enable();
+        _ItemInput.action.Enable();
     }
 
     private void OnDisable()
@@ -39,11 +42,13 @@ public class InputManager : MonoBehaviour
         _movementInput.action.Disable();
         _attackInput.action.Disable();
         _attackCancelInput.action.Disable();
+        _ItemInput.action.Disable();
     }
     private void OnDestroy()
     {
         _attackInput.action.performed -= AttackActionPerformed;
         _attackCancelInput.action.performed -= AttackCancelled;
+        _ItemInput.action.performed -= ItemActionPerformed;
     }
 
     private void Update()
@@ -56,12 +61,17 @@ public class InputManager : MonoBehaviour
 
     private void AttackActionPerformed(InputAction.CallbackContext obj)
     {
-        _linkAttack.Attack(true);
+        _linkAttack.Attack(true,false);
        
     }
 
     private void AttackCancelled(InputAction.CallbackContext obj)
     {
-        _linkAttack.Attack(false);
+        _linkAttack.Attack(false,false);
+    }
+    private void ItemActionPerformed(InputAction.CallbackContext obj)
+    {
+        _linkAttack.Attack(false, true);
+
     }
 }
