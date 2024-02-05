@@ -8,7 +8,7 @@ public class ItemComponent : MonoBehaviour
     private int _itemId;
     [SerializeField]
     private int _itemPrice;
-
+    [SerializeField] private AudioClip _getItemSoundEffect;
 
     private LinkAnimatorComponent _link;
     /*
@@ -37,6 +37,8 @@ public class ItemComponent : MonoBehaviour
             _link.ItemPicked(1);
             InventoryManager.Instance.UnlockItem(_itemId);
             InventoryManager.Instance.ChangeItemEquiped(_itemId);
+
+            AudioManager.Instance.PlaySoundEffect(_getItemSoundEffect);
 
             Destroy(gameObject);
         }

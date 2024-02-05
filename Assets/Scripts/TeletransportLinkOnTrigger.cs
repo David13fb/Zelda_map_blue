@@ -30,8 +30,11 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
         GameObject Link = linkCollider.gameObject;
         if(Link.GetComponent<LinkController>() != null)
         {
-            if(_movingToCave)
+            if (_movingToCave)
+            {
                 GameManager.instance.linkOnCave = true;
+                AudioManager.Instance.PlayOrStopMusic(false);
+            }
 
             Link.transform.position = _newLinkPosition;
             _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
@@ -44,6 +47,7 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
             if (!_movingToCave)
             {
                 GameManager.instance.linkOnCave = false;
+                AudioManager.Instance.PlayOrStopMusic(true);
             }
 
             //_camera.GetComponent<CameraController>().enabled = !_movingToCave;
