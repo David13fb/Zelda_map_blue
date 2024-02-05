@@ -267,7 +267,7 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""b"",
                     ""type"": ""Button"",
-                    ""id"": ""1363f092-0825-4cfc-a0ca-0854189986ee"",
+                    ""id"": ""3d9bfa4a-1029-4011-88d3-4e07f9973fa4"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -277,8 +277,8 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""7b4a66d3-2e26-4777-a78b-7a43489da34e"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""id"": ""94176730-3dd8-4d64-9db0-9d52152c8f93"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -288,41 +288,8 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""28dc79f9-73d1-4f3d-aac1-65e1a1e8dbe3"",
-                    ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""b"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6a3c61d6-9040-4d6f-8b66-aa0a8a7f0114"",
-                    ""path"": ""<XInputController>/buttonEast"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""b"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ba70e40c-428a-4f1f-9db4-6023600bcbb5"",
-                    ""path"": ""<Keyboard>/z"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""b"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""926d775e-50f2-4c28-82bd-69a0e323ffc8"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""id"": ""043b3ab6-7681-4d1a-a085-789dfa2472b5"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -370,29 +337,7 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0c0639d1-9030-49b7-8975-36d13e0f29e0"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cabd0be3-980d-4377-8ae3-2d705e8956ee"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""64f7218d-b65b-440d-af28-826bc148c9d5"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -414,7 +359,7 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""09ffea23-329e-4943-9fe2-cb4a4fa704d9"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -436,18 +381,7 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a48031f1-cf26-4c68-9ac1-fbe68d52be05"",
-                    ""path"": ""<Keyboard>/i"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Attack cancel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b72ef02c-ccdb-4ff0-88f8-c31b20b60fc7"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -469,7 +403,7 @@ public partial class @LinkControlKeyboard: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9ad52f60-185b-4d41-9e94-d2c9b9b6fccf"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

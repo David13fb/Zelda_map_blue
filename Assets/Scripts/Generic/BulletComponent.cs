@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class BulletComponent : MonoBehaviour
@@ -31,6 +32,7 @@ public class BulletComponent : MonoBehaviour
     void Update()
     {
         _myTransform.position += _direction * _speed * Time.deltaTime;
+        if(_direction.magnitude * _speed == 0) Destroy(gameObject);
     }
 
     //Destroys the bullet if not on sight
