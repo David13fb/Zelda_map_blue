@@ -56,7 +56,7 @@ public class HP_manager : MonoBehaviour
         _hudManager.UpdateHPmaxHP(_currentMaxHp);
     }
 
-    public void Die()
+    private void Die()
     {
         if (_thisIsPlayer)
         {
@@ -66,6 +66,11 @@ public class HP_manager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public void deathAnimFinished()
+    {
+        GameManager.instance.DeathAnimationFinished();
     }
 
     public bool IsFullHP()

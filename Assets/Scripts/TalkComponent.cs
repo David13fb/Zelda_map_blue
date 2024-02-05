@@ -27,12 +27,10 @@ public class TalkComponent : MonoBehaviour
     public void Reset(string text)
     {
         _textRef.text = "";
-        letterShown = 0;
+        letterShown = -1;
         _timer = Time.time;
         ChangeText(text);
     }
-
-
 
     void Update()
     {

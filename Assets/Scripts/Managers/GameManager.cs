@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
         _changeRedScreen = FindAnyObjectByType<ChangeToRedDeadScreen>();
         _characterController = FindAnyObjectByType<LinkController>();
+        _linkAnimatorComponent = FindObjectOfType<LinkAnimatorComponent>();
         cam = Camera.main;
     }
 
@@ -87,13 +88,14 @@ public class GameManager : MonoBehaviour
     public void LinkHasDied()
     {
         _changeRedScreen.SetDeathScreenColorChange();
-        Time.timeScale = 0;
+        _linkAnimatorComponent.LinkIsDead();
     }
 
     public void DeathAnimationFinished()
     {
         _characterController.DisableLink();
         _changeRedScreen.SpawnLoseGame();
+        Time.timeScale = 0;
     }
 
    

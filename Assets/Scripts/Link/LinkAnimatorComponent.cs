@@ -61,5 +61,10 @@ public class LinkAnimatorComponent : MonoBehaviour
 
     }
 
+    public void LinkIsDead()
+    {
+        _animator.SetBool("LinkDeath", true);
+    }
+
 
 }
