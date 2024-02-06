@@ -60,14 +60,14 @@ public class BlueOctorokIA : MonoBehaviour
         _prevDirection = direction;
 
         _targetPoint.position = _myTransform.position + newShootingOffset;
-        _chMovement.MoveCharacter(direction);
+        _chMovement.SetCharacterVelocity(Vector2.zero);
     }
 
     public void StopDirection()
     {
         Vector2 direction = Vector2.zero;
         _targetPoint.position = _myTransform.position;
-        _chMovement.MoveCharacter(direction);
+        _chMovement.SetCharacterVelocity(Vector2.zero);
     }
 
     //Method to shoot
