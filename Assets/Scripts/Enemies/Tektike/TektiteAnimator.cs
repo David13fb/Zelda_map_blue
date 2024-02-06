@@ -5,58 +5,64 @@ using UnityEngine;
 using UnityEngine.Windows;
 
 public class TektiteAnimator : MonoBehaviour
-{
-    [SerializeField] private Animator _animator;
-    private bool jump;
+{/*
+    [SerializeField]
+    private Animator _animator;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        
     }
-
-
-    private void Jump(bool newState)
+    static void Cloud1()
     {
-        jump = newState;
-        StartCoroutine(Move());
+
+        _animator.SetBool("Cloud1", true);
+        _animator.SetBool("Cloud2", false);
+
+
+
+    }
+    static void Cloud2()
+    {
+
+        _animator.SetBool("Cloud1", false);
+        _animator.SetBool("Cloud2", true);
+
+
+
     }
 
-         IEnumerator Move()
-         {
-        if (jump)
+    static void Cloud3() 
+    {
+
+
+        _animator.SetBool("Cloud1", false);
+        _animator.SetBool("Cloud2", false);
+
+
+
+    }
+
+    //vector that the IA will pass, its the position
+    static void Tektike(Vector3 movement)
+    {
+        //if its on the groud
+        if ()
         {
-            //time should be adapted with duration of displacement in the IA
-            // Animación "up"
-            _animator.SetBool("Move", false);
-            yield return new WaitForSeconds(1.3f);
-
-            // Animación "down"
-            _animator.SetBool("Move", true);
-            yield return new WaitForSeconds(0.8f);
-
-        }
-        else 
-        {
-
-            // Animación "up"
-            _animator.SetBool("Move", false);
-            yield return new WaitForSeconds(0.8f);
-
-            // Animación "down"
-            _animator.SetBool("Move", true);
-            yield return new WaitForSeconds(0.8f);
-
-
-
-        }
-
 
            
-
-
-
+        }
+        //if its on the sky
+        else
+        { 
         
-         }
-}
+        
+        
+        }
+    
+    
+    
+    }
 
+    */
+}
