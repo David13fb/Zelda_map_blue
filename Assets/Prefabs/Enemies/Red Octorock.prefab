@@ -104,7 +104,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578567725743851718}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _linkTransform: {fileID: 0}
-  _colorAmount: 3
+  _currentColorCount: 0
 --- !u!114 &3742496855735749239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 2631205176616915908, guid: e4ca3f3fda1e8de48b79f23d29634b4d, type: 3}
   _targetPosition: {fileID: 1224683102966683452}
+  _isPlayer: 0
 --- !u!114 &7988033313172404553
 MonoBehaviour:
   m_ObjectHideFlags: 0

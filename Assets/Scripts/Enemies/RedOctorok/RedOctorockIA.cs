@@ -53,7 +53,7 @@ public class RedOctorokIA : MonoBehaviour
             newTargetOffset = new Vector3(0f, -1.5f);
         }
         
-        _chMovement.SetCharacterVelocity(direction);
+        _chMovement.MoveCharacter(direction);
         _targetPoint.position = _myTransform.position + newTargetOffset;
 
         _sw.Restart();
@@ -63,7 +63,7 @@ public class RedOctorokIA : MonoBehaviour
     {
         Vector2 direction = Vector2.zero;
         _targetPoint.position = _myTransform.position;
-        _chMovement.SetCharacterVelocity(direction);
+        _chMovement.MoveCharacter(direction);
     }
     //Method to decide when to shoot
     private void CreateRandomInterval()

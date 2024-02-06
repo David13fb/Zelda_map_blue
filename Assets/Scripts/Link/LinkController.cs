@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
@@ -11,6 +13,7 @@ public class LinkController : MonoBehaviour
 
     private CharacterMovement _chMovement;
     private bool _blockMovement = false;
+    private bool _success = true;
 
     void Start()
     {
@@ -18,12 +21,19 @@ public class LinkController : MonoBehaviour
     }
 
     //mueve al personaje en una de las 4 direcciones b�sicas seg�n el input
-    public void MoveLink(Vector2 inputDirection)
+    public void MoveLink(UnityEngine.Vector2 inputDirection)
     {
-        // Debug.Log(inputDirection);
-        //Debug.Log(_blockMovement);
         if(!_blockMovement)
-            _chMovement.SetCharacterVelocity(inputDirection);
+            _success = _chMovement.MoveCharacter(inputDirection);
+            if (!_success)
+            {
+                _success = _chMovement.MoveCharacter(new UnityEngine.Vector2(inputDirection.x, 0));
+                if (!_success)
+                {
+                    _success = _chMovement.MoveCharacter(new UnityEngine.Vector2(0, inputDirection.y));
+                }
+            }
+            
     }
 
     //devuelve el vector de input pero transformado en un vector unitario en una de las 4 direcciones
@@ -51,7 +61,7 @@ public class LinkController : MonoBehaviour
     public void SetBlockMovement(bool newValue)
     {
         _blockMovement = newValue;
-        _chMovement.SetCharacterVelocity(Vector2.zero);
+        _chMovement.MoveCharacter(UnityEngine.Vector2.zero);
     }
 
     public void DisableLink()

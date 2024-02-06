@@ -15,7 +15,7 @@ public class TakeDamageComponent : MonoBehaviour
     [SerializeField]Transform _linkTransform; //taken to push everything in links looking direction
    
     //getting pushed related parameters:
-    private Vector3 _pushDirection;
+    private Vector2 _pushDirection;
     private Color[] sequenceOfColors = new Color[] { Color.white, Color.red, Color.blue, Color.green};
 
     private bool _colorLoopEnabled;
@@ -45,7 +45,7 @@ public class TakeDamageComponent : MonoBehaviour
                 _hpManager.changeCurrentHealth(-damage); //damage taken is a negative, damage is a positive value
                 ColorLoop();
                 _pushDirection = -_linkTransform.up;
-                _rb.AddForce(_pushDirection);
+                _rb.MovePosition(_rb.position + _pushDirection);
             }
     }
 
