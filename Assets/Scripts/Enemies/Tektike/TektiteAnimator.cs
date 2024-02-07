@@ -8,41 +8,55 @@ public class TektiteAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     private bool jump;
-    private float _jumptime = 0.4f;
-    private float _longJumpTime = 0.7f;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
+        
+    }
+
+
+    private void Jump(bool newState)
+    {
+        jump = newState;
         StartCoroutine(Move());
     }
 
-    /*private void Jump(bool newState)
-    {
-        jump = newState;
+         IEnumerator Move()
+         {
         if (jump)
         {
-            _jumptime = _longJumpTime; 
-        }
-        else
-        {
-            _jumptime = 0.4f; 
-        }
-    }
-    */
+            //time should be adapted with duration of displacement in the IA
+            // Animación "up"
+            _animator.SetBool("Move", false);
+            yield return new WaitForSeconds(1.3f);
 
-    private IEnumerator Move()
-    {
-        while (true)
-        {
             // Animación "down"
             _animator.SetBool("Move", true);
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.8f);
+
+        }
+        else 
+        {
 
             // Animación "up"
             _animator.SetBool("Move", false);
-            yield return new WaitForSeconds(_jumptime);
+            yield return new WaitForSeconds(0.8f);
+
+            // Animación "down"
+            _animator.SetBool("Move", true);
+            yield return new WaitForSeconds(0.8f);
+
+
+
         }
-    }
+
+
+           
+
+
+
+        
+         }
 }
 
