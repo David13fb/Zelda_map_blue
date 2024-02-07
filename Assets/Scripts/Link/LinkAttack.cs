@@ -20,6 +20,8 @@ public class LinkAttack : MonoBehaviour
     [SerializeField]
     private ShootingComponent _shootingComponent;
 
+    private InventoryManager _inventoryManager;
+
     private BombScript _bombScript;
 
     private Transform _linkTransform;
@@ -39,6 +41,7 @@ public class LinkAttack : MonoBehaviour
 
     void Start()
     {
+        _inventoryManager = FindAnyObjectByType<InventoryManager>();
         _linkController = GetComponent<LinkController>();
         _anim = FindAnyObjectByType<LinkAnimatorComponent>();
         _linkTransform = transform;
@@ -81,23 +84,23 @@ public class LinkAttack : MonoBehaviour
             {
                 _attackDirection = Vector3.down;
             }
+            if (_hpManager.IsFullHP() && !bomb)
+            {
+                _shootingComponent.Shoot();
+            }
             if (attacked && !bomb)
             {
-                if (_hpManager.IsFullHP())
-                {
-                    _shootingComponent.Shoot();
-                }
                 _swordInstance = Instantiate(_sword, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                 _anim.UpdateAttackSword(true);
                 _linkController.SetBlockMovement(true);
             }
-            else if (!attacked && bomb)
+            else if (!attacked && bomb && _inventoryManager.nBombs > 0)
             {
                 _bombInstance = Instantiate(_bomb, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
-                _bombScript.Bomb();
+                _inventoryManager.ChangeBombAmount(- 1);
             }
         }
-        else if (!attacked && !bomb)
+        else if (!attacked)
         {
             Destroy(_swordInstance);
             _linkController.SetBlockMovement(false);

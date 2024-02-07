@@ -5,14 +5,15 @@ using UnityEngine;
 public class WallScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        gameObject.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D bombColider)
     {
-        
+        if (bombColider.gameObject.GetComponent<BombScript>() != null)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
