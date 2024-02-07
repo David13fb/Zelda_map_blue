@@ -17,9 +17,11 @@ public class HP_manager : MonoBehaviour
     bool _thisIsPlayer = false;
     [SerializeField]
     private HUDmanager _hudManager;
+    private LinkController _linkController;
 
     void Start()
     {
+        _linkController = FindObjectOfType<LinkController>();
         _currentHealth = _currentMaxHp = _startingMaxHp;
         if (_thisIsPlayer)
             changeHpGauge();
@@ -27,6 +29,7 @@ public class HP_manager : MonoBehaviour
 
     public void changeCurrentHealth(int damage)
     {
+
         _currentHealth += damage;
         if(_currentHealth > _currentMaxHp)
             _currentHealth = _currentMaxHp;
