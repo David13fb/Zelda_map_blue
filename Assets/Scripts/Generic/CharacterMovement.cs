@@ -8,8 +8,6 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float _speed = 1.0f;
 
-    private float collisionOffset = 0.1f;
-
     public ContactFilter2D movementFilter;
     public bool NotMoving { get { return _rb.velocity == Vector2.zero; } }
 

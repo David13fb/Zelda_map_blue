@@ -99,8 +99,8 @@ public class HUDmanager : MonoBehaviour
     }
     private void Start()
     {
-           _lastCameraPosition = Camera.main.transform.position;
-          // _lastCameraPosition.y = 376.04F;
+        _lastCameraPosition = Camera.main.transform.position;
+        // _lastCameraPosition.y = 376.04F;
         //Debug.Log("primara posicion"+_lastCameraPosition);
     }
     bool primerapantalla = true;

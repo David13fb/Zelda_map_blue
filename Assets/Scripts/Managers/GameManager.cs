@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     // This will be used to access the LinkController
     private LinkController _characterController;
+    private LevelManager _levelManager;
     private ChangeToRedDeadScreen _changeRedScreen;
     private LinkAnimatorComponent _linkAnimatorComponent;
 
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
         _changeRedScreen = FindAnyObjectByType<ChangeToRedDeadScreen>();
         _characterController = FindAnyObjectByType<LinkController>();
         _linkAnimatorComponent = FindObjectOfType<LinkAnimatorComponent>();
+        _levelManager = FindObjectOfType<LevelManager>();
         cam = Camera.main;
     }
 
@@ -89,6 +91,7 @@ public class GameManager : MonoBehaviour
     {
         _changeRedScreen.SetDeathScreenColorChange();
         _linkAnimatorComponent.LinkIsDead();
+        _levelManager.ReloadLevel();
     }
 
     public void DeathAnimationFinished()

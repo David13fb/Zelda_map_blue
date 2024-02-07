@@ -2548,6 +2548,7 @@ GameObject:
   - component: {fileID: 1006073787}
   - component: {fileID: 1006073788}
   - component: {fileID: 1006073789}
+  - component: {fileID: 1006073790}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2605,6 +2606,18 @@ MonoBehaviour:
   _hudManager: {fileID: 1043487593}
   itemsUnlocked: 00000000
   borrarEsto: 0
+--- !u!114 &1006073790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006073786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4253cea2dbef1074fb837e1e23dee1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1015790615
 GameObject:
   m_ObjectHideFlags: 0
