@@ -51,13 +51,15 @@ public class InputManager : MonoBehaviour
         _ItemInput.action.performed -= ItemActionPerformed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        _linkController.MoveLink(_movementInput.action.ReadValue<Vector2>());
-        _linkAnim.LateUpdateMoveAnimation(_movementInput.action.ReadValue<Vector2>());
-        _linkAttack.inputvector(_movementInput.action.ReadValue<Vector2>());
+        Vector2 movementDirection = _movementInput.action.ReadValue<Vector2>();
         
+        _linkController.MoveLink(movementDirection);
+        _linkAnim.LateUpdateMoveAnimation(movementDirection);
+        _linkAttack.inputvector(movementDirection);
     }
+
 
     private void AttackActionPerformed(InputAction.CallbackContext obj)
     {
