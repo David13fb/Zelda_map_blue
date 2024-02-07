@@ -18,11 +18,11 @@ public class BulletComponent : MonoBehaviour
         _direction = direct.position - _myTransform.position;
         _direction = _direction.normalized;
     }
-
     public void SetLinkSwordDirection(Vector3 direction)
     {
         _direction = direction;
         _direction.Normalize();
+        
     }
 
     void Awake()
