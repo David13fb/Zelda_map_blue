@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private Transform _transform;
-    private Rigidbody2D _rb;
     [SerializeField]
     private float _speed = 1.0f;
+
+    private float collisionOffset = 0.1f;
+
+    public ContactFilter2D movementFilter;
+    public bool NotMoving { get { return _rb.velocity == Vector2.zero; } }
+
+
+    private Transform _transform;
+    private Rigidbody2D _rb;
     Vector2 actualspeed = Vector2.zero;
     Vector2 targetspeed = Vector2.zero;
    

@@ -9,12 +9,12 @@ public class DamagingComponent : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         bool somethingWasHit = false;
+        bool linkBlockedIt = false;
 
         //Damages whatever it hits if it can be damaged
         TakeDamageComponent damage = collision.gameObject.GetComponent<TakeDamageComponent>();
         if (damage != null)
-        {
-            damage.TakeDamage(_damage);
+        { 
             somethingWasHit = true;
         }
 
@@ -24,7 +24,21 @@ public class DamagingComponent : MonoBehaviour
             BulletComponent bulletComponent = GetComponent<BulletComponent>();
             if (bulletComponent != null)
             {
+                LinkController linkController = collision.gameObject.GetComponent<LinkController>();
+                Debug.Log(bulletComponent.DirectionToCounter);
+                if(linkController != null && bulletComponent.DirectionToCounter == linkController.lastInput && linkController._chMovement.NotMoving)
+                {
+                    linkBlockedIt = true;
+                }
+
                 Destroy(gameObject);
+            }
+
+
+            //Debug.Log(linkBlockedIt);
+            if (!linkBlockedIt)
+            {
+                damage.TakeDamage(_damage);
             }
         }
         
