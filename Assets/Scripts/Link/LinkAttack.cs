@@ -20,6 +20,8 @@ public class LinkAttack : MonoBehaviour
     [SerializeField]
     private ShootingComponent _shootingComponent;
 
+    private BombScript _bombScript;
+
     private Transform _linkTransform;
 
     private float _offset = 1.0f;
@@ -42,6 +44,7 @@ public class LinkAttack : MonoBehaviour
         _linkTransform = transform;
         _myRb = GetComponent<Rigidbody2D>();
         _shootingComponent = GetComponent<ShootingComponent>();
+        _bombScript = GetComponent<BombScript>();
     }
     public void inputvector(Vector2 input)
     {
@@ -78,12 +81,12 @@ public class LinkAttack : MonoBehaviour
             {
                 _attackDirection = Vector3.down;
             }
-            if (_hpManager.IsFullHP())
-            {
-                _shootingComponent.Shoot();
-            }
             if (attacked && !bomb)
             {
+                if (_hpManager.IsFullHP())
+                {
+                    _shootingComponent.Shoot();
+                }
                 _swordInstance = Instantiate(_sword, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                 _anim.UpdateAttackSword(true);
                 _linkController.SetBlockMovement(true);
@@ -91,6 +94,7 @@ public class LinkAttack : MonoBehaviour
             else if (!attacked && bomb)
             {
                 _bombInstance = Instantiate(_bomb, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                _bombScript.Bomb();
             }
         }
         else if (!attacked && !bomb)
