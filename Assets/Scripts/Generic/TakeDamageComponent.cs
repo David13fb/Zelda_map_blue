@@ -32,7 +32,6 @@ public class TakeDamageComponent : MonoBehaviour
     //methods
     private void Start()
     {
-        _linkTransform = FindObjectOfType<LinkController>().transform;
         _rb = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _hpManager = GetComponent<HP_manager>();
