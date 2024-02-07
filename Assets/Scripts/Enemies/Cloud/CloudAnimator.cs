@@ -9,6 +9,8 @@ public class CloudAnimator : MonoBehaviour
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
     [SerializeField]
+    private GameObject _enemy;
+    [SerializeField]
     private float _time;
 
     private void Start()
@@ -17,6 +19,7 @@ public class CloudAnimator : MonoBehaviour
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(CloudAppear());
+        _enemy.SetActive(false);
     }
     IEnumerator CloudAppear()
     {
@@ -27,9 +30,11 @@ public class CloudAnimator : MonoBehaviour
 
         // call to set inactive the sprite
         gameObject.SetActive(false);
-        
        
+        _enemy.SetActive(true);
+
 
 
     }
+    
 }
