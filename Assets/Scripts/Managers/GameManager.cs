@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool linkOnCave;
+    // This will be used to check if the player is dead
+    public bool isDead;
     Vector2 direc;
     [SerializeField]
     private Camera cam;
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     // Singleton pattern
     public static GameManager instance;
-    
+
     // This will be used to access the CameraController
     private CameraController _cameraController;
 
@@ -91,14 +93,13 @@ public class GameManager : MonoBehaviour
     {
         _changeRedScreen.SetDeathScreenColorChange();
         _linkAnimatorComponent.LinkIsDead();
-        _levelManager.ReloadLevel();
     }
 
     public void DeathAnimationFinished()
     {
         _characterController.DisableLink();
         _changeRedScreen.SpawnLoseGame();
-        Time.timeScale = 0;
+        isDead = true;
     }
 
    

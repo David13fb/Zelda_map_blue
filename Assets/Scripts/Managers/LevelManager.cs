@@ -5,8 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-     public void ReloadLevel()
+
+    GameManager _gameManager;
+
+
+    private void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        _gameManager = GameManager.instance;
+
+    }
+    public void ReloadLevel()
+    {
+        if (_gameManager.isDead)
+        {
+           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
+

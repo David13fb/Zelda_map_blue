@@ -9,17 +9,19 @@ public class InputManager : MonoBehaviour
     [SerializeField] private InputActionReference _attackInput;
     [SerializeField] private InputActionReference _attackCancelInput;
     [SerializeField] private InputActionReference _ItemInput;
+    
 
     private LinkController _linkController;
     private LinkAttack _linkAttack;
     private LinkAnimatorComponent _linkAnim;
+    private LevelManager _levelManager;
 
     private void Start()
     {
         _linkController = FindObjectOfType<LinkController>();
         _linkAttack = FindObjectOfType<LinkAttack>();
         _linkAnim = FindObjectOfType<LinkAnimatorComponent>();
-        
+        _levelManager = FindObjectOfType<LevelManager>();
 
     }
     private void Awake()
@@ -62,7 +64,6 @@ public class InputManager : MonoBehaviour
     private void AttackActionPerformed(InputAction.CallbackContext obj)
     {
         _linkAttack.Attack(true,false);
-       
     }
 
     private void AttackCancelled(InputAction.CallbackContext obj)
@@ -72,6 +73,6 @@ public class InputManager : MonoBehaviour
     private void ItemActionPerformed(InputAction.CallbackContext obj)
     {
         _linkAttack.Attack(false, true);
-
+        _levelManager.ReloadLevel();
     }
 }
