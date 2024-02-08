@@ -12,8 +12,8 @@ public class OctorokIA : MonoBehaviour
     [SerializeField] private Transform _targetPoint;
 
     //Timers to move and stop:
-    [SerializeField] private int _timerToStop= 600;
-    [SerializeField] private int _timerToMove = 1200;
+    [SerializeField] private int _timerToStop= 500;
+    [SerializeField] private int _timerToMove = 1000;
     private Stopwatch _sw = new Stopwatch();
     private bool _parada = false;
 
