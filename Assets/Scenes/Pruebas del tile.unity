@@ -2742,6 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkOnCave: 0
+  isDead: 0
   cam: {fileID: 1497397037}
   screenSizeWidth: 0
   screenSizeHeight: 0
@@ -4534,7 +4535,7 @@ Transform:
   m_GameObject: {fileID: 1497397035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.34, y: 5.57, z: -10}
+  m_LocalPosition: {x: 7.75, y: 5.57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
