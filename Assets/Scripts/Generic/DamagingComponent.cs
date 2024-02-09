@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DamagingComponent : MonoBehaviour
@@ -33,7 +34,13 @@ public class DamagingComponent : MonoBehaviour
 
                 Destroy(gameObject);
             }
+            BombScript bombScript = GetComponent<BombScript>();
+            if (bombScript != null)
+            {
+                LinkController linkController = collision.gameObject.GetComponent<LinkController>();
+                
 
+            }
 
             //Debug.Log(linkBlockedIt);
             if (!linkBlockedIt)

@@ -9,11 +9,6 @@ public class WallScript : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    private void OnTriggerEnter2D(Collider2D bombColider)
-    {
-        if (bombColider.gameObject.GetComponent<BombScript>() != null)
-        {
-            gameObject.SetActive(false);
-        }
-    }
+ 
+   
 }

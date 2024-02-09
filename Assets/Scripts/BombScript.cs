@@ -7,14 +7,12 @@ using UnityEngine;
 public class BombScript : MonoBehaviour
 {
     [SerializeField] private float explosionTime = 1.0f;
-    private CircleCollider2D _circleCollider;
+    [SerializeField]
+    private CircleCollider2D _circleCollider1;
+    [SerializeField]
+    private CircleCollider2D _circleCollider2;
     // Start is called before the first frame update
 
-    private void Start()
-    {
-        _circleCollider = GetComponent<CircleCollider2D>();
-        _circleCollider.enabled = false;
-    }
     private void Destroy()
     {
         gameObject.SetActive(false);
@@ -24,7 +22,9 @@ public class BombScript : MonoBehaviour
         explosionTime--;
         if (explosionTime < 100)
         {
-            _circleCollider.enabled = true;
+            _circleCollider1.enabled = true;
+            _circleCollider2.enabled = true;
+           
         }
     }
     private void LateUpdate()
@@ -33,5 +33,9 @@ public class BombScript : MonoBehaviour
         {
             Destroy();
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.GetComponent<HP_manager>() == null) GameObject.Destroy(collision.gameObject);
     }
 }
