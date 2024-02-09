@@ -12,17 +12,19 @@ public class HP_manager : MonoBehaviour
     [SerializeField]
     int _currentMaxHp;
     [SerializeField]
-    int _currentHealth;
+    public int _currentHealth;
     [SerializeField]
     bool _thisIsPlayer = false;
     [SerializeField]
     private HUDmanager _hudManager;
     private LinkController _linkController;
+    private DropitemScrips _dropitem;
 
     void Start()
     {
         _linkController = FindObjectOfType<LinkController>();
         _currentHealth = _currentMaxHp = _startingMaxHp;
+        _dropitem = GetComponent<DropitemScrips>();
         if (_thisIsPlayer)
             changeHpGauge();
     }
@@ -40,6 +42,7 @@ public class HP_manager : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            _dropitem.DropItem();
             Die();
         }
 
