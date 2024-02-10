@@ -31603,15 +31603,15 @@ PrefabInstance:
     - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: _trhowingSwordDown
       value: 
-      objectReference: {fileID: 3879120149748665134, guid: 35d5db180fced1641954133f4c32389b, type: 3}
+      objectReference: {fileID: 3879120149748665134, guid: d431b00a0abcc014fb3fc2c663c30c8c, type: 3}
     - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: _trhowingSwordLeft
       value: 
-      objectReference: {fileID: 3879120149748665134, guid: 4a4a4ad4cef74fd4bb2b89c794b4d11c, type: 3}
+      objectReference: {fileID: 3879120149748665134, guid: d6daea23676a35040b6abeb3bd5f00ed, type: 3}
     - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: _trhowingSwordRight
       value: 
-      objectReference: {fileID: 3879120149748665134, guid: d061f883f1afe0f4d86f871d0841f75c, type: 3}
+      objectReference: {fileID: 3879120149748665134, guid: 1aa904303f64e7b48ab29cf9721cc461, type: 3}
     - target: {fileID: 8590169248246799019, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: _hudManager
       value: 

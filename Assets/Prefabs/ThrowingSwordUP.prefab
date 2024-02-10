@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7262923312362115882}
   - component: {fileID: 8782118404454059097}
   m_Layer: 10
-  m_Name: ThrowingSword
+  m_Name: ThrowingSwordUP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
