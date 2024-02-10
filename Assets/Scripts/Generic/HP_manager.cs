@@ -69,7 +69,7 @@ public class HP_manager : MonoBehaviour
         }
         else
         {
-            _dropitem.DropItem();
+            //_dropitem.DropItem();
             Destroy(this.gameObject);
         }
     }
