@@ -8,8 +8,8 @@ public class CloudAnimator : MonoBehaviour
     private Animator _animator;
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
-    [SerializeField]
-    private float _time;
+  
+    private float _time=0.4f;
     [SerializeField] private GameObject _enemy;
 
     private void Start()

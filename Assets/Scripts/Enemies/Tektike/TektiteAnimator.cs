@@ -9,12 +9,13 @@ public class TektiteAnimator : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private bool jump= false;
-    private float _jumptime = 0.8f;
-    private float _longJumpTime = 1.3f;
+    private float _jumptime = 0.6f;
+    private float _longJumpTime = 1.0f;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
+     
         StartCoroutine(Move());
        
     }
@@ -28,7 +29,7 @@ public class TektiteAnimator : MonoBehaviour
         }
         else
         {
-            _jumptime = 0.8f; 
+            _jumptime = 0.6f; 
         }
     }
    
@@ -38,7 +39,7 @@ public class TektiteAnimator : MonoBehaviour
         {
             // Animación "down"
             _animator.SetBool("Move", true);
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(0.6f);
 
             // Animación "up"
             _animator.SetBool("Move", false);
