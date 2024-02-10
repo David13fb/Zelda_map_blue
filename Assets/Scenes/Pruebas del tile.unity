@@ -967,6 +967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tektite (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9120431676701407679, guid: 87973fa0ef2c7944898eb96de2f268de, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

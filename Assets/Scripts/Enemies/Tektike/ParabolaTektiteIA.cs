@@ -11,8 +11,6 @@ public class ParabolaTektiteIA : MonoBehaviour
     private Vector3 _targetPoint;
     private Vector2 _direction;
    
-    [SerializeField] private float _maxJumpSpeed;
-    private float _jumpSpeed;
     [SerializeField] int _timeBetweenJumps = 4000;
     private Stopwatch _sw = new Stopwatch();
 

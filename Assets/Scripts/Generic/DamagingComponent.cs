@@ -28,7 +28,6 @@ public class DamagingComponent : MonoBehaviour
                 if (bulletComponent != null)
                 {
                     LinkController linkController = collision.gameObject.GetComponent<LinkController>();
-                    Debug.Log(bulletComponent.DirectionToCounter);
                     if (linkController != null && bulletComponent.DirectionToCounter == linkController.lastInput && linkController._chMovement.NotMoving)
                     {
                         linkBlockedIt = true;
