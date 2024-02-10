@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a067d975771e704eaca464c9e27ec8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetPoint: {fileID: 0}
+  _targetPoint: {fileID: 1224683102966683452}
   _timerToStop: 600
   _timerToMove: 1200
 --- !u!114 &6353977900426453911
