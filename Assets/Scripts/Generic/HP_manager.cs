@@ -42,7 +42,6 @@ public class HP_manager : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            _dropitem.DropItem();
             Die();
         }
 
@@ -70,6 +69,7 @@ public class HP_manager : MonoBehaviour
         }
         else
         {
+            _dropitem.DropItem();
             Destroy(this.gameObject);
         }
     }
