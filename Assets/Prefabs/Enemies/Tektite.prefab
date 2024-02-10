@@ -262,3 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOctorokMoblin: 0
+  _isLeever: 0
+  _isTektite: 1

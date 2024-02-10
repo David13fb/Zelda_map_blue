@@ -240,6 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOctorokMoblin: 0
+  _isLeever: 1
+  _isTektite: 0
 --- !u!114 &2090453761859292974
 MonoBehaviour:
   m_ObjectHideFlags: 0

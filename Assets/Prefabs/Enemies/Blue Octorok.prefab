@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1578567725743851718, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Name
-      value: Blue Octorock
+      value: Blue Octorok
       objectReference: {fileID: 0}
     - target: {fileID: 2099354942860667337, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Controller
@@ -87,6 +87,10 @@ PrefabInstance:
     - target: {fileID: 4910489882958248411, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293510377640294011, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _isOctorokMoblin
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Enabled

@@ -29,6 +29,8 @@ public class ParabolaTektiteIA : MonoBehaviour
 
     bool _hasArrived = false;
 
+    bool _onScreen =true;
+
     //Calculates new target position and the direction
     void NewTargetPosition()
     {
@@ -50,6 +52,14 @@ public class ParabolaTektiteIA : MonoBehaviour
         //_chMovement.SetCharacterVelocity(_currentDisplacementVector.normalized);
     }
 
+    public void StartMoving()
+    {
+        _onScreen = true;
+    }
+    public void StopMoving()
+    {
+        _onScreen = false;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +72,7 @@ public class ParabolaTektiteIA : MonoBehaviour
     void Update()
     {
         float currentOffset;
-        if ((_targetPoint - _myTransform.position).magnitude > 0.01f)
+        if ((_targetPoint - _myTransform.position).magnitude > 0.01f && _onScreen)
         {
             UnityEngine.Debug.Log((Time.time - _timer) / _jumpDuration);
             currentOffset = Mathf.Lerp(0, _jumpYOffset, - Mathf.Pow(2*((Time.time - _timer)/_jumpDuration) - 1,2)+1);
