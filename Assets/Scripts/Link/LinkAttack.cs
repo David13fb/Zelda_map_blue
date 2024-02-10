@@ -51,7 +51,6 @@ public class LinkAttack : MonoBehaviour
     private Vector3 _attackDirection = Vector3.right;
     private Vector2 _oldInput = Vector2.zero;
     private Vector2 _input = Vector2.zero;
-    private Vector3 _shootDirection = Vector3.right;
 
     private GameObject _swordInstance;
     private GameObject _bombInstance;
@@ -108,35 +107,36 @@ public class LinkAttack : MonoBehaviour
             {
                     if (_oldInput.x == 1)
                     {
-                        _shootDirection = Vector3.right;
-                        GameObject newBullet = Instantiate(_trhowingSwordRight, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+                        GameObject newBullet = Instantiate(_trhowingSwordRight, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                         BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
-                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                        bulletComponent.SetLinkSwordDirection(_attackDirection);
                     }
 
                     else if (_oldInput.x == -1)
                     {
-                        _shootDirection = Vector3.left;
-                        GameObject newBullet = Instantiate(_trhowingSwordLeft, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+                        
+                        GameObject newBullet = Instantiate(_trhowingSwordLeft, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                         BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
-                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                        bulletComponent.SetLinkSwordDirection(_attackDirection);
                     }
 
                     else if (_oldInput.y == 1)
                     {
-                        _shootDirection = Vector3.up;
-                        GameObject newBullet = Instantiate(_trhowingSwordUp, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+            
+                        GameObject newBullet = Instantiate(_trhowingSwordUp, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                         BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
-                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                        bulletComponent.SetLinkSwordDirection(_attackDirection);
                     }
 
                     else if (_oldInput.y == -1)
                     {
-                        _shootDirection = Vector3.down;
-                        GameObject newBullet = Instantiate(_trhowingSwordDown, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+         
+                        GameObject newBullet = Instantiate(_trhowingSwordDown, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                         BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
-                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                        bulletComponent.SetLinkSwordDirection(_attackDirection);
                     }
+
+              
 
             }
             if (attacked && !bomb)
