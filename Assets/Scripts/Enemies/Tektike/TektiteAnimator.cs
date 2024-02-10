@@ -7,56 +7,44 @@ using UnityEngine.Windows;
 public class TektiteAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-    private bool jump;
+
+    private bool jump= false;
+    private float _jumptime = 0.8f;
+    private float _longJumpTime = 1.3f;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-        
+        StartCoroutine(Move());
+       
     }
 
-
-    private void Jump(bool newState)
+   private void Jump(bool newState)
     {
         jump = newState;
-        StartCoroutine(Move());
-    }
-
-         IEnumerator Move()
-         {
         if (jump)
         {
-            //time should be adapted with duration of displacement in the IA
-            // Animación "up"
-            _animator.SetBool("Move", false);
-            yield return new WaitForSeconds(1.3f);
-
-            // Animación "down"
-            _animator.SetBool("Move", true);
-            yield return new WaitForSeconds(0.8f);
-
+            _jumptime = _longJumpTime; 
         }
-        else 
+        else
         {
-
-            // Animación "up"
-            _animator.SetBool("Move", false);
-            yield return new WaitForSeconds(0.8f);
-
+            _jumptime = 0.8f; 
+        }
+    }
+   
+    private IEnumerator Move()
+    {
+        while (true)
+        {
             // Animación "down"
             _animator.SetBool("Move", true);
             yield return new WaitForSeconds(0.8f);
 
-
-
+            // Animación "up"
+            _animator.SetBool("Move", false);
+            yield return new WaitForSeconds(_jumptime);
         }
+    }
 
-
-           
-
-
-
-        
-         }
 }
 
