@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb3cd76d5c967845a000a9aa9faeaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingMaxHp: 6
+  _startingMaxHp: 1
   _currentMaxHp: 0
   _currentHealth: 0
   _thisIsPlayer: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxJumpSpeed: 0
-  _timeBetweenJumps: 1000
+  _timeBetweenJumps: 3000
   _jumpDuration: 1
   _maxXMovement: 3
   _maxYMovement: 1.5
