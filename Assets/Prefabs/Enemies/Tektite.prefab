@@ -196,9 +196,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0015976429, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.30668616
 --- !u!95 &-4322959642086433484
 Animator:
   serializedVersion: 5
@@ -248,6 +248,8 @@ MonoBehaviour:
   _maxJumpSpeed: 0
   _timeBetweenJumps: 1000
   _jumpDuration: 1
+  _maxXMovement: 3
+  _maxYMovement: 1.5
 --- !u!114 &-4588190238406637910
 MonoBehaviour:
   m_ObjectHideFlags: 0
