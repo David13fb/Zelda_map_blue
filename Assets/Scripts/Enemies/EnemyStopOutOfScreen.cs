@@ -14,7 +14,7 @@ public class EnemyStopOutOfScreen : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    private void Update()
+   /* private void Update()
     {
         if (IsVisibleFromCamera())
         {
@@ -28,7 +28,7 @@ public class EnemyStopOutOfScreen : MonoBehaviour
             _enemyMovementIA.enabled = false;
             _shootingComponent.enabled = false;
         }
-    }
+    }*/
 
     private bool IsVisibleFromCamera()
     {
