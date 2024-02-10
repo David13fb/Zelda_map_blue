@@ -29890,6 +29890,17 @@ CircleCollider2D:
   m_Offset: {x: 0.051330328, y: 0}
   serializedVersion: 2
   m_Radius: 0.26388
+--- !u!114 &1603836973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7315910857421621012, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+  m_PrefabInstance: {fileID: 2084760625634074595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485723450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8697d8c333cafaf44b8e6adb9e6eb1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1603846936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 952767657521297661, guid: e679a3ca3f902c5479815e97871cd12c, type: 3}
@@ -31573,6 +31584,34 @@ PrefabInstance:
       propertyPath: _hpManager
       value: 
       objectReference: {fileID: 1603836962}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _swordVertical
+      value: 
+      objectReference: {fileID: 2810184725970434544, guid: 3ab1390279e6b31489b6d84cc4af0aba, type: 3}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _swordHorizontal
+      value: 
+      objectReference: {fileID: 2810184725970434544, guid: a19b1f48a2cd0a74e87474fb95995931, type: 3}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _trhowingSwordUp
+      value: 
+      objectReference: {fileID: 3879120149748665134, guid: 5007b8835f104084cae9bd61345f4df5, type: 3}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _shootingComponent
+      value: 
+      objectReference: {fileID: 1603836973}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _trhowingSwordDown
+      value: 
+      objectReference: {fileID: 3879120149748665134, guid: 35d5db180fced1641954133f4c32389b, type: 3}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _trhowingSwordLeft
+      value: 
+      objectReference: {fileID: 3879120149748665134, guid: 4a4a4ad4cef74fd4bb2b89c794b4d11c, type: 3}
+    - target: {fileID: 6975645737245046328, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
+      propertyPath: _trhowingSwordRight
+      value: 
+      objectReference: {fileID: 3879120149748665134, guid: d061f883f1afe0f4d86f871d0841f75c, type: 3}
     - target: {fileID: 8590169248246799019, guid: 2617db5a2ad4135428d9e1542a4a6ac2, type: 3}
       propertyPath: _hudManager
       value: 
