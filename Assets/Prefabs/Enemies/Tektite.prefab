@@ -9,10 +9,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8075057967971348540}
+  - component: {fileID: 2654765769222505143}
+  - component: {fileID: -8387404220776911692}
+  - component: {fileID: 4525723970545207864}
   - component: {fileID: -8721984082618198982}
   - component: {fileID: -2509725528692062774}
   - component: {fileID: 7394259937474851138}
   - component: {fileID: -4322959642086433484}
+  - component: {fileID: 6662494012929496897}
+  - component: {fileID: 2261817678210367082}
+  - component: {fileID: -4588190238406637910}
   m_Layer: 0
   m_Name: Tektite
   m_TagString: Untagged
@@ -35,6 +41,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2654765769222505143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0021b5c001904074487c51afa8d63f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _linkTransform: {fileID: 0}
+  _currentColorCount: 0
+--- !u!114 &-8387404220776911692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb3cd76d5c967845a000a9aa9faeaaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingMaxHp: 6
+  _currentMaxHp: 0
+  _currentHealth: 0
+  _thisIsPlayer: 0
+  _hudManager: {fileID: 0}
+--- !u!114 &4525723970545207864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1c086c57b3d97468f04fca678479b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
 --- !u!212 &-8721984082618198982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -170,3 +220,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6662494012929496897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ad7bf9726693c4c92f02720c30d446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: -4322959642086433484}
+--- !u!114 &2261817678210367082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee42b059b5ca6994893ee49d88c48a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxJumpSpeed: 0
+  _timeBetweenJumps: 1000
+  _jumpDuration: 1
+--- !u!114 &-4588190238406637910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
