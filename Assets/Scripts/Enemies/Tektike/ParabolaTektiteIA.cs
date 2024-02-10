@@ -6,6 +6,11 @@ using UnityEngine;
 
 public class ParabolaTektiteIA : MonoBehaviour
 {
+   
+    public bool activity;
+    [Serialize]
+    private TektiteAnimator _animator;
+ 
     private CharacterMovement _chMovement;
     private Transform _myTransform;
     private Vector3 _targetPoint;
@@ -33,6 +38,7 @@ public class ParabolaTektiteIA : MonoBehaviour
     void NewTargetPosition()
     {
         _hasArrived = false;
+        
         _timer = Time.time;
         _sw.Restart();
         _sw.Stop();
@@ -61,10 +67,26 @@ public class ParabolaTektiteIA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         _chMovement = GetComponent<CharacterMovement>();
         _myTransform = transform;
         NewTargetPosition();
+    _animator=GetComponent<TektiteAnimator>();
     }
+
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void Active(bool state)
+    {
+        activity = state;
+        gameObject.SetActive(state);
+    }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -72,21 +94,27 @@ public class ParabolaTektiteIA : MonoBehaviour
         float currentOffset;
         if ((_targetPoint - _myTransform.position).magnitude > 0.01f && _onScreen)
         {
+          
+            UnityEngine.Debug.Log((Time.time - _timer) / _jumpDuration);
             currentOffset = Mathf.Lerp(0, _jumpYOffset, - Mathf.Pow(2*((Time.time - _timer)/_jumpDuration) - 1,2)+1);
             _myTransform.position = Vector3.up * currentOffset + Vector3.Lerp(_initialPosition, _targetPoint, (Time.time - _timer)/_jumpDuration);
-            
+         
         }
         else if(!_hasArrived)
         {
             //_chMovement.SetCharacterVelocity(Vector2.zero);
             _sw.Restart();
             _hasArrived = true;
+          
         }
-
+        _animator.Jump(_hasArrived);
 
         if (_sw.ElapsedMilliseconds >= _timeBetweenJumps)
         {
+           
             NewTargetPosition();
+            
         }
+          
     }
 }

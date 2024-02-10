@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.Windows;
+using Task = System.Threading.Tasks.Task;
 
 public class LinkAnimatorComponent : MonoBehaviour
 {
@@ -45,21 +47,33 @@ public class LinkAnimatorComponent : MonoBehaviour
         {
 
             _animator.SetTrigger("ItemHeart");
-           // await _controller.FreezeCharacter(1);
-            
+            StartCoroutine(DeactivateAnimation("ItemHeart"));
+
+
 
         }
         else if (typeItem == 1) 
         {
             _animator.SetTrigger("ItemSword");
-  
-           // await _controller.FreezeCharacter(1);
-         
+            StartCoroutine(DeactivateAnimation("ItemSword"));
+
+
         }
             
        
 
     }
+
+    private IEnumerator DeactivateAnimation(string triggerName)
+    {
+        yield return new WaitForSeconds(0.4f); 
+
+        _animator.ResetTrigger(triggerName);
+    }
+
+
+
+
 
     public void LinkIsDead()
     {
