@@ -82,10 +82,11 @@ public class GameManager : MonoBehaviour
       //  Debug.Log(cam.transform.position);
     }
 
-    public void LinkHasDied()
+    async public void LinkHasDied()
     {
         _changeRedScreen.SetDeathScreenColorChange();
         _linkAnimatorComponent.LinkIsDead();
+        await _characterController.FreezeCharacter(3f);
     }
 
     public void DeathAnimationFinished()
