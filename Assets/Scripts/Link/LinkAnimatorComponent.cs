@@ -45,31 +45,25 @@ public class LinkAnimatorComponent : MonoBehaviour
     {
         if (typeItem == 2)
         {
-
+           
             _animator.SetTrigger("ItemHeart");
-            StartCoroutine(DeactivateAnimation("ItemHeart"));
 
-
+    
 
         }
-        else if (typeItem == 1) 
+        else if (typeItem == 1)
         {
+           
             _animator.SetTrigger("ItemSword");
-            StartCoroutine(DeactivateAnimation("ItemSword"));
-
+        
 
         }
-            
-       
+
+
 
     }
 
-    private IEnumerator DeactivateAnimation(string triggerName)
-    {
-        yield return new WaitForSeconds(0.4f); 
-
-        _animator.ResetTrigger(triggerName);
-    }
+   
 
 
 

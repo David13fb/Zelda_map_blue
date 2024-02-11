@@ -44,7 +44,7 @@ public class LeeverIA : MonoBehaviour
 
     void SpawnAndDirection()
     {
-        _collider.enabled = true;
+       // _collider.enabled = true;
         int _spawnPosition = Random.Range(0, 2);
         Vector2 direction = Vector2.zero;
         Vector3 _offset = new Vector3 (3, 0, 0);
@@ -76,7 +76,7 @@ public class LeeverIA : MonoBehaviour
         _playerTransform = FindObjectOfType<LinkController>().gameObject.transform;
         _myTransform = transform;
         _collider = GetComponent<Collider2D>();
-        _collider.enabled = false;
+
 
         _timer = Time.time;
         _currentState = State.resetting;
