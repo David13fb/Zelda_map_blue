@@ -5,14 +5,14 @@ public class EnemyStopOutOfScreen : MonoBehaviour
     private OctorokIA _OctorokMovementIA;
     private LeeverIA _LeeverMovementIA;
     private ParabolaTektiteIA _TektiteMovementIA;
-    //private ZoraIA _ZoraMovementIA;
+    private ZolaIA _ZolaMovementIA;
     private ShootingComponent _shootingComponent;
     [SerializeField] bool _isOctorokMoblin;
     [SerializeField] bool _isLeever;
     [SerializeField] bool _isTektite;
 
     private bool _itsVisible = false;
-    //[SerializeField] bool _isZora;
+    [SerializeField] bool _isZola;
     private Camera mainCamera;
 
     private void Awake()
@@ -30,6 +30,11 @@ public class EnemyStopOutOfScreen : MonoBehaviour
         {
             _TektiteMovementIA = GetComponent<ParabolaTektiteIA>();
         }
+        else if (_isZola)
+        {
+            _ZolaMovementIA = GetComponent<ZolaIA>();
+            _shootingComponent = GetComponent<ShootingComponent>();
+        }
         mainCamera = Camera.main;
 
 
@@ -42,19 +47,22 @@ public class EnemyStopOutOfScreen : MonoBehaviour
             _OctorokMovementIA.enabled = false;
             _shootingComponent.enabled = false;
             _OctorokMovementIA.StopMoving();
-
         }
         else if (_isLeever)
         {
             _LeeverMovementIA.enabled = false;
             _LeeverMovementIA.StopMoving();
-
         }
         else if (_isTektite)
         {
             _TektiteMovementIA.enabled = false;
             _TektiteMovementIA.StopMoving();
-
+        }
+        else if (_isZola)
+        {
+            _ZolaMovementIA.enabled = false;
+            _shootingComponent.enabled = false;
+            _ZolaMovementIA.StopMoving();
         }
     }
 
@@ -85,6 +93,12 @@ public class EnemyStopOutOfScreen : MonoBehaviour
                 _TektiteMovementIA.StartMoving();
 
             }
+            else if (_isZola)
+            {
+                _ZolaMovementIA.enabled = true;
+                _shootingComponent.enabled = true;
+                _ZolaMovementIA.StartMoving();
+            }
         }
         else if(!visible && _itsVisible)
         {
@@ -107,6 +121,12 @@ public class EnemyStopOutOfScreen : MonoBehaviour
                 _TektiteMovementIA.enabled = false;
                 _TektiteMovementIA.StopMoving();
 
+            }
+            else if (_isZola)
+            {
+                _ZolaMovementIA.enabled = false;
+                _shootingComponent.enabled = false;
+                _ZolaMovementIA.StopMoving();
             }
         }
         

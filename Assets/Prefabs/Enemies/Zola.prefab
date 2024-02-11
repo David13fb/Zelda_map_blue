@@ -11,12 +11,14 @@ GameObject:
   - component: {fileID: 164668500439473064}
   - component: {fileID: 3555939227330723088}
   - component: {fileID: -7246315823333869301}
+  - component: {fileID: 5444738831204883205}
   - component: {fileID: -4306914154259500278}
   - component: {fileID: 3088586342811653761}
   - component: {fileID: 2918054509484202188}
   - component: {fileID: 5687266823931672393}
   - component: {fileID: -1427711897731452165}
   - component: {fileID: -8159184105198623117}
+  - component: {fileID: -1680711750542983427}
   m_Layer: 8
   m_Name: Zola
   m_TagString: Untagged
@@ -118,6 +120,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5444738831204883205
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &-4306914154259500278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,3 +266,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1680711750542983427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOctorokMoblin: 0
+  _isLeever: 0
+  _isTektite: 0
+  _isZola: 1

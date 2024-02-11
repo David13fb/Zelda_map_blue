@@ -8,6 +8,7 @@ using UnityEngine;
 public class ZolaIA : MonoBehaviour
 {
     //References:
+    private ZolaAnimator _zolaAnimator;
     private Collider2D _collider;
     private Transform _myTransform;
     private ShootingComponent _shootingComponent;
@@ -58,13 +59,14 @@ public class ZolaIA : MonoBehaviour
         _collider.enabled = true;
         if (_InACorner)
         {
-            float _xCoord = 0;
-            float _yCoord = 0;
-            while (_xCoord > (_notAllowedCentre.position.x + _notAllowedWidth) && _xCoord < (_notAllowedCentre.position.x - _notAllowedWidth) && _yCoord > (_notAllowedCentre.position.y + _notAllowedHeight) && _yCoord < (_notAllowedCentre.position.y - _notAllowedWidth))
+            float _xCoord;
+            float _yCoord;
+            do
             {
                 _xCoord = Random.Range(-_lakeWidth, _lakeWidth);
                 _yCoord = Random.Range(-_lakeHeight, _lakeHeight);
-            }
+            } while (_xCoord > (_notAllowedCentre.position.x + _notAllowedWidth) && _xCoord < (_notAllowedCentre.position.x - _notAllowedWidth) && _yCoord > (_notAllowedCentre.position.y + _notAllowedHeight) && _yCoord < (_notAllowedCentre.position.y - _notAllowedWidth));
+
             Vector3 newPosition = new Vector3(_xCoord, _yCoord, 0);
             _myTransform.position = _lakeCentre.position + newPosition;
         }
@@ -77,6 +79,7 @@ public class ZolaIA : MonoBehaviour
 
     void Start()
     {
+        _zolaAnimator = GetComponent<ZolaAnimator>();
         _myTransform = transform;
         _collider = GetComponent<Collider2D>();
         _shootingComponent = GetComponent<ShootingComponent>();
