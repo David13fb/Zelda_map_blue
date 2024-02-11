@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private ChangeToRedDeadScreen _changeRedScreen;
     private LinkAnimatorComponent _linkAnimatorComponent;
 
-
+    
 
     // Reference to the CameraController and setting the screen size
     void Start()

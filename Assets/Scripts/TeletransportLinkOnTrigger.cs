@@ -79,17 +79,16 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
         if (_controller != null)
         {
             _controller.SetBlockMovement(false);
-           
+
             _moving = false;
+
+            _link.transform.position = _newLinkPosition;
+            _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
             if (_movingToCave)
             {
                 _gameManager.linkOnCave = true;
                 _audioManager.PlayOrStopMusic(false);
             }
-
-            _link.transform.position = _newLinkPosition;
-            _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
-
             if (_caveObject != null)
             {
                 _caveObject.GetComponent<TalkComponent>().Reset(_textToWrite);

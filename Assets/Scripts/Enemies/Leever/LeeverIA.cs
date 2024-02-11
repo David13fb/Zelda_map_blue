@@ -18,7 +18,7 @@ public class LeeverIA : MonoBehaviour
 
     private bool _outOfScreen = false;
     //private Stopwatch _sw = new Stopwatch();
-
+    private float _yPosition;
     enum State
     {
         spawn,
@@ -28,6 +28,7 @@ public class LeeverIA : MonoBehaviour
 
     private State _currentState;
 
+    
     //Methods to start/stop moving when in/out of the screen.
     public void StopMoving()
     {
@@ -44,19 +45,19 @@ public class LeeverIA : MonoBehaviour
 
     void SpawnAndDirection()
     {
-       // _collider.enabled = true;
+        _collider.enabled = true;
         int _spawnPosition = Random.Range(0, 2);
         Vector2 direction = Vector2.zero;
-        Vector3 _offset = new Vector3 (3, 0, 0);
+        float _offset =3f;
 
         if (_spawnPosition == 0)
         {
-            _myTransform.position = _playerTransform.position + (_offset * -1);
+            _myTransform.position = new Vector3(_playerTransform.position.x + (_offset * -1), _yPosition, 0);
             direction = Vector2.right;
         }
         else
         {
-            _myTransform.position = _playerTransform.position + (_offset);
+            _myTransform.position = new Vector3(_playerTransform.position.x + (_offset), _yPosition, 0);
             direction = Vector2.left;
         }
 
@@ -75,6 +76,7 @@ public class LeeverIA : MonoBehaviour
         _chMovement = GetComponent<CharacterMovement>();
      
         _myTransform = transform;
+        _yPosition = _myTransform.position.y;
         _collider = GetComponent<Collider2D>();
 
 

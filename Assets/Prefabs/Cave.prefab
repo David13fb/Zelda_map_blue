@@ -130,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 1754346334083400246}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9939, y: -11.8, z: 0}
+  m_LocalPosition: {x: 7.9939, y: -11.43, z: 0}
   m_LocalScale: {x: 1.9662937, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -351,7 +351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemId: 0
   _itemPrice: 0
+  _healthRecovered: 0
+  _maxHealthIncrease: 0
   _getItemSoundEffect: {fileID: 8300000, guid: 710356ee005c9584c84357c441319c16, type: 3}
+  _objectToDestroyOnPickUp: {fileID: 0}
 --- !u!61 &7398474106182608295
 BoxCollider2D:
   m_ObjectHideFlags: 0
