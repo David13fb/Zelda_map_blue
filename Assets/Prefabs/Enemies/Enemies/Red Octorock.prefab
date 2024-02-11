@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb3cd76d5c967845a000a9aa9faeaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingMaxHp: 6
+  _startingMaxHp: 1
   _currentMaxHp: 0
   _currentHealth: 0
   _thisIsPlayer: 0
@@ -215,6 +215,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!114 &6093509571171028937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOctorokMoblin: 0
+  _isLeever: 0
+  _isTektite: 0
 --- !u!95 &2099354942860667337
 Animator:
   serializedVersion: 5
