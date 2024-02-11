@@ -26,7 +26,10 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
     private GameManager _gameManager;
     private AudioManager _audioManager;
 
-    private void Start() {
+    GameObject _link;
+
+    private void Start()
+    {
         _gameManager = FindObjectOfType<GameManager>();
         _audioManager = FindObjectOfType<AudioManager>();
     }
@@ -35,8 +38,8 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
     {
         //_camera.GetComponent<CameraController>().enabled = false;
 
-        GameObject Link = linkCollider.gameObject;
-        if(Link.GetComponent<LinkController>() != null)
+        _link = linkCollider.gameObject;
+        if (_link.GetComponent<LinkController>() != null)
         {
             if (_movingToCave)
             {
@@ -44,10 +47,42 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
                 _audioManager.PlayOrStopMusic(false);
             }
 
-            Link.transform.position = _newLinkPosition;
+            _link.transform.position = _newLinkPosition;
             _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
 
-            if(_caveObject != null)
+            if (_caveObject != null)
+            {
+                _caveObject.GetComponent<TalkComponent>().Reset(_textToWrite);
+            }
+
+            if (!_movingToCave)
+            {
+                _gameManager.linkOnCave = false;
+                _audioManager.PlayOrStopMusic(true);
+            }
+
+            //_camera.GetComponent<CameraController>().enabled = !_movingToCave;
+        }
+
+
+    }
+    private void TPLink()
+    {
+        //_camera.GetComponent<CameraController>().enabled = false;
+
+
+        if (_link.GetComponent<LinkController>() != null)
+        {
+            if (_movingToCave)
+            {
+                _gameManager.linkOnCave = true;
+                _audioManager.PlayOrStopMusic(false);
+            }
+
+            _link.transform.position = _newLinkPosition;
+            _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
+
+            if (_caveObject != null)
             {
                 _caveObject.GetComponent<TalkComponent>().Reset(_textToWrite);
             }
