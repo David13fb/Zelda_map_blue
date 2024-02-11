@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayOrStopMusic(bool play)
     {
+       
         if (play)
         {
             _musicAudioSource.Play();

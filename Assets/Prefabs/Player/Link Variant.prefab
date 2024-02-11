@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 540113346619660516, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1572248368955548788, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -76,6 +80,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2937289597412384306, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      propertyPath: _linkDieAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 3609908d2cd743640bd83e218b519bb6, type: 3}
+    - target: {fileID: 4556315636623372961, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      propertyPath: _bombDropAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b5479a8242621b4fb4edf388567f469, type: 3}
+    - target: {fileID: 4556315636623372961, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      propertyPath: _swordShootAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: a401a193a4ea6e44ca40b34eab88df06, type: 3}
+    - target: {fileID: 4556315636623372961, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      propertyPath: _swordSlashAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: bc075a84f0e566443a80bb4faba0f4dd, type: 3}
+    - target: {fileID: 6622979834776991807, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
+      propertyPath: _damageAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: cd8c06964b3e79042a633c28126ade20, type: 3}
     - target: {fileID: 7149458318370985118, guid: 4741c98d2ff96674a94ba1ebe0d20144, type: 3}
       propertyPath: m_Name
       value: Link Variant
@@ -157,4 +181,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3879120149748665134, guid: 5007b8835f104084cae9bd61345f4df5, type: 3}
   _targetPosition: {fileID: 0}
+  targetVector: {x: 0, y: 0, z: 0}
   _isPlayer: 0

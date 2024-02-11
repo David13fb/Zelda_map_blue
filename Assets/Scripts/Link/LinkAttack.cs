@@ -57,7 +57,10 @@ public class LinkAttack : MonoBehaviour
     private GameObject _bombInstance;
     private LinkController _linkController;
 
-
+    private AudioManager _audioManager;
+    [SerializeField] AudioClip _swordSlashAudio;
+    [SerializeField] AudioClip _swordShootAudio;
+    [SerializeField] AudioClip _bombDropAudio;
 
     void Start()
     {
@@ -68,6 +71,7 @@ public class LinkAttack : MonoBehaviour
         _myRb = GetComponent<Rigidbody2D>();
         _shootingComponent = GetComponent<ShootingComponent>();
         _bombScript = GetComponent<BombScript>();
+        _audioManager = FindObjectOfType<AudioManager>();
     }
     public void inputvector(Vector2 input)
     {
@@ -137,7 +141,7 @@ public class LinkAttack : MonoBehaviour
                         BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
                         bulletComponent.SetLinkSwordDirection(_shootDirection);
                     }
-
+                _audioManager.PlaySoundEffect(_swordShootAudio);
             }
             if (attacked && !bomb)
             {
@@ -164,13 +168,14 @@ public class LinkAttack : MonoBehaviour
 
                     _swordInstance = Instantiate(_swordVertical, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
                 }
-
                 _anim.UpdateAttackSword(true);
                 _linkController.SetBlockMovement(true);
+                _audioManager.PlaySoundEffect(_swordSlashAudio);
             }
             else if (!attacked && bomb && _inventoryManager.nBombs > 0)
             {
                 _bombInstance = Instantiate(_bomb, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                _audioManager.PlaySoundEffect(_bombDropAudio);
                 _inventoryManager.ChangeBombAmount(-1);
             }
         }

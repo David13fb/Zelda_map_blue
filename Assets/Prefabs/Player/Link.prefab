@@ -82,8 +82,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0, g: 0.9528302, b: 0.07544805, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c221fca34f554014daabdfc620f6403b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,6 +106,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!50 &540113346619660516
 Rigidbody2D:
   serializedVersion: 4
@@ -162,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e01a65ffc9a0040a5b0eda283cf116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _chMovement: {fileID: 0}
 --- !u!114 &4556315636623372961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,8 +189,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0789a33d9a4053439986a6dd52506eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sword: {fileID: 2810184725970434544, guid: a19b1f48a2cd0a74e87474fb95995931, type: 3}
+  _swordHorizontal: {fileID: 0}
+  _swordVertical: {fileID: 0}
+  _bomb: {fileID: 0}
   _swordPos: {fileID: 8935961197136312102}
+  _trhowingSwordRight: {fileID: 0}
+  _trhowingSwordLeft: {fileID: 0}
+  _trhowingSwordUp: {fileID: 0}
+  _trhowingSwordDown: {fileID: 0}
+  _hpManager: {fileID: 0}
+  _shootingComponent: {fileID: 0}
+  _swordSlashAudio: {fileID: 0}
+  _swordShootAudio: {fileID: 0}
 --- !u!114 &6622979834776991807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _linkTransform: {fileID: 2229852516454524800}
+  _currentColorCount: 0
 --- !u!114 &606864697371401387
 MonoBehaviour:
   m_ObjectHideFlags: 0

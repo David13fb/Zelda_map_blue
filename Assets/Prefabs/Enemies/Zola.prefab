@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3555939227330723088}
   - component: {fileID: -7246315823333869301}
   - component: {fileID: -4306914154259500278}
+  - component: {fileID: 3088586342811653761}
   m_Layer: 8
   m_Name: Zola
   m_TagString: Untagged
@@ -130,3 +131,20 @@ MonoBehaviour:
   _currentHealth: 0
   _thisIsPlayer: 0
   _hudManager: {fileID: 0}
+  _linkDieAudio: {fileID: 0}
+  _enemyDieAudio: {fileID: 8300000, guid: 7d703063e56417848b72acf8dd4eae37, type: 3}
+--- !u!114 &3088586342811653761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0021b5c001904074487c51afa8d63f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _linkTransform: {fileID: 0}
+  _currentColorCount: 0
+  _damageAudio: {fileID: 8300000, guid: 2f75a11b1c770264fb66d662361a21a9, type: 3}

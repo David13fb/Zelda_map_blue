@@ -56,6 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _linkTransform: {fileID: 0}
   _currentColorCount: 0
+  _damageAudio: {fileID: 8300000, guid: 2f75a11b1c770264fb66d662361a21a9, type: 3}
 --- !u!114 &-8387404220776911692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +74,8 @@ MonoBehaviour:
   _currentHealth: 0
   _thisIsPlayer: 0
   _hudManager: {fileID: 0}
+  _linkDieAudio: {fileID: 0}
+  _enemyDieAudio: {fileID: 8300000, guid: 7d703063e56417848b72acf8dd4eae37, type: 3}
 --- !u!114 &4525723970545207864
 MonoBehaviour:
   m_ObjectHideFlags: 0

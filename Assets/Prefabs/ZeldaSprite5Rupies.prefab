@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _value: 5
+  _getRupeeAudio: {fileID: 8300000, guid: 48dba8b54c18ae2479c53d138be720f7, type: 3}
 --- !u!70 &8470395593910030956
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

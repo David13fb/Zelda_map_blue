@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     private ChangeToRedDeadScreen _changeRedScreen;
     private LinkAnimatorComponent _linkAnimatorComponent;
 
+
+
     // Reference to the CameraController and setting the screen size
     void Start()
     {
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         _characterController = FindAnyObjectByType<LinkController>();
         _linkAnimatorComponent = FindObjectOfType<LinkAnimatorComponent>();
         _levelManager = FindObjectOfType<LevelManager>();
+        
         cam = Camera.main;
 
         Application.targetFrameRate = _frameRate;
@@ -84,6 +87,7 @@ public class GameManager : MonoBehaviour
 
     async public void LinkHasDied()
     {
+       
         _changeRedScreen.SetDeathScreenColorChange();
         _linkAnimatorComponent.LinkIsDead();
         await _characterController.FreezeCharacter(3f);

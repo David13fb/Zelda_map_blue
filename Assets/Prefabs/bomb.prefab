@@ -100,9 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d02b2e6fc855314fbe6ddf49a97e66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionTime: 1240
+  _explosionTime: 1000
+  _timeBeforeDeletion: 0.25
   _circleCollider1: {fileID: -7874163057196704058}
   _circleCollider2: {fileID: 3084874435193909015}
+  _bombAudio: {fileID: 8300000, guid: 18b947385aa371d458017bc72ed3c9b5, type: 3}
+  _wallBreakAudio: {fileID: 8300000, guid: 42db4fcb3868db240a71883b8a896a11, type: 3}
+  _secretWallAudio: {fileID: 8300000, guid: 8e4adcb78d366b04d9d284b69761422c, type: 3}
 --- !u!58 &-7874163057196704058
 CircleCollider2D:
   m_ObjectHideFlags: 0

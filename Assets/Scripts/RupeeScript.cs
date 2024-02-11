@@ -14,18 +14,22 @@ public class RupeeScript : MonoBehaviour
     #endregion
     #region references
     private InventoryManager _inventoryManager;
+
+    private AudioManager _audioManager;
+    [SerializeField] private AudioClip _getRupeeAudio;
     #endregion
     #region Methods
     
     private void Start() {
         _inventoryManager = FindObjectOfType<InventoryManager>();
+        _audioManager = FindObjectOfType<AudioManager>();
     }
     private void OnTriggerEnter2D(Collider2D linkCollider)
     {
         if (linkCollider.gameObject.GetComponent<LinkController>() != null)
         {
             _inventoryManager.ChangeRupeeAmount(_value);
-            //no ser�a mejor eliminarlas??
+            _audioManager.PlaySoundEffect(_getRupeeAudio);
             Destroy(this.gameObject);
             
         }
