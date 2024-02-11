@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 
 public class BombScript : MonoBehaviour
@@ -11,6 +12,8 @@ public class BombScript : MonoBehaviour
     private CircleCollider2D _circleCollider1;
     [SerializeField]
     private CircleCollider2D _circleCollider2;
+    [SerializeField] private Animator _animator;
+    Transform _transform;
 
     private Stopwatch _stopwatch = new Stopwatch();
    
@@ -20,12 +23,16 @@ public class BombScript : MonoBehaviour
 
     private void Start()
     {
+       _transform = transform;
         _audioManager = FindObjectOfType<AudioManager>();
+        _animator = GetComponent<Animator>();
+       
     }
     private void Update()
     {
         if (_stopwatch.ElapsedMilliseconds > _explosionTime)
         {
+            _animator.speed = 1.0f;
             _circleCollider1.enabled = true;
             _circleCollider2.enabled = true;
             Explode();
@@ -33,8 +40,9 @@ public class BombScript : MonoBehaviour
         }
     }
     private void Explode()
-    {
-        _audioManager.PlaySoundEffect(_bombAudio);
+    { _audioManager.PlaySoundEffect(_bombAudio);
+        _animator.SetBool("explote", true);
+        _transform.localScale = Vector3.one*3;
         Destroy(gameObject, _timeBeforeDeletion);
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,5 +59,6 @@ public class BombScript : MonoBehaviour
     private void OnEnable()
     {
         _stopwatch.Start();
+       
     }
 }
