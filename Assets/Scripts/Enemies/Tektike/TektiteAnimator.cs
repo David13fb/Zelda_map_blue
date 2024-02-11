@@ -2,50 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.Windows;
 
 public class TektiteAnimator : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
-
-    private bool jump= false;
-    private float _jumptime = 0.6f;
-    private float _longJumpTime = 1.0f;
+    private bool jump;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
-     
-        StartCoroutine(Move());
-       
     }
 
-   private void Jump(bool newState)
+    public void Activate(bool state)
     {
-        jump = newState;
-        if (jump)
+        gameObject.SetActive(state);
+    }
+
+
+
+    public void Jump(bool state)
+    {
+        jump = state;
+        Move(); 
+    }
+
+    public void Move()
+    {
+        if (!jump)
         {
-            _jumptime = _longJumpTime; 
+            // Inicia la corrutina Wait() para gestionar el salto
+            StartCoroutine(Wait());
         }
         else
         {
-            _jumptime = 0.6f; 
+            // Establece la animación para el caso no jump
+            _animator.SetBool("Move", true); // Esto podría requerir un manejo diferente según tus requisitos
         }
     }
-   
-    private IEnumerator Move()
+
+    IEnumerator Wait()
     {
-        while (true)
-        {
-            // Animación "down"
-            _animator.SetBool("Move", true);
-            yield return new WaitForSeconds(0.6f);
-
-            // Animación "up"
-            _animator.SetBool("Move", false);
-            yield return new WaitForSeconds(_jumptime);
-        }
+        // Espera antes de cambiar el estado de la animación
+        yield return new WaitForSeconds(0.8f);
+        _animator.SetBool("Move", false);
+        // Espera antes de restaurar el estado de la animación
+        yield return new WaitForSeconds(0.8f);
+        _animator.SetBool("Move", true);
+        yield return new WaitForSeconds(0.9f);
+        Move();
     }
-
 }
 

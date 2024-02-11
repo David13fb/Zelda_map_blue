@@ -19,6 +19,14 @@ public class TalkComponent : MonoBehaviour
     [SerializeField]
     private AudioClip _letterSoundEffect;
 
+    private GameManager _gameManager;
+    private AudioManager _audioManager;
+
+    private void Start() {
+        _gameManager = FindObjectOfType<GameManager>();
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
+
     public void ChangeText(string newText)
     {
         text = newText;
@@ -48,7 +56,7 @@ public class TalkComponent : MonoBehaviour
 
                 _textRef.text += text[letterShown];
 
-                if(GameManager.instance.linkOnCave) AudioManager.Instance.PlaySoundEffect(_letterSoundEffect);
+                if(_gameManager.linkOnCave) _audioManager.PlaySoundEffect(_letterSoundEffect);
 
                 _timer = Time.time;
             }

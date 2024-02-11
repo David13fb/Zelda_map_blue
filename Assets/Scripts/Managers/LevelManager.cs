@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        _gameManager = GameManager.instance;
+        _gameManager = FindAnyObjectByType<GameManager>();
 
     }
     public void ReloadLevel()

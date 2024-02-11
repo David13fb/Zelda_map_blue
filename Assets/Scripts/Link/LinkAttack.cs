@@ -7,11 +7,29 @@ using UnityEngine;
 public class LinkAttack : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _sword;
+    private GameObject _swordHorizontal;
+
+    [SerializeField]
+    private GameObject _swordVertical;
+
     [SerializeField]
     private GameObject _bomb;
+
     [SerializeField]
     Transform _swordPos;
+
+    [SerializeField]
+    private GameObject _trhowingSwordRight;
+
+    [SerializeField]
+    private GameObject _trhowingSwordLeft;
+
+    [SerializeField]
+    private GameObject _trhowingSwordUp;
+
+    [SerializeField]
+    private GameObject _trhowingSwordDown;
+
     LinkAnimatorComponent _anim;
 
     [SerializeField]
@@ -33,11 +51,16 @@ public class LinkAttack : MonoBehaviour
     private Vector3 _attackDirection = Vector3.right;
     private Vector2 _oldInput = Vector2.zero;
     private Vector2 _input = Vector2.zero;
+    private Vector3 _shootDirection = Vector3.right;
+
     private GameObject _swordInstance;
     private GameObject _bombInstance;
     private LinkController _linkController;
 
-
+    private AudioManager _audioManager;
+    [SerializeField] AudioClip _swordSlashAudio;
+    [SerializeField] AudioClip _swordShootAudio;
+    [SerializeField] AudioClip _bombDropAudio;
 
     void Start()
     {
@@ -48,6 +71,7 @@ public class LinkAttack : MonoBehaviour
         _myRb = GetComponent<Rigidbody2D>();
         _shootingComponent = GetComponent<ShootingComponent>();
         _bombScript = GetComponent<BombScript>();
+        _audioManager = FindObjectOfType<AudioManager>();
     }
     public void inputvector(Vector2 input)
     {
@@ -61,7 +85,7 @@ public class LinkAttack : MonoBehaviour
     }
     public void Attack(bool attacked, bool bomb)
     {
-        if (!InventoryManager.Instance.itemsUnlocked[0]) return;
+        if (!_inventoryManager.itemsUnlocked[0]) return;
 
         if (attacked || bomb)
         {
@@ -86,18 +110,73 @@ public class LinkAttack : MonoBehaviour
             }
             if (_hpManager.IsFullHP() && !bomb)
             {
-                _shootingComponent.Shoot();
+                    if (_oldInput.x == 1)
+                    {
+                        _shootDirection = Vector3.right;
+                        GameObject newBullet = Instantiate(_trhowingSwordRight, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+                        BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
+                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                    }
+
+                    else if (_oldInput.x == -1)
+                    {
+                        _shootDirection = Vector3.left;
+                        GameObject newBullet = Instantiate(_trhowingSwordLeft, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+                        BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
+                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                    }
+
+                    else if (_oldInput.y == 1)
+                    {
+                        _shootDirection = Vector3.up;
+                        GameObject newBullet = Instantiate(_trhowingSwordUp, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+                        BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
+                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                    }
+
+                    else if (_oldInput.y == -1)
+                    {
+                        _shootDirection = Vector3.down;
+                        GameObject newBullet = Instantiate(_trhowingSwordDown, _linkTransform.position + (_offset * _shootDirection), _linkTransform.rotation);
+                        BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
+                        bulletComponent.SetLinkSwordDirection(_shootDirection);
+                    }
+                _audioManager.PlaySoundEffect(_swordShootAudio);
             }
             if (attacked && !bomb)
             {
-                _swordInstance = Instantiate(_sword, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                if (_oldInput.x == 1)
+                {
+
+                    _swordInstance = Instantiate(_swordHorizontal, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                }
+
+                else if (_oldInput.x == -1)
+                {
+
+                    _swordInstance = Instantiate(_swordHorizontal, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                }
+
+                else if (_oldInput.y == 1)
+                {
+
+                    _swordInstance = Instantiate(_swordVertical, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                }
+
+                else if (_oldInput.y == -1)
+                {
+
+                    _swordInstance = Instantiate(_swordVertical, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
+                }
                 _anim.UpdateAttackSword(true);
                 _linkController.SetBlockMovement(true);
+                _audioManager.PlaySoundEffect(_swordSlashAudio);
             }
             else if (!attacked && bomb && _inventoryManager.nBombs > 0)
             {
                 _bombInstance = Instantiate(_bomb, _linkTransform.position + (_offset * _attackDirection), _linkTransform.rotation);
-                _inventoryManager.ChangeBombAmount(- 1);
+                _audioManager.PlaySoundEffect(_bombDropAudio);
+                _inventoryManager.ChangeBombAmount(-1);
             }
         }
         else if (!attacked)

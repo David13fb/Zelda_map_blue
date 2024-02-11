@@ -17,6 +17,8 @@ public class OctorokIA : MonoBehaviour
     private Stopwatch _sw = new Stopwatch();
     private bool _parada = false;
 
+    public Vector2 currentMovementDirection;
+
     //Stores previous direction to shoot only once per stop
     private Vector2 _prevDirection;
 
@@ -59,7 +61,12 @@ public class OctorokIA : MonoBehaviour
         //Give direction to move or stop
         _prevDirection = direction;
 
-        if(newShootingOffset != Vector3.zero)_targetPoint.position = _myTransform.position + newShootingOffset;
+        if (newShootingOffset != Vector3.zero)
+        {
+            currentMovementDirection = newShootingOffset;
+            _targetPoint.position = _myTransform.position + newShootingOffset;
+            //UnityEngine.Debug.Log(_targetPoint.position);
+        }//_shootingComponent.targetVector = newShootingOffset; //_targetPoint.position = _myTransform.position + newShootingOffset;
         _chMovement.SetCharacterVelocity(direction);
 
        
@@ -69,9 +76,8 @@ public class OctorokIA : MonoBehaviour
     public void StopMoving()
     {
         _sw.Stop();
-        Vector2 direction = Vector2.zero;
-        _targetPoint.position = _myTransform.position;
-        _chMovement.SetCharacterVelocity(direction);
+        //_targetPoint.position = _myTransform.position;
+        _chMovement.SetCharacterVelocity(Vector2.zero);
     }
     public void StartMoving()
     {
@@ -84,21 +90,21 @@ public class OctorokIA : MonoBehaviour
         if (Random.Range(0, 4) == 0) _shootingComponent.Shoot();
     }
 
-    void Start()
+    void Awake()
     {
         _chMovement = GetComponent<CharacterMovement>();
         _myTransform = transform;
         _shootingComponent = GetComponent<ShootingComponent>();
 
         _sw.Start();
-
+        //_targetPoint = gameObject.GetComponentInChildren<Transform>();
         GiveRandomDirection();
     }
 
 
     void Update()
     {
-        
+        //UnityEngine.Debug.Log(_myTransform.position);
         if (_sw.ElapsedMilliseconds > _timerToMove)
         {
             _parada = false;

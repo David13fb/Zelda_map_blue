@@ -6,36 +6,50 @@ using UnityEngine;
 
 public class BombScript : MonoBehaviour
 {
-    [SerializeField] private float explosionTime = 1.0f;
+    [SerializeField] private float _explosionTime, _timeBeforeDeletion;
     [SerializeField]
     private CircleCollider2D _circleCollider1;
     [SerializeField]
     private CircleCollider2D _circleCollider2;
-    // Start is called before the first frame update
 
-    private void Destroy()
+    private Stopwatch _stopwatch = new Stopwatch();
+   
+    //Audio
+    private AudioManager _audioManager;
+    [SerializeField] AudioClip _bombAudio, _wallBreakAudio, _secretWallAudio;
+
+    private void Start()
     {
-        gameObject.SetActive(false);
+        _audioManager = FindObjectOfType<AudioManager>();
     }
     private void Update()
     {
-        explosionTime--;
-        if (explosionTime < 100)
+        if (_stopwatch.ElapsedMilliseconds > _explosionTime)
         {
             _circleCollider1.enabled = true;
             _circleCollider2.enabled = true;
+            Explode();
            
         }
     }
-    private void LateUpdate()
+    private void Explode()
     {
-        if (explosionTime < 0)
-        {
-            Destroy();
-        }
+        _audioManager.PlaySoundEffect(_bombAudio);
+        Destroy(gameObject, _timeBeforeDeletion);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<HP_manager>() == null) GameObject.Destroy(collision.gameObject);
+        if (collision.gameObject.GetComponent<HP_manager>() == null) 
+        {
+            GameObject.Destroy(collision.gameObject);
+            _audioManager.PlaySoundEffect(_wallBreakAudio);
+            _audioManager.PlaySoundEffect(_secretWallAudio);
+
+        }
+    }
+
+    private void OnEnable()
+    {
+        _stopwatch.Start();
     }
 }

@@ -25,7 +25,14 @@ public class CharacterMovement : MonoBehaviour
     public void SetCharacterVelocity(Vector2 direction)
     {
         if (_rb == null) return;
+        _rb.velocity = direction.normalized * _speed;
+    }
 
-        _rb.velocity = direction * _speed;
+    void Update()
+    {
+        if(_rb.velocity.magnitude > _speed)
+        {
+            Debug.Log("Te pasaste");
+        }
     }
 }

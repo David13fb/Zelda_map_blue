@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+
+    private int _frameRate = 60;
+
     public bool linkOnCave;
     // This will be used to check if the player is dead
     public bool isDead;
@@ -31,39 +35,31 @@ public class GameManager : MonoBehaviour
     private CameraController _cameraController;
 
     // This will be used to access the LinkController
-    private LinkController _characterController;
+    public LinkController _characterController;
     private LevelManager _levelManager;
     private ChangeToRedDeadScreen _changeRedScreen;
     private LinkAnimatorComponent _linkAnimatorComponent;
 
-    // Singleton pattern
-    void Awake()
-    {
-        // Singleton pattern
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     // Reference to the CameraController and setting the screen size
     void Start()
     {
         _hudmanager = FindObjectOfType<HUDmanager>();
-        _cameraController = CameraController.instance;
+        _cameraController = FindAnyObjectByType<CameraController>();
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
         _changeRedScreen = FindAnyObjectByType<ChangeToRedDeadScreen>();
         _characterController = FindAnyObjectByType<LinkController>();
         _linkAnimatorComponent = FindObjectOfType<LinkAnimatorComponent>();
         _levelManager = FindObjectOfType<LevelManager>();
+        
         cam = Camera.main;
+
+        Application.targetFrameRate = _frameRate;
     }
+
+    
 
 
     async void Update() 
@@ -89,10 +85,12 @@ public class GameManager : MonoBehaviour
       //  Debug.Log(cam.transform.position);
     }
 
-    public void LinkHasDied()
+    async public void LinkHasDied()
     {
+       
         _changeRedScreen.SetDeathScreenColorChange();
         _linkAnimatorComponent.LinkIsDead();
+        await _characterController.FreezeCharacter(3f);
     }
 
     public void DeathAnimationFinished()
@@ -101,7 +99,5 @@ public class GameManager : MonoBehaviour
         _changeRedScreen.SpawnLoseGame();
         isDead = true;
     }
-
-   
 }
 

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 using UnityEngine.Windows;
+using Task = System.Threading.Tasks.Task;
 
 public class LinkAnimatorComponent : MonoBehaviour
 {
@@ -43,23 +45,29 @@ public class LinkAnimatorComponent : MonoBehaviour
     {
         if (typeItem == 2)
         {
-
+           
             _animator.SetTrigger("ItemHeart");
-           // await _controller.FreezeCharacter(1);
-            
+
+    
 
         }
-        else if (typeItem == 1) 
+        else if (typeItem == 1)
         {
+           
             _animator.SetTrigger("ItemSword");
-  
-           // await _controller.FreezeCharacter(1);
-         
+        
+
         }
-            
-       
+
+
 
     }
+
+   
+
+
+
+
 
     public void LinkIsDead()
     {

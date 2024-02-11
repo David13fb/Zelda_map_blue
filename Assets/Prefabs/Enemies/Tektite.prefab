@@ -9,11 +9,18 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8075057967971348540}
+  - component: {fileID: 2654765769222505143}
+  - component: {fileID: -8387404220776911692}
+  - component: {fileID: 4525723970545207864}
   - component: {fileID: -8721984082618198982}
   - component: {fileID: -2509725528692062774}
   - component: {fileID: 7394259937474851138}
   - component: {fileID: -4322959642086433484}
-  m_Layer: 0
+  - component: {fileID: 6662494012929496897}
+  - component: {fileID: 2261817678210367082}
+  - component: {fileID: -4588190238406637910}
+  - component: {fileID: -2951138012835784528}
+  m_Layer: 8
   m_Name: Tektite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,6 +42,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2654765769222505143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0021b5c001904074487c51afa8d63f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _linkTransform: {fileID: 0}
+  _currentColorCount: 0
+  _damageAudio: {fileID: 8300000, guid: 2f75a11b1c770264fb66d662361a21a9, type: 3}
+--- !u!114 &-8387404220776911692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb3cd76d5c967845a000a9aa9faeaaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingMaxHp: 1
+  _currentMaxHp: 0
+  _currentHealth: 0
+  _thisIsPlayer: 0
+  _hudManager: {fileID: 0}
+  _linkDieAudio: {fileID: 0}
+  _enemyDieAudio: {fileID: 8300000, guid: 7d703063e56417848b72acf8dd4eae37, type: 3}
+--- !u!114 &4525723970545207864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1c086c57b3d97468f04fca678479b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
 --- !u!212 &-8721984082618198982
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -75,7 +129,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 1800896905, guid: 581386726083bcc40882d3a0371d6b59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,7 +149,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9120431676701407679}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -110,10 +164,10 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!58 &7394259937474851138
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -146,9 +200,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0015976429, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.30668616
 --- !u!95 &-4322959642086433484
 Animator:
   serializedVersion: 5
@@ -170,3 +224,63 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6662494012929496897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ad7bf9726693c4c92f02720c30d446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: -4322959642086433484}
+--- !u!114 &2261817678210367082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee42b059b5ca6994893ee49d88c48a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activity: 0
+  _timeBetweenJumps: 3000
+  _jumpDuration: 1
+  _maxXMovement: 3
+  _maxYMovement: 1.5
+--- !u!114 &-4588190238406637910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isOctorokMoblin: 0
+  _isLeever: 0
+  _isTektite: 1
+--- !u!114 &-2951138012835784528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd13a9326f4d19c4db98c83a1edbde55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rupee: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+  heart: {fileID: 1862787796090156783, guid: a4f133e3189e54143822d844e346d916, type: 3}
+  drop: 0

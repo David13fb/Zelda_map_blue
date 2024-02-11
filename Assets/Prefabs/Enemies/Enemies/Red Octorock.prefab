@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 7988033313172404553}
   - component: {fileID: 5293510377640294011}
   - component: {fileID: 2099354942860667337}
+  - component: {fileID: 4524775298184284055}
   m_Layer: 8
   m_Name: Red Octorock
   m_TagString: Untagged
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578567725743851718}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -121,7 +122,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1142300783039820387
 CircleCollider2D:
@@ -197,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb3cd76d5c967845a000a9aa9faeaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingMaxHp: 6
+  _startingMaxHp: 1
   _currentMaxHp: 0
   _currentHealth: 0
   _thisIsPlayer: 0
@@ -215,6 +216,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!114 &6093509571171028937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70ae3fa72460804bb157c15b378304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOctorokMoblin: 0
+  _isLeever: 0
+  _isTektite: 0
 --- !u!95 &2099354942860667337
 Animator:
   serializedVersion: 5
@@ -291,6 +309,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4524775298184284055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578567725743851718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd13a9326f4d19c4db98c83a1edbde55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rupee: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+  heart: {fileID: 1862787796090156783, guid: a4f133e3189e54143822d844e346d916, type: 3}
+  drop: 0
 --- !u!1 &6762804178274373987
 GameObject:
   m_ObjectHideFlags: 0

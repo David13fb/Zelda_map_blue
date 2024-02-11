@@ -10,16 +10,34 @@ public class CloudAnimator : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
   
     private float _time=0.4f;
-    [SerializeField] private GameObject _enemy;
+   
+    [SerializeField] 
+    private ParabolaTektiteIA _parabola;
 
+
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+       
+    }
     private void Start()
     {
+        
+        
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
+       
         
-        StartCoroutine(CloudAppear());
-        _enemy.SetActive(false);
     }
+
+    public void Activate(bool state)
+    {
+            gameObject.SetActive(state);
+        StartCoroutine(CloudAppear());
+    }
+
+
+
     IEnumerator CloudAppear()
     {
         _animator.SetBool("Cloud", false);
@@ -29,7 +47,9 @@ public class CloudAnimator : MonoBehaviour
 
         // call to set inactive the sprite
         gameObject.SetActive(false);
-        _enemy.SetActive(true);
+        _parabola.Active(true);
+
+       
        
 
 

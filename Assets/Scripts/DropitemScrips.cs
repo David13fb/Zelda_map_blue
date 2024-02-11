@@ -9,19 +9,18 @@ public class DropitemScrips : MonoBehaviour
     [SerializeField] GameObject heart;
     [SerializeField] int drop;
     private Transform _transform;
-   
+    
     // Start is called before the first frame update
     void Start()
     {
         _transform = transform;
-      
     }
 
     // Update is called once per frame
    public void DropItem()
     {
      
-            Debug.Log("jajaj");
+            
             if (drop ==1)
             {
                 Instantiate(rupee, transform.position, _transform.rotation);
@@ -30,6 +29,7 @@ public class DropitemScrips : MonoBehaviour
             {
                 Instantiate(heart, transform.position, _transform.rotation);
             }
+            
         
     }
 }

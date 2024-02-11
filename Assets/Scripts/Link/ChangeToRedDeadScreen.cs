@@ -12,6 +12,8 @@ public class ChangeToRedDeadScreen : MonoBehaviour
 
     private float _timer;
 
+    private GameManager _gameManager;
+
     private float _animationDuration;
     [SerializeField]
     private float _initialAnimationDuration = 1.5f;
@@ -24,6 +26,7 @@ public class ChangeToRedDeadScreen : MonoBehaviour
     {
         _image = GetComponent<Image>();
         _animationDuration = _initialAnimationDuration;
+        _gameManager = FindAnyObjectByType<GameManager>();
     }
 
     public void DeathScreenColorChange()
@@ -40,7 +43,7 @@ public class ChangeToRedDeadScreen : MonoBehaviour
             {
                 _dontTransition = true;
                 _animationDuration = _initialAnimationDuration;
-                GameManager.instance.DeathAnimationFinished();
+                _gameManager.DeathAnimationFinished();
             }
         }
     }

@@ -18,8 +18,8 @@ public class BorderDetector : MonoBehaviour
     void Start()
     {
         _playerTransform = transform;
-        _gameManager = GameManager.instance;
-        _cameraController = CameraController.instance;
+        _gameManager = FindAnyObjectByType<GameManager>();
+        _cameraController = FindAnyObjectByType<CameraController>();;
     }
 
     // This method checks the player's position and updates the current screen coordinates

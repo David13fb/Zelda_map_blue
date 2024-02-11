@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,34 +24,95 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
     [SerializeField]
     private bool _movingToCave;
 
+    private GameManager _gameManager;
+    private AudioManager _audioManager;
+
+
+    private Animator _animator;
+
+    private Transform _mytransform;
+
+    private Transform _linkTransform;
+
+    GameObject _link;
+
+    private bool _moving = false;
+
+    private void Start()
+    {
+        _gameManager = FindObjectOfType<GameManager>();
+        _audioManager = FindObjectOfType<AudioManager>();
+        _mytransform = transform;
+
+    }
+
     void OnTriggerEnter2D(Collider2D linkCollider)
+    {
+        _link = linkCollider.gameObject;
+
+        LinkController _controller = _link.GetComponent<LinkController>();
+        if (_controller!=null)
+        {
+            _controller.SetBlockMovement(true);
+            _linkTransform = _link.transform;
+            _linkTransform.position = _mytransform.position;
+
+            _moving = true;
+
+            _animator = _link.GetComponent<Animator>();
+
+            _animator.SetTrigger("EnterCave");
+
+     
+        
+        }
+
+       
+
+
+    }
+    private void OnTriggerExit2D()
     {
         //_camera.GetComponent<CameraController>().enabled = false;
 
-        GameObject Link = linkCollider.gameObject;
-        if(Link.GetComponent<LinkController>() != null)
+        LinkController _controller = _link.GetComponent<LinkController>();
+        if (_controller != null)
         {
+            _controller.SetBlockMovement(false);
+           
+            _moving = false;
             if (_movingToCave)
             {
-                GameManager.instance.linkOnCave = true;
-                AudioManager.Instance.PlayOrStopMusic(false);
+                _gameManager.linkOnCave = true;
+                _audioManager.PlayOrStopMusic(false);
             }
 
-            Link.transform.position = _newLinkPosition;
+            _link.transform.position = _newLinkPosition;
             _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
 
-            if(_caveObject != null)
+            if (_caveObject != null)
             {
                 _caveObject.GetComponent<TalkComponent>().Reset(_textToWrite);
             }
 
             if (!_movingToCave)
             {
-                GameManager.instance.linkOnCave = false;
-                AudioManager.Instance.PlayOrStopMusic(true);
+                _gameManager.linkOnCave = false;
+                _audioManager.PlayOrStopMusic(true);
             }
 
             //_camera.GetComponent<CameraController>().enabled = !_movingToCave;
         }
+
+    }
+
+    public void MoveDown()
+    {
+        _linkTransform.position = new Vector3 (_linkTransform.position.x, _linkTransform.position.y -0.02f, _linkTransform.position.z);
+    }
+
+    private void Update()
+    {
+        if (_moving) MoveDown();
     }
 }

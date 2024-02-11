@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3742496855735749239, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _startingMaxHp
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4676954395088894682, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -110,6 +114,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1578567725743851718, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       insertIndex: 8
       addedObject: {fileID: 1701862776502612973}
+    - targetCorrespondingSourceObject: {fileID: 1578567725743851718, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2569805390153984005}
   m_SourcePrefab: {fileID: 100100000, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
 --- !u!95 &6000145366265809056 stripped
 Animator:
@@ -136,6 +143,21 @@ MonoBehaviour:
   _targetPoint: {fileID: 6816293221569787477}
   _timerToStop: 600
   _timerToMove: 1200
+--- !u!114 &-2569805390153984005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6597376129299556783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd13a9326f4d19c4db98c83a1edbde55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rupee: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+  heart: {fileID: 1862787796090156783, guid: a4f133e3189e54143822d844e346d916, type: 3}
+  drop: 0
 --- !u!4 &6816293221569787477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1224683102966683452, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}

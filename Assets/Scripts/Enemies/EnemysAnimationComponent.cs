@@ -9,12 +9,14 @@ public class EnemysAnimationComponent : MonoBehaviour
     [SerializeField]
     private Animator _animator;
     private Rigidbody2D _myRigidbody;
+    private OctorokIA _octorokIA;
     Vector2 _prevVelocity; //velocidad anterior
 
     void Start()
     {
         _animator = GetComponent<Animator>(); 
         _myRigidbody = GetComponent<Rigidbody2D>();
+        _octorokIA = GetComponent<OctorokIA>();
         _prevVelocity = _myRigidbody.velocity;
     }
 
@@ -23,8 +25,8 @@ public class EnemysAnimationComponent : MonoBehaviour
     {
         if (_prevVelocity != _myRigidbody.velocity)
         {
-            _animator.SetFloat("xMove", _myRigidbody.velocity.x);
-            _animator.SetFloat("yMove", _myRigidbody.velocity.y);
+            _animator.SetFloat("xMove", _octorokIA.currentMovementDirection.x);
+            _animator.SetFloat("yMove", _octorokIA.currentMovementDirection.y);
         }
         _prevVelocity = _myRigidbody.velocity;
     }

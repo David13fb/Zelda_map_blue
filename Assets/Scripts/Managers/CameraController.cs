@@ -16,25 +16,13 @@ public class CameraController : MonoBehaviour
     // Singleton pattern
     public static CameraController instance;
     
-    // Singleton pattern
-    void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 
     // Setting the references
     void Start()
     {
         _myTransform = transform;
-        _gameManager = GameManager.instance;
+        _gameManager = FindAnyObjectByType<GameManager>();
         _isTransitioning = false;
     }
 

@@ -20,11 +20,20 @@ public class HP_manager : MonoBehaviour
     private LinkController _linkController;
     private DropitemScrips _dropitem;
 
+    private GameManager _gameManager;
+
+    //Audio
+    private AudioManager _audioManager;
+    [SerializeField] AudioClip _linkDieAudio;
+    [SerializeField] AudioClip _enemyDieAudio;
+
     void Start()
     {
         _linkController = FindObjectOfType<LinkController>();
         _currentHealth = _currentMaxHp = _startingMaxHp;
         _dropitem = GetComponent<DropitemScrips>();
+        _gameManager = FindObjectOfType<GameManager>();
+        _audioManager = FindObjectOfType<AudioManager>();
         if (_thisIsPlayer)
             changeHpGauge();
     }
@@ -65,18 +74,21 @@ public class HP_manager : MonoBehaviour
     {
         if (_thisIsPlayer)
         {
-            GameManager.instance.LinkHasDied();
+            _gameManager.LinkHasDied();
+            _audioManager.PlaySoundEffect(_linkDieAudio);
+            _audioManager.PlayOrStopMusic(false);
         }
         else
         {
             _dropitem.DropItem();
             Destroy(this.gameObject);
+            _audioManager.PlaySoundEffect(_enemyDieAudio);
         }
     }
 
     public void deathAnimFinished()
     {
-        GameManager.instance.DeathAnimationFinished();
+        _gameManager.DeathAnimationFinished();
     }
 
     public bool IsFullHP()

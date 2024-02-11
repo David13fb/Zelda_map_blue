@@ -4,22 +4,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance { get; private set; } //singleton
     [SerializeField] Transform _cameraTransform;
     [SerializeField] AudioSource _musicAudioSource, _sfxAudioSource;
 
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-    }
 
     public void PlaySoundEffect(AudioClip clip)
     {
@@ -28,6 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayOrStopMusic(bool play)
     {
+       
         if (play)
         {
             _musicAudioSource.Play();
