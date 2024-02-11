@@ -15,6 +15,13 @@ public class TektiteAnimator : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    public void Activate(bool state)
+    {
+        gameObject.SetActive(state);
+    }
+
+
+
     public void Jump(bool state)
     {
         jump = state;
