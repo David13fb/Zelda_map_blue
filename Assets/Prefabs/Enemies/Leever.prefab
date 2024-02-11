@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 833231136236755918}
   - component: {fileID: 2090453761859292974}
   - component: {fileID: 7345539428111642474}
+  - component: {fileID: -2343753410068848787}
   m_Layer: 8
   m_Name: Leever
   m_TagString: Untagged
@@ -277,3 +278,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2343753410068848787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5721174987075140290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd13a9326f4d19c4db98c83a1edbde55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rupee: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+  heart: {fileID: 1862787796090156783, guid: a4f133e3189e54143822d844e346d916, type: 3}
+  drop: 0

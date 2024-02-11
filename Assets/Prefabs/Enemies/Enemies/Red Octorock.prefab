@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 7988033313172404553}
   - component: {fileID: 5293510377640294011}
   - component: {fileID: 2099354942860667337}
+  - component: {fileID: 4524775298184284055}
   m_Layer: 8
   m_Name: Red Octorock
   m_TagString: Untagged
@@ -308,6 +309,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4524775298184284055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578567725743851718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd13a9326f4d19c4db98c83a1edbde55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rupee: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+  heart: {fileID: 1862787796090156783, guid: a4f133e3189e54143822d844e346d916, type: 3}
+  drop: 0
 --- !u!1 &6762804178274373987
 GameObject:
   m_ObjectHideFlags: 0

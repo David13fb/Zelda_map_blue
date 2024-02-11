@@ -42,6 +42,7 @@ public class HP_manager : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            _dropitem.DropItem();
             Die();
         }
 

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6662494012929496897}
   - component: {fileID: 2261817678210367082}
   - component: {fileID: -4588190238406637910}
+  - component: {fileID: -2951138012835784528}
   m_Layer: 8
   m_Name: Tektite
   m_TagString: Untagged
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee42b059b5ca6994893ee49d88c48a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activity: 0
   _timeBetweenJumps: 3000
   _jumpDuration: 1
   _maxXMovement: 3
@@ -264,3 +266,18 @@ MonoBehaviour:
   _isOctorokMoblin: 0
   _isLeever: 0
   _isTektite: 1
+--- !u!114 &-2951138012835784528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9120431676701407679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd13a9326f4d19c4db98c83a1edbde55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rupee: {fileID: 8251355081348610158, guid: 4a6b5fa2942c2984298a55caa012aeff, type: 3}
+  heart: {fileID: 1862787796090156783, guid: a4f133e3189e54143822d844e346d916, type: 3}
+  drop: 0
