@@ -73,7 +73,7 @@ public class LeeverIA : MonoBehaviour
     void Start()
     {
         _chMovement = GetComponent<CharacterMovement>();
-        _playerTransform = FindObjectOfType<LinkController>().gameObject.transform;
+     
         _myTransform = transform;
         _collider = GetComponent<Collider2D>();
 
