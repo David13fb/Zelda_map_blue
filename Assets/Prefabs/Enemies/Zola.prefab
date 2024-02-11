@@ -13,6 +13,10 @@ GameObject:
   - component: {fileID: -7246315823333869301}
   - component: {fileID: -4306914154259500278}
   - component: {fileID: 3088586342811653761}
+  - component: {fileID: 2918054509484202188}
+  - component: {fileID: 5687266823931672393}
+  - component: {fileID: -1427711897731452165}
+  - component: {fileID: -8159184105198623117}
   m_Layer: 8
   m_Name: Zola
   m_TagString: Untagged
@@ -102,7 +106,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -148,3 +152,80 @@ MonoBehaviour:
   _linkTransform: {fileID: 0}
   _currentColorCount: 0
   _damageAudio: {fileID: 8300000, guid: 2f75a11b1c770264fb66d662361a21a9, type: 3}
+--- !u!114 &2918054509484202188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519d5b2e56a0beb4089fd29b7d04519c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+--- !u!114 &5687266823931672393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8aec72b58afac469e45aaa59fab34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lakeCentre: {fileID: 0}
+  _lakeWidth: 0
+  _lakeHeight: 0
+  _playerTransform: {fileID: 0}
+  _timeToShoot: 0
+  _InACorner: 0
+  _notAllowedCentre: {fileID: 0}
+  _notAllowedWidth: 0
+  _notAllowedHeight: 0
+  _timerToStop: 5.5
+  _timerToSpawn: 0.5
+--- !u!114 &-1427711897731452165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8697d8c333cafaf44b8e6adb9e6eb1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 2631205176616915908, guid: eb70c84b050fee94b862b3eb906423e9, type: 3}
+  _targetPosition: {fileID: 0}
+  _arrowUp: {fileID: 0}
+  _arrowDown: {fileID: 0}
+  _arrowLeft: {fileID: 0}
+  _arrowRight: {fileID: 0}
+  targetVector: {x: 0, y: 0, z: 0}
+  _isMoblin: 0
+--- !u!95 &-8159184105198623117
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888850301552041338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8d9eccbed75343458d752d621466472, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
