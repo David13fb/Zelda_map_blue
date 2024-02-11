@@ -76,7 +76,7 @@ public class LeeverIA : MonoBehaviour
         _playerTransform = FindObjectOfType<LinkController>().gameObject.transform;
         _myTransform = transform;
         _collider = GetComponent<Collider2D>();
-
+        _collider.enabled = false;
 
         _timer = Time.time;
         _currentState = State.resetting;
