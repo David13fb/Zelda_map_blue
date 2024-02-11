@@ -13,6 +13,9 @@ public class ShootingComponent : MonoBehaviour
     [SerializeField]
     private Transform _targetPosition; //a qué dispara
 
+
+    public Vector3 targetVector;
+
     [SerializeField]
     private bool _isPlayer = false;
 
@@ -64,7 +67,9 @@ public class ShootingComponent : MonoBehaviour
         {
             GameObject newBullet = Instantiate(_bullet, _myTransform.position, Quaternion.identity);
             BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
-            bulletComponent.SetDirection(_targetPosition);
+            if(_targetPosition != null)
+                bulletComponent.SetDirection(_targetPosition);
+
         }
     }
 

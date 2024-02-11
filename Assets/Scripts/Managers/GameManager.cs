@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+
+    private int _frameRate = 60;
+
     public bool linkOnCave;
     // This will be used to check if the player is dead
     public bool isDead;
@@ -63,6 +67,8 @@ public class GameManager : MonoBehaviour
         _linkAnimatorComponent = FindObjectOfType<LinkAnimatorComponent>();
         _levelManager = FindObjectOfType<LevelManager>();
         cam = Camera.main;
+
+        Application.targetFrameRate = _frameRate;
     }
 
 

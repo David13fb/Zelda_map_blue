@@ -21,9 +21,6 @@ public class InventoryManager : MonoBehaviour
     //Entre 1 y 3 que son los valores de los items distintos a la espada.
     private int itemEquiped = -1;
 
-    [SerializeField]
-    private int borrarEsto = 0;
-
     void Start()
     {
         if(Instance == null)
@@ -33,15 +30,6 @@ public class InventoryManager : MonoBehaviour
         else
         {
             Destroy(this);
-        }
-    }
-
-
-    void Update()
-    {
-        if(borrarEsto > 0)
-        {
-            ChangeRupeeAmount(borrarEsto);
         }
     }
 

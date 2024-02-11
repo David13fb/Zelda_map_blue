@@ -120,9 +120,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1142300783039820387
 CircleCollider2D:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb3cd76d5c967845a000a9aa9faeaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingMaxHp: 6
+  _startingMaxHp: 1
   _currentMaxHp: 0
   _currentHealth: 0
   _thisIsPlayer: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bullet: {fileID: 2631205176616915908, guid: e4ca3f3fda1e8de48b79f23d29634b4d, type: 3}
   _targetPosition: {fileID: 1224683102966683452}
+  targetVector: {x: 0, y: 0, z: 0}
   _isPlayer: 0
 --- !u!114 &7988033313172404553
 MonoBehaviour:
