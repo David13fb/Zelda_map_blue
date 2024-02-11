@@ -61,7 +61,7 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
 
             _animator = _link.GetComponent<Animator>();
 
-            _animator.SetTrigger("EnterCave");
+            _animator.SetBool("CaveEnter", true);
 
      
         
