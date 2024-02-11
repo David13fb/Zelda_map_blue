@@ -89,9 +89,29 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _arrowUp
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: 56dee05e306966e4f9635de676a92fee, type: 3}
+    - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _isMoblin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _arrowDown
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: 4f36547cdb52ff941ad8ded3aadb1a5d, type: 3}
+    - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _arrowLeft
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: 5cd7f0c2c24d6d84c89fb8601ad348bc, type: 3}
+    - target: {fileID: 6353977900426453911, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
+      propertyPath: _arrowRight
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: a3a9cf574ee85e64bb0220b6d4cbf9bc, type: 3}
     - target: {fileID: 6762804178274373987, guid: 931d2abf867646a4a883ed6c795ba283, type: 3}
       propertyPath: m_Icon
       value: 
@@ -139,6 +159,7 @@ MonoBehaviour:
   _targetPoint: {fileID: 6816293221569787477}
   _timerToStop: 600
   _timerToMove: 1200
+  currentMovementDirection: {x: 0, y: 0}
 --- !u!114 &-2569805390153984005
 MonoBehaviour:
   m_ObjectHideFlags: 0

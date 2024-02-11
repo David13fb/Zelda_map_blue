@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 059d13d119197b24e9f467996b646ab5, type: 3}
+    - target: {fileID: 1606511168661783294, guid: df574810ea1b99147bfae1065602c3eb, type: 3}
+      propertyPath: _arrowUp
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: 56dee05e306966e4f9635de676a92fee, type: 3}
+    - target: {fileID: 1606511168661783294, guid: df574810ea1b99147bfae1065602c3eb, type: 3}
+      propertyPath: _isMoblin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606511168661783294, guid: df574810ea1b99147bfae1065602c3eb, type: 3}
+      propertyPath: _arrowDown
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: 4f36547cdb52ff941ad8ded3aadb1a5d, type: 3}
+    - target: {fileID: 1606511168661783294, guid: df574810ea1b99147bfae1065602c3eb, type: 3}
+      propertyPath: _arrowLeft
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: 5cd7f0c2c24d6d84c89fb8601ad348bc, type: 3}
+    - target: {fileID: 1606511168661783294, guid: df574810ea1b99147bfae1065602c3eb, type: 3}
+      propertyPath: _arrowRight
+      value: 
+      objectReference: {fileID: 2631205176616915908, guid: a3a9cf574ee85e64bb0220b6d4cbf9bc, type: 3}
     - target: {fileID: 6597376129299556783, guid: df574810ea1b99147bfae1065602c3eb, type: 3}
       propertyPath: m_Name
       value: Moblin black Variant

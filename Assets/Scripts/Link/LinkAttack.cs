@@ -18,6 +18,11 @@ public class LinkAttack : MonoBehaviour
     [SerializeField]
     Transform _swordPos;
 
+
+    /// <summary>
+    /// GUARRADA ESPADA ARRROJADIZA XD
+    /// </summary>
+
     [SerializeField]
     private GameObject _trhowingSwordRight;
 
@@ -29,6 +34,11 @@ public class LinkAttack : MonoBehaviour
 
     [SerializeField]
     private GameObject _trhowingSwordDown;
+
+
+    /// <summary>
+    /// PATATA
+    /// </summary>
 
     LinkAnimatorComponent _anim;
 
@@ -62,6 +72,11 @@ public class LinkAttack : MonoBehaviour
     [SerializeField] AudioClip _swordShootAudio;
     [SerializeField] AudioClip _bombDropAudio;
 
+
+
+    private Stopwatch _sw;
+
+
     void Start()
     {
         _inventoryManager = FindAnyObjectByType<InventoryManager>();
@@ -72,6 +87,11 @@ public class LinkAttack : MonoBehaviour
         _shootingComponent = GetComponent<ShootingComponent>();
         _bombScript = GetComponent<BombScript>();
         _audioManager = FindObjectOfType<AudioManager>();
+
+        _sw = new Stopwatch();
+
+        _sw.Start();
+
     }
     public void inputvector(Vector2 input)
     {
@@ -110,6 +130,8 @@ public class LinkAttack : MonoBehaviour
             }
             if (_hpManager.IsFullHP() && !bomb)
             {
+                if (_sw.ElapsedMilliseconds > 1500f)
+                {
                     if (_oldInput.x == 1)
                     {
                         _shootDirection = Vector3.right;
@@ -141,7 +163,10 @@ public class LinkAttack : MonoBehaviour
                         BulletComponent bulletComponent = newBullet.GetComponent<BulletComponent>();
                         bulletComponent.SetLinkSwordDirection(_shootDirection);
                     }
-                _audioManager.PlaySoundEffect(_swordShootAudio);
+                    _audioManager.PlaySoundEffect(_swordShootAudio);
+
+                    _sw.Restart();
+                }
             }
             if (attacked && !bomb)
             {
