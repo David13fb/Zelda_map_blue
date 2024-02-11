@@ -63,7 +63,10 @@ public class LinkAnimatorComponent : MonoBehaviour
 
     }
 
-   
+    public void CaveEnterFalse()
+    {
+        _animator.SetBool("CaveEnter", false);
+    }   
 
 
 
