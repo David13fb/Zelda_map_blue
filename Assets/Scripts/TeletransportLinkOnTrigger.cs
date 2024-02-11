@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,53 +27,60 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
     private GameManager _gameManager;
     private AudioManager _audioManager;
 
+
+    private Animator _animator;
+
+    private Transform _mytransform;
+
+    private Transform _linkTransform;
+
     GameObject _link;
+
+    private bool _moving = false;
 
     private void Start()
     {
         _gameManager = FindObjectOfType<GameManager>();
         _audioManager = FindObjectOfType<AudioManager>();
+        _mytransform = transform;
+
     }
 
     void OnTriggerEnter2D(Collider2D linkCollider)
     {
-        //_camera.GetComponent<CameraController>().enabled = false;
-
         _link = linkCollider.gameObject;
-        if (_link.GetComponent<LinkController>() != null)
+
+        LinkController _controller = _link.GetComponent<LinkController>();
+        if (_controller!=null)
         {
-            if (_movingToCave)
-            {
-                _gameManager.linkOnCave = true;
-                _audioManager.PlayOrStopMusic(false);
-            }
+            _controller.SetBlockMovement(true);
+            _linkTransform = _link.transform;
+            _linkTransform.position = _mytransform.position;
 
-            _link.transform.position = _newLinkPosition;
-            _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
+            _moving = true;
 
-            if (_caveObject != null)
-            {
-                _caveObject.GetComponent<TalkComponent>().Reset(_textToWrite);
-            }
+            _animator = _link.GetComponent<Animator>();
 
-            if (!_movingToCave)
-            {
-                _gameManager.linkOnCave = false;
-                _audioManager.PlayOrStopMusic(true);
-            }
+            _animator.SetTrigger("EnterCave");
 
-            //_camera.GetComponent<CameraController>().enabled = !_movingToCave;
+     
+        
         }
+
+       
 
 
     }
-    private void TPLink()
+    private void OnTriggerExit2D()
     {
         //_camera.GetComponent<CameraController>().enabled = false;
 
-
-        if (_link.GetComponent<LinkController>() != null)
+        LinkController _controller = _link.GetComponent<LinkController>();
+        if (_controller != null)
         {
+            _controller.SetBlockMovement(false);
+           
+            _moving = false;
             if (_movingToCave)
             {
                 _gameManager.linkOnCave = true;
@@ -95,5 +103,16 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
 
             //_camera.GetComponent<CameraController>().enabled = !_movingToCave;
         }
+
+    }
+
+    public void MoveDown()
+    {
+        _linkTransform.position = new Vector3 (_linkTransform.position.x, _linkTransform.position.y -0.02f, _linkTransform.position.z);
+    }
+
+    private void Update()
+    {
+        if (_moving) MoveDown();
     }
 }
