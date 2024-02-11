@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 399256104866023043}
   - component: {fileID: 2504276316906409288}
   m_Layer: 7
-  m_Name: BulletMoblin
+  m_Name: BulletMoblinRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a64cbf95a3127ab469b1bef10677c7d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7a0c5aaf0a11a5240abe6e63323e4758, type: 3}
   m_Color: {r: 1, g: 0.3433962, b: 0.3433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
