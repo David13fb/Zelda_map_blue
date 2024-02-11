@@ -17,6 +17,8 @@ public class OctorokIA : MonoBehaviour
     private Stopwatch _sw = new Stopwatch();
     private bool _parada = false;
 
+    public Vector2 currentMovementDirection;
+
     //Stores previous direction to shoot only once per stop
     private Vector2 _prevDirection;
 
@@ -61,6 +63,7 @@ public class OctorokIA : MonoBehaviour
 
         if (newShootingOffset != Vector3.zero)
         {
+            currentMovementDirection = newShootingOffset;
             _targetPoint.position = _myTransform.position + newShootingOffset;
             //UnityEngine.Debug.Log(_targetPoint.position);
         }//_shootingComponent.targetVector = newShootingOffset; //_targetPoint.position = _myTransform.position + newShootingOffset;

@@ -44,9 +44,13 @@ public class TakeDamageComponent : MonoBehaviour
             if (_hpManager != null && _spriteRenderer != null && _rb != null && !_colorLoopEnabled)
             {
                 _hpManager.changeCurrentHealth(-damage); //damage taken is a negative, damage is a positive value
-                ColorLoop();
-                _pushDirection = -_linkTransform.up;
-                _rb.MovePosition(_rb.position + _pushDirection);
+                if(damage < 0) 
+                {
+                    ColorLoop();
+                    _pushDirection = -_linkTransform.up;
+                    _rb.MovePosition(_rb.position + _pushDirection);
+                }
+
             }
     }
 
