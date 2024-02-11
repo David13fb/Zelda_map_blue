@@ -14,14 +14,30 @@ public class CloudAnimator : MonoBehaviour
     [SerializeField] 
     private ParabolaTektiteIA _parabola;
 
+
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+       
+    }
     private void Start()
     {
+        
+        
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _animator = GetComponent<Animator>();
-        
-        StartCoroutine(CloudAppear());
+       
         
     }
+
+    public void Activate(bool state)
+    {
+            gameObject.SetActive(state);
+        StartCoroutine(CloudAppear());
+    }
+
+
+
     IEnumerator CloudAppear()
     {
         _animator.SetBool("Cloud", false);
