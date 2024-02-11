@@ -15,36 +15,43 @@ public class ZolaAnimator : MonoBehaviour
 
     }
 
-    private void Shoot(bool newState)
+    public void Shoot()
     {
-        shoot= newState;
+        shoot= true;
     }
+
+
 
     private IEnumerator Move()
     {
-      
 
         while (true)
         {
-            // Animación "down"
-            _animator.SetBool("Water", true);
-            yield return new WaitForSeconds(0.6f);
-
-            // Animación "up"
-            _animator.SetBool("Water", false);
-            yield return new WaitForSeconds(0.6f);
-
 
             if (shoot)
             {
 
-                _animator.SetBool("Shoot", true);
-                yield return new WaitForSeconds(0.6f);
-                _animator.SetBool("Shoot", false);
-
+                _animator.SetTrigger("Shoot");
+                yield return new WaitForSeconds(0.5f);
+                _animator.SetBool("Water", true);
+                shoot = false;
 
 
             }
+            
+            
+
+                // Animación "down"
+                _animator.SetBool("Water", true);
+                if (!shoot) yield return new WaitForSeconds(0.1f);
+
+                // Animación "up"
+                _animator.SetBool("Water", false);
+                if (!shoot) yield return new WaitForSeconds(0.1f);
+
+
+
+            
         }
     }
 

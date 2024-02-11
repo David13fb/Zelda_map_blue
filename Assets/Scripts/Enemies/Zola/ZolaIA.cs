@@ -8,7 +8,7 @@ using UnityEngine;
 public class ZolaIA : MonoBehaviour
 {
     //References:
-    private ZolaAnimator _zolaAnimator;
+  private ZolaAnimator _animator;
     private Collider2D _collider;
     private Transform _myTransform;
     private ShootingComponent _shootingComponent;
@@ -52,11 +52,13 @@ public class ZolaIA : MonoBehaviour
     {
 
         _outOfScreen = false;
+
     }
 
     void SpawnAndDirection()
     {
         _collider.enabled = true;
+     
         if (_InACorner)
         {
             float _xCoord;
@@ -72,6 +74,7 @@ public class ZolaIA : MonoBehaviour
         }
         else
         {
+           
             Vector3 newPosition = new Vector3(Random.Range(-_lakeWidth, _lakeWidth), Random.Range(-_lakeHeight, _lakeHeight), 0);
             _myTransform.position = _lakeCentre.position + newPosition;
         }
@@ -79,7 +82,7 @@ public class ZolaIA : MonoBehaviour
 
     void Start()
     {
-        _zolaAnimator = GetComponent<ZolaAnimator>();
+        _animator = GetComponent<ZolaAnimator>();
         _myTransform = transform;
         _collider = GetComponent<Collider2D>();
         _shootingComponent = GetComponent<ShootingComponent>();
@@ -99,6 +102,7 @@ public class ZolaIA : MonoBehaviour
                 _timer = Time.time;
                 _currentState = State.resetting;
                 SpawnAndDirection();
+                
             }
         }
         else if (Time.time - _timer >= _timerToStop && !_outOfScreen)
@@ -107,6 +111,7 @@ public class ZolaIA : MonoBehaviour
             {
                 _currentState = State.dissapear;
                 _collider.enabled = false;
+               
             }
         }
         else if (Time.time - _timer >= _timerToSpawn && !_outOfScreen)
@@ -115,15 +120,18 @@ public class ZolaIA : MonoBehaviour
             {
                 _currentState = State.spawn;
                 _shootingSw.Restart();
+                
             }
         }
 
         if (_shootingSw.ElapsedMilliseconds >= _timeToShoot && !_outOfScreen)
         {
             _shootingComponent.Shoot();
+            _animator.Shoot();
+            _shootingSw.Restart();
             _shootingSw.Stop();
         }
-
+        
     }
 }
 
