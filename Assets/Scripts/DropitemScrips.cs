@@ -14,8 +14,6 @@ public class DropitemScrips : MonoBehaviour
     void Start()
     {
         _transform = transform;
-    
-      
     }
 
     // Update is called once per frame

@@ -20,11 +20,14 @@ public class HP_manager : MonoBehaviour
     private LinkController _linkController;
     private DropitemScrips _dropitem;
 
+    private GameManager _gameManager;
+
     void Start()
     {
         _linkController = FindObjectOfType<LinkController>();
         _currentHealth = _currentMaxHp = _startingMaxHp;
         _dropitem = GetComponent<DropitemScrips>();
+        _gameManager = FindObjectOfType<GameManager>();
         if (_thisIsPlayer)
             changeHpGauge();
     }
@@ -42,7 +45,6 @@ public class HP_manager : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            _dropitem.DropItem();
             Die();
         }
 
@@ -66,18 +68,18 @@ public class HP_manager : MonoBehaviour
     {
         if (_thisIsPlayer)
         {
-            GameManager.instance.LinkHasDied();
+            _gameManager.LinkHasDied();
         }
         else
         {
-            //_dropitem.DropItem();
+            _dropitem.DropItem();
             Destroy(this.gameObject);
         }
     }
 
     public void deathAnimFinished()
     {
-        GameManager.instance.DeathAnimationFinished();
+        _gameManager.DeathAnimationFinished();
     }
 
     public bool IsFullHP()

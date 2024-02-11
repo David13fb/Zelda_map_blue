@@ -13,15 +13,19 @@ public class RupeeScript : MonoBehaviour
     private int _value;
     #endregion
     #region references
-    [SerializeField]
+    private InventoryManager _inventoryManager;
     #endregion
     #region Methods
+    
+    private void Start() {
+        _inventoryManager = FindObjectOfType<InventoryManager>();
+    }
     private void OnTriggerEnter2D(Collider2D linkCollider)
     {
         if (linkCollider.gameObject.GetComponent<LinkController>() != null)
         {
-            InventoryManager.Instance.ChangeRupeeAmount(_value);
-            //no sería mejor eliminarlas??
+            _inventoryManager.ChangeRupeeAmount(_value);
+            //no serï¿½a mejor eliminarlas??
             Destroy(this.gameObject);
             
         }

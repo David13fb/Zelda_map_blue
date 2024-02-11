@@ -35,31 +35,16 @@ public class GameManager : MonoBehaviour
     private CameraController _cameraController;
 
     // This will be used to access the LinkController
-    private LinkController _characterController;
+    public LinkController _characterController;
     private LevelManager _levelManager;
     private ChangeToRedDeadScreen _changeRedScreen;
     private LinkAnimatorComponent _linkAnimatorComponent;
-
-    // Singleton pattern
-    void Awake()
-    {
-        // Singleton pattern
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     // Reference to the CameraController and setting the screen size
     void Start()
     {
         _hudmanager = FindObjectOfType<HUDmanager>();
-        _cameraController = CameraController.instance;
+        _cameraController = FindAnyObjectByType<CameraController>();
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
         screenSizeWidth = Camera.main.orthographicSize * 2 * Camera.main.aspect;
         _changeRedScreen = FindAnyObjectByType<ChangeToRedDeadScreen>();
@@ -70,6 +55,8 @@ public class GameManager : MonoBehaviour
 
         Application.targetFrameRate = _frameRate;
     }
+
+    
 
 
     async void Update() 
@@ -107,7 +94,5 @@ public class GameManager : MonoBehaviour
         _changeRedScreen.SpawnLoseGame();
         isDead = true;
     }
-
-   
 }
 

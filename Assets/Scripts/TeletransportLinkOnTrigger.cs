@@ -23,6 +23,14 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
     [SerializeField]
     private bool _movingToCave;
 
+    private GameManager _gameManager;
+    private AudioManager _audioManager;
+
+    private void Start() {
+        _gameManager = FindObjectOfType<GameManager>();
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
+
     void OnTriggerEnter2D(Collider2D linkCollider)
     {
         //_camera.GetComponent<CameraController>().enabled = false;
@@ -32,8 +40,8 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
         {
             if (_movingToCave)
             {
-                GameManager.instance.linkOnCave = true;
-                AudioManager.Instance.PlayOrStopMusic(false);
+                _gameManager.linkOnCave = true;
+                _audioManager.PlayOrStopMusic(false);
             }
 
             Link.transform.position = _newLinkPosition;
@@ -46,8 +54,8 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
 
             if (!_movingToCave)
             {
-                GameManager.instance.linkOnCave = false;
-                AudioManager.Instance.PlayOrStopMusic(true);
+                _gameManager.linkOnCave = false;
+                _audioManager.PlayOrStopMusic(true);
             }
 
             //_camera.GetComponent<CameraController>().enabled = !_movingToCave;

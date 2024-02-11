@@ -81,7 +81,7 @@ public class LinkAttack : MonoBehaviour
     }
     public void Attack(bool attacked, bool bomb)
     {
-        if (!InventoryManager.Instance.itemsUnlocked[0]) return;
+        if (!_inventoryManager.itemsUnlocked[0]) return;
 
         if (attacked || bomb)
         {

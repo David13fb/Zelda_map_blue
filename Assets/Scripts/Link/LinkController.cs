@@ -13,6 +13,8 @@ public class LinkController : MonoBehaviour
     private bool _blockMovement = false;
 
     public Vector2 lastInput { get; private set; }
+
+    
     void Start()
     {
         _chMovement = GetComponent<CharacterMovement>();
