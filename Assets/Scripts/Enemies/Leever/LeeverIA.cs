@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class LeeverIA : MonoBehaviour
@@ -16,6 +15,8 @@ public class LeeverIA : MonoBehaviour
     //Timers to move and stop:
     [SerializeField] private float _timerToStop = 5.5f;
     [SerializeField] private float _timerToSpawn = 0.5f;
+
+    private bool _outOfScreen = false;
     //private Stopwatch _sw = new Stopwatch();
 
     enum State
@@ -31,17 +32,19 @@ public class LeeverIA : MonoBehaviour
     public void StopMoving()
     {
         Vector2 direction = Vector2.zero;
-        _chMovement.SetCharacterVelocity(direction);
+        _outOfScreen = true;
     }
     public void StartMoving()
     {
+        _outOfScreen = false;
         SpawnAndDirection();
+        _currentState = State.resetting;
+        _timer = Time.time;
     }
 
     void SpawnAndDirection()
     {
         _collider.enabled = true;
-        UnityEngine.Debug.Log(_currentState);
         int _spawnPosition = Random.Range(0, 2);
         Vector2 direction = Vector2.zero;
         Vector3 _offset = new Vector3 (3, 0, 0);
@@ -73,9 +76,9 @@ public class LeeverIA : MonoBehaviour
         _playerTransform = FindObjectOfType<LinkController>().gameObject.transform;
         _myTransform = transform;
         _collider = GetComponent<Collider2D>();
-        _timer = Time.time;
 
-        //_sw.Start();
+
+        _timer = Time.time;
         _currentState = State.resetting;
 
         
@@ -84,14 +87,12 @@ public class LeeverIA : MonoBehaviour
 
     void Update()
     {
-        //UnityEngine.Debug.Log(Time.time - _timer);
-        //_timer += Time.deltaTime;
-        //UnityEngine.Debug.Log(_sw.ElapsedMilliseconds);
+        if (_outOfScreen) return;
+
         if (Time.time - _timer >= _timerToStop + _timerToSpawn)
         {
             if (_currentState != State.resetting)
             {
-                Debug.Log("reset");
                 _timer = Time.time;
                 _currentState = State.resetting;
             }
@@ -106,7 +107,7 @@ public class LeeverIA : MonoBehaviour
         }
         else if (Time.time - _timer >= _timerToSpawn)
         {
-            if(_currentState != State.spawn )
+            if(_currentState != State.spawn)
             {
                 _currentState = State.spawn;
 

@@ -10,6 +10,8 @@ public class EnemyStopOutOfScreen : MonoBehaviour
     [SerializeField] bool _isOctorokMoblin;
     [SerializeField] bool _isLeever;
     [SerializeField] bool _isTektite;
+
+    private bool _itsVisible = false;
     //[SerializeField] bool _isZora;
     private Camera mainCamera;
 
@@ -20,58 +22,94 @@ public class EnemyStopOutOfScreen : MonoBehaviour
             _OctorokMovementIA = GetComponent<OctorokIA>();
             _shootingComponent = GetComponent<ShootingComponent>();
         }
-        if (_isLeever)
+        else if (_isLeever)
         {
             _LeeverMovementIA = GetComponent<LeeverIA>();
         }
-        if (_isTektite)
+        else if (_isTektite)
         {
             _TektiteMovementIA = GetComponent<ParabolaTektiteIA>();
         }
-        /**/
         mainCamera = Camera.main;
+
+
+    }
+
+    void Start()
+    {
+        if (_isOctorokMoblin)
+        {
+            _OctorokMovementIA.enabled = false;
+            _shootingComponent.enabled = false;
+            _OctorokMovementIA.StopMoving();
+
+        }
+        else if (_isLeever)
+        {
+            _LeeverMovementIA.enabled = false;
+            _LeeverMovementIA.StopMoving();
+
+        }
+        else if (_isTektite)
+        {
+            _TektiteMovementIA.enabled = false;
+            _TektiteMovementIA.StopMoving();
+
+        }
     }
 
     private void Update()
     {
-        if (IsVisibleFromCamera())
+        bool visible = IsVisibleFromCamera();
+
+
+        if (visible && !_itsVisible)
         {
+            _itsVisible = true;
             if (_isOctorokMoblin)
             {
-                _OctorokMovementIA.StartMoving();
                 _OctorokMovementIA.enabled = true;
                 _shootingComponent.enabled = true;
+                _OctorokMovementIA.StartMoving();
+
             }
-            if (_isLeever)
+            else if (_isLeever)
             {
-                _LeeverMovementIA.StartMoving();
                 _LeeverMovementIA.enabled = true;
+                _LeeverMovementIA.StartMoving();
+
             }
-            if (_isTektite)
+            else if (_isTektite)
             {
-                _TektiteMovementIA.StartMoving();
                 _TektiteMovementIA.enabled = true;
+                _TektiteMovementIA.StartMoving();
+
             }
         }
-        else
+        else if(!visible && _itsVisible)
         {
+            _itsVisible = false;
             if (_isOctorokMoblin)
             {
-                _OctorokMovementIA.StopMoving();
                 _OctorokMovementIA.enabled = false;
                 _shootingComponent.enabled = false;
+                _OctorokMovementIA.StopMoving();
+
             }
-            if (_isLeever)
+            else if (_isLeever)
             {
-                _LeeverMovementIA.StopMoving();
                 _LeeverMovementIA.enabled = false;
+                _LeeverMovementIA.StopMoving();
+
             }
-            if (_isTektite)
+            else if (_isTektite)
             {
-                _TektiteMovementIA.StopMoving();
                 _TektiteMovementIA.enabled = false;
+                _TektiteMovementIA.StopMoving();
+
             }
         }
+        
     }
 
     private bool IsVisibleFromCamera()
