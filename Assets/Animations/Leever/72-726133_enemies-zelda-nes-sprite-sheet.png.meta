@@ -1,0 +1,4307 @@
+fileFormatVersion: 2
+guid: 504328dfef3836e4abce12d44cbd5d27
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 331
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077be02dbcdbd72429076f6cba5cf061
+      internalID: 920930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 330
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa1bbf789352e5409de9ab649eb9379
+      internalID: 1855849388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 331
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf740ff5ba1e64e429ab15681e5167c1
+      internalID: 452457844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 330
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce08577933b8afd44bb1fc15265b52ea
+      internalID: -589870423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 331
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9b47dabc8876e44bcb524614af7ce8
+      internalID: 1957129014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 330
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db0093e280e94245bd669aa60b14fdd
+      internalID: -168583630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 331
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6711ac824e77e004aba06b8c3eadd13f
+      internalID: -1661665493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 330
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391031337a9032546b089a1297dd2a06
+      internalID: 1335325463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 331
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b20e588183bce3449cae75c0aa68618
+      internalID: 1063942818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 331
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b4d8b90b1a9644e8f72a3b6605fffd
+      internalID: -494446041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 330
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c51e4a34f99244c8563669ce87c0c7
+      internalID: 1779008262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 333
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08719c225d8801b4abe6212c8149bb92
+      internalID: 640624631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 333
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ec232789d16b8438defbddda31d0e9
+      internalID: -799314248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 333
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9b62094886d7946a7d5c4aa969816d
+      internalID: 1666652008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 330
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67426c51f25d9e34db7d717d8ce14254
+      internalID: 836773608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1edb6a885f23a408a7f805a71368b2
+      internalID: -667470162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc67527c74aa88542b1a62c2b12b7e06
+      internalID: -1983507694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0e3c106fd074c4aa3e049c9a409b4e
+      internalID: 880921411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df6b2c0db1c3474eaf1b697a524d4ea
+      internalID: 1688256825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28efc6ffcdbf58444ac5c3f6b6386556
+      internalID: 1093254729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2634f60cd9d45d64bb5b88d432b5a566
+      internalID: 2116549667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96e9d592517c06429c78a40c2d36506
+      internalID: 1992844543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_22
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a298b909ff64bc4429344032c4d788d1
+      internalID: -223428893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e33f742ecccd24592aaf4e63ebc57c
+      internalID: 1575076798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baef4e4090dbdb42acc0edb7a995682
+      internalID: 773273193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0508bed5ebcccb0468198e307e23142a
+      internalID: -298366217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_26
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 303
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c52540484d644145b5e23e48da8e8c9
+      internalID: -330047989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_27
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 303
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0108b06964f72df418d8050c38abc287
+      internalID: -1596670832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_28
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 303
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403d73aaae6230740beda58c246d4e52
+      internalID: -1989147588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_29
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 300
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb63f7442703202449c83d9d26875d43
+      internalID: 44794994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6ece2e189c5264983548ec0a728f2e
+      internalID: -1864434762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_31
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628ebf85d7304bf44a00fa36be2f75e1
+      internalID: 1876673116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_32
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873d7217fb038af44866565d92375c7c
+      internalID: -731239718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_33
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb27986229e50244490a91f1b4c3f5ab
+      internalID: 792712494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_34
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a835df379f62746a2f1c39b94cb9ad
+      internalID: 1706673925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_35
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2f9391b159fce4995560b1a52b9302
+      internalID: -489202744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_36
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a64f0f48d36fc74ea7d29ba5f47b16d
+      internalID: 797584166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_37
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 270
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879f8f3caa817164ba073732ef9da49c
+      internalID: -1352067757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_38
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 271
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f55bc95a4710bd4ab2451788b2371df
+      internalID: 1344662334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_39
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 270
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33996f483aefe64bb18f55c0373c314
+      internalID: 1516997667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_40
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 271
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dc4a869bfbe4448911d3d6f9331355
+      internalID: 186933607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_41
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 271
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410083cf5980fe146ba223ad4e1dea46
+      internalID: -1147305205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_42
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 270
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a657bd10237335409d3ef2c3b3c74cd
+      internalID: 1216181353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_43
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 271
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0c6d8346157fa468626c871d609b82
+      internalID: 451864285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_44
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 270
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3857e6d5794e6ac48b22422b7555b815
+      internalID: -506149633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 240
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae130fcb31abb4b4d8d1ec2d81bccdf7
+      internalID: 849062504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_46
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 241
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6833f8816a1684c98d2fdedef14497
+      internalID: -1537382617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_47
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 240
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0729bca317a1188499eef37898549bb6
+      internalID: -1037959347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_48
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 241
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5cb07aaae30b9469c77bc757d592dc
+      internalID: 2076927495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_49
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 240
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8603a4d81fb8f4542af2f30efe1f04de
+      internalID: 957919476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_50
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 241
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe428fd0cd624814cae1d6fb39375f3b
+      internalID: 1522890432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_51
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 240
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c57db10804c884ab99de54a945c78a
+      internalID: -791071487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_52
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 241
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fddeb8ffc00bf54ca2469b36abb6c2f
+      internalID: 392043600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_53
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 240
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8760c097b1654df429859e0e40d4cb51
+      internalID: 1011937589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_54
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 241
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b98404186c03ac438122c18885e582c
+      internalID: -1928788691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_55
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 240
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7904e287489ca1740972cc23754b1f43
+      internalID: 709345664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_56
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 240
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5cc35e58a1be5479360b7a153aebf6
+      internalID: 1223585890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_57
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 241
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a4c846e14b57c4d9d9b76888be3c56
+      internalID: 979104449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_58
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 240
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098e78fb30e9b3146be736e74261d991
+      internalID: -8751447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_59
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 240
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc221e2ac45fe74faf32d88dc3b0e05
+      internalID: -668791601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183aced0c9bd2fd49809ca882692ba20
+      internalID: -1835626714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_61
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 211
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08c287c25f74ba45897747428a1abb1
+      internalID: -630284432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_62
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 210
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89337bf98cde13543a2f7ad9bc56ce21
+      internalID: 560542396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_63
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb3cadaf0c0f5148a07e6606e7cd7cd
+      internalID: 652143225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_64
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11738eea0c9d4c747b03d1bf2b12987b
+      internalID: -149494844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_65
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 211
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971d8f575aa7b314ab424564965414ef
+      internalID: 241754907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_66
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 210
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfeafcc60d9e8e449230782a51cfeb5
+      internalID: -985857780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_67
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ec74c81c8c57845a8b8d67e0b7aacf
+      internalID: -1627672511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_68
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 211
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb9b27d0dfff9f4c98a267b95f6bfab
+      internalID: 1205384259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_69
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 211
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59083740ab0efec4fbe3205425aeb9b2
+      internalID: 279878402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_70
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1343a2090ed734c84d6629f6046e81
+      internalID: 583282068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_71
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cdb00eab1c4244691447b56b04ed4f
+      internalID: -873177146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_72
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a160157f5f557b46b66121beea29dbd
+      internalID: -1070866271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_73
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 210
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3dc292f7ec36945a9d31e7cde57cbc
+      internalID: 1970168046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_74
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 210
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef796a48b6708874e9ecc9e7e454beb5
+      internalID: 123784453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a16a3cb1b320e4385666f7860e9bd0
+      internalID: 911921662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_76
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b09de2f9248034b9a8e3c341288c7f
+      internalID: -951542486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_77
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 180
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d8b624b1ef6cf4a850256b824579b3
+      internalID: 1363466328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_78
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 181
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c870394e6b07fff4d9d9cd660c61a89e
+      internalID: 1743100275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_79
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19cb59fdaf78a54a82a3df6a13d86eb
+      internalID: -1245051558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_80
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c6bfc50632e2e42bc9dbf42e8b5a55
+      internalID: 1940498475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_81
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 180
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23997f59a99e44f4e9164881a10aadd4
+      internalID: -1370876180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_82
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 181
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68afd4bce5194434bb86d5b0a5726133
+      internalID: -2086985675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_83
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 181
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd6f584c109e87449cf803a60de87c0
+      internalID: -757022648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_84
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 181
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f7b1a2684bd5e546abdbd0ffae35610
+      internalID: -470235700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_85
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fb80a216255654884322d734ff9d3b
+      internalID: -222467794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_86
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b460d77163070fc4c8823a7d5b166272
+      internalID: -1483822816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_87
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd0ae20b1e951b48a01323582903873
+      internalID: -1008979422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_88
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 180
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afbed1603cdf66648acd43f3eed0fe9d
+      internalID: -966774529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_89
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 180
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b2f41a5c7fa0c44872ed6240ba6c1d
+      internalID: 1972014814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7570dedfb853d4e990f01ba96feae9
+      internalID: -948066452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_91
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 150
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1308677f1d509a48830e40ada0d638b
+      internalID: -28353531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_92
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 150
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5b9572452782849934803883c39398
+      internalID: 447013759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_93
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 150
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc18b67e35a2af442ba49a191d491524
+      internalID: 707362577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_94
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 150
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9953ae72acd1e140b95fb26bbd50b1d
+      internalID: 537952494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_95
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 150
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecefa1fabee9cd439f4e51ba1b3ef56
+      internalID: 558243612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_96
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 150
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aaa379db6426b0448d1e7cc16343828
+      internalID: -239240421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_97
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 150
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6e5ce4aee09e4c83340d4cabc98b4
+      internalID: -289423371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_98
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 152
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f9f8c9ec5d00a468bdb32fa66b7744
+      internalID: 1445909849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_99
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 152
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a1ae1bb8b159545a44c4f3babb5644
+      internalID: -178056008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_100
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 151
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3b3cab060f7584b9048d39fdbf0093
+      internalID: -1691396798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_101
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 150
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad556337d73d02e439eb1cfa633b9c27
+      internalID: 742570438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_102
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 151
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89104f93f0095684cb57fe2fab3adf5a
+      internalID: 1723135281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_103
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 151
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3202df9c2e9784d4d891463695ca2dee
+      internalID: 1814546981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_104
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 154
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635c45c4b4b0e7544a5cc9cc9540ac9c
+      internalID: -811854200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_105
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 154
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8a6f2b73f88044a8c581deba878774
+      internalID: -371363712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_106
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4408988f9cb5f6748b7419a6e091db9c
+      internalID: -260613981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_107
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 121
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4dff541f54fc14cbc9801ce14557c1
+      internalID: -855119141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_108
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 120
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081ec63cdb2bb0b459922b52d5c98e27
+      internalID: 1629057217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_109
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 121
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148d062c815b28f48a30c9959a0627cf
+      internalID: 1923354252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_110
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94caa49c16ea8614bbbffe8c19a9f46c
+      internalID: -1490538526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_111
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 121
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc8b38ccec43c5409601cdaaba07213
+      internalID: -693917229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_112
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 120
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e6cf0ba8ecc924bb9df97cf40941c3
+      internalID: 1834551475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_113
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 121
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f3a88179f2c63409e5eadfe8906b4f
+      internalID: -790525102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_114
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 121
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdf1fb85b366c24aa8b972d1e4ff244
+      internalID: 1657104871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_115
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 121
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fbabd9db9bb9f4a8508dca2c1e2d81
+      internalID: -1028177633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_116
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32f7a8d6207dae4cace939293b4d792
+      internalID: 954454897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_117
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 120
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d5f5d757b41df428c45bc8145ef129
+      internalID: -399543810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_118
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 120
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5492b980646b5d64bb49999ab0079040
+      internalID: 2136055851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_119
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 120
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0825f11dd81e844a5e03b94322e2a3
+      internalID: 1653207263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_120
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 124
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c8bd3881c74624e8ce5460abc4d2e7
+      internalID: -1701467687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_121
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 124
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700c9c0deda718b4588685500080df0a
+      internalID: -1568082828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_122
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e167056b49abf48bf59687a78a0b59
+      internalID: 240954328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_123
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 91
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d619e0c9de4d72b4c865f61691d5b591
+      internalID: -1254980831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_124
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 90
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf76a184d541514da76aed2ee2556e2
+      internalID: -2066768860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_125
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 91
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5c6ed867f39d34ea5030e81d1fece7
+      internalID: 725744135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_126
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 90
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab06a1ee6b4bc04996fd4c7fb3657f5
+      internalID: -98102028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_127
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 91
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b564eac8022dee46a59182687634e81
+      internalID: -1649403489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_128
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 90
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921f49fad4cb1db45a35dac3b71dca93
+      internalID: 2030606402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_129
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 91
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4928d53c96ffe4a44ac8595cbf863299
+      internalID: -2108054478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_130
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 92
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d591e659e5dcdf41b62adcbb2254252
+      internalID: -2113482705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_131
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22e121bcea9221409b49498e620fb64
+      internalID: 977942873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_132
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 91
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9163575f0e8923c419215112eddc5f75
+      internalID: 1198478062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_133
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 92
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7b53af3134f0040b65c9eecc72b6df
+      internalID: -953208063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_134
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 91
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dc9ec761c72ce4396cd29d1c45e790
+      internalID: -1000478088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_135
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 92
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffce8bd62199c54884070cf71060576
+      internalID: 2124926089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_136
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 103
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7fd59bcf501e745b23ae309074b54f
+      internalID: -1620383275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_137
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 103
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f09f4d016ac3e44eaccd1acd921b89a
+      internalID: 1497328062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_138
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 93
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1457501779cad4993c8a35925fe024
+      internalID: 2075275902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_139
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 94
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d93a50c2fbb1d43a3eb51be4386f85
+      internalID: -1082866732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_140
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 94
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5b3b4193396e040835a7c7dd841988
+      internalID: -588503920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_141
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 94
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784b0f521a30c5d45b9e3a03a0994249
+      internalID: 1877232593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_142
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 94
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150b6ba1448536d44b13fd4cfbbfde5d
+      internalID: -926105534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_143
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 88
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79a5d19bbb017840a870ac7ecb39441
+      internalID: -1030861665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_144
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 88
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b283a712e281e448afe10643e03f90d
+      internalID: -766521478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_145
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d0242a10ccb014c909286c398e880d
+      internalID: -27174570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_146
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 61
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5575d9e01fee6e843bd0bba39cde4869
+      internalID: -173914946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_147
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 60
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f01c8cbde696046849acb97589d6c0
+      internalID: -1592797639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_148
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 61
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5828bb18d355f4cb94ef55233f7beb
+      internalID: -1963614035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_149
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 60
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b53867ea27bab4fbde74f78c9e80d8
+      internalID: 1492088614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_150
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 61
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e202f1b60a2b1b348a3f2e0ca69eac4d
+      internalID: 2053148084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_151
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 60
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d260730f5e9c247448390c1289589ef1
+      internalID: 1135123392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_152
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 61
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d429a2c9401cc04bbdaaac69c5f056d
+      internalID: -1330664807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_153
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade720d7a459e584080fee21a9ad56a0
+      internalID: -1117325566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_154
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 63
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e1a94e910609142bf9247357dec0e3
+      internalID: -1312453528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_155
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 64
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388d88211f7784b4fbb6bb7d1df48208
+      internalID: 1893631420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_156
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 63
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c865db18a5d570240be202108f10c9a7
+      internalID: 1077658078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_157
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 60
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1814fbe7b40d1ec40bab39bb56107808
+      internalID: 368298563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_158
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 61
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7420aa6e9bd524bb43aa96144a5a45
+      internalID: -1395841365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_159
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60991b5ae8393bc468cb0410c7062ea5
+      internalID: 547115762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_160
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c6bd0ed1a10a04581abb0f4885240f
+      internalID: -1939371020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_161
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6c71fdba046ca409cab952c0798f5a
+      internalID: 884962505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_162
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9822945f524b7645b614ea2a7fbc87a
+      internalID: -469757905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_163
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 59
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136cab985d1248e409f3123ca604dc9a
+      internalID: 1383891154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_164
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 59
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22107db2f5fd61e49a4a2f39bde2122e
+      internalID: -900852429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_165
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 59
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fedf41f6a6d78842a2bc04d336c735a
+      internalID: 713318901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_166
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 59
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c95449dd51f7b74e9252b6186d5c80a
+      internalID: 958363111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_167
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 31
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b21fa5eb98d2347a42b61d1f9d9bd1
+      internalID: -2060606426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_168
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 31
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ef9771c5223ff4bb6d4df106142734
+      internalID: -1234422660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_169
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 30
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda47408d83646944a18126cac1b1d41
+      internalID: -87128118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_170
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 30
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991e5182c3bc57f46997207b2f8ba8c6
+      internalID: -1557920539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_171
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 36
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83af67778292f494db10b42b435ca9f8
+      internalID: -540262499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_172
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 36
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccb9a76e69e9ef43b0399baa3dcfc9f
+      internalID: 136195050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_173
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c659da10c5901478d6d326e5c0e458
+      internalID: -1418983717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_174
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0103a0709bcc39b459605ef60de76bc3
+      internalID: 1462193552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_175
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 36
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36ac126693c82d4e8d4185e389d6b53
+      internalID: 909005137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_176
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 36
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be5762fc18e2f347a6945faa3d6e05e
+      internalID: 1833229472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_177
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 33
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d613b1fc071e34187655cf8f5bbfb0
+      internalID: -708179550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_178
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 30
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d2b159ceb41ff47ad7525cf043e067
+      internalID: -1876300871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_179
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0464411030391f9439cfece668ee1c59
+      internalID: -1809661342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_180
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 33
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e7c4fc584626145a513a8ff7c54607
+      internalID: 848099222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_181
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 33
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6265a9a6bcdc754ca15cac364d1e443
+      internalID: -1774339245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bc1fde17d1e2c45a4629a9879708ab
+      internalID: -509689802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_183
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1472a0584283341b524a9d44b22153
+      internalID: -1068511257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_184
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34556f03c08d4d44bfb7d345d10c570
+      internalID: 399880672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_185
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 3
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cb49d6798cfe4468202343ba8fcb1c
+      internalID: -814975145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_186
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcdeb3c13013cf4792ed82458296d8c
+      internalID: 199703731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_187
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea5663f4eba094478682b685efaaa68
+      internalID: 826594546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_188
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 4
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86c4951149fe194b8339edc2195f852
+      internalID: 422691663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 72-726133_enemies-zelda-nes-sprite-sheet_189
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 4
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e094be1b4d871546aa1dca0b38ecadc
+      internalID: -1437456119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      72-726133_enemies-zelda-nes-sprite-sheet_0: 920930
+      72-726133_enemies-zelda-nes-sprite-sheet_1: 1855849388
+      72-726133_enemies-zelda-nes-sprite-sheet_10: 1779008262
+      72-726133_enemies-zelda-nes-sprite-sheet_100: -1691396798
+      72-726133_enemies-zelda-nes-sprite-sheet_101: 742570438
+      72-726133_enemies-zelda-nes-sprite-sheet_102: 1723135281
+      72-726133_enemies-zelda-nes-sprite-sheet_103: 1814546981
+      72-726133_enemies-zelda-nes-sprite-sheet_104: -811854200
+      72-726133_enemies-zelda-nes-sprite-sheet_105: -371363712
+      72-726133_enemies-zelda-nes-sprite-sheet_106: -260613981
+      72-726133_enemies-zelda-nes-sprite-sheet_107: -855119141
+      72-726133_enemies-zelda-nes-sprite-sheet_108: 1629057217
+      72-726133_enemies-zelda-nes-sprite-sheet_109: 1923354252
+      72-726133_enemies-zelda-nes-sprite-sheet_11: 640624631
+      72-726133_enemies-zelda-nes-sprite-sheet_110: -1490538526
+      72-726133_enemies-zelda-nes-sprite-sheet_111: -693917229
+      72-726133_enemies-zelda-nes-sprite-sheet_112: 1834551475
+      72-726133_enemies-zelda-nes-sprite-sheet_113: -790525102
+      72-726133_enemies-zelda-nes-sprite-sheet_114: 1657104871
+      72-726133_enemies-zelda-nes-sprite-sheet_115: -1028177633
+      72-726133_enemies-zelda-nes-sprite-sheet_116: 954454897
+      72-726133_enemies-zelda-nes-sprite-sheet_117: -399543810
+      72-726133_enemies-zelda-nes-sprite-sheet_118: 2136055851
+      72-726133_enemies-zelda-nes-sprite-sheet_119: 1653207263
+      72-726133_enemies-zelda-nes-sprite-sheet_12: -799314248
+      72-726133_enemies-zelda-nes-sprite-sheet_120: -1701467687
+      72-726133_enemies-zelda-nes-sprite-sheet_121: -1568082828
+      72-726133_enemies-zelda-nes-sprite-sheet_122: 240954328
+      72-726133_enemies-zelda-nes-sprite-sheet_123: -1254980831
+      72-726133_enemies-zelda-nes-sprite-sheet_124: -2066768860
+      72-726133_enemies-zelda-nes-sprite-sheet_125: 725744135
+      72-726133_enemies-zelda-nes-sprite-sheet_126: -98102028
+      72-726133_enemies-zelda-nes-sprite-sheet_127: -1649403489
+      72-726133_enemies-zelda-nes-sprite-sheet_128: 2030606402
+      72-726133_enemies-zelda-nes-sprite-sheet_129: -2108054478
+      72-726133_enemies-zelda-nes-sprite-sheet_13: 1666652008
+      72-726133_enemies-zelda-nes-sprite-sheet_130: -2113482705
+      72-726133_enemies-zelda-nes-sprite-sheet_131: 977942873
+      72-726133_enemies-zelda-nes-sprite-sheet_132: 1198478062
+      72-726133_enemies-zelda-nes-sprite-sheet_133: -953208063
+      72-726133_enemies-zelda-nes-sprite-sheet_134: -1000478088
+      72-726133_enemies-zelda-nes-sprite-sheet_135: 2124926089
+      72-726133_enemies-zelda-nes-sprite-sheet_136: -1620383275
+      72-726133_enemies-zelda-nes-sprite-sheet_137: 1497328062
+      72-726133_enemies-zelda-nes-sprite-sheet_138: 2075275902
+      72-726133_enemies-zelda-nes-sprite-sheet_139: -1082866732
+      72-726133_enemies-zelda-nes-sprite-sheet_14: 836773608
+      72-726133_enemies-zelda-nes-sprite-sheet_140: -588503920
+      72-726133_enemies-zelda-nes-sprite-sheet_141: 1877232593
+      72-726133_enemies-zelda-nes-sprite-sheet_142: -926105534
+      72-726133_enemies-zelda-nes-sprite-sheet_143: -1030861665
+      72-726133_enemies-zelda-nes-sprite-sheet_144: -766521478
+      72-726133_enemies-zelda-nes-sprite-sheet_145: -27174570
+      72-726133_enemies-zelda-nes-sprite-sheet_146: -173914946
+      72-726133_enemies-zelda-nes-sprite-sheet_147: -1592797639
+      72-726133_enemies-zelda-nes-sprite-sheet_148: -1963614035
+      72-726133_enemies-zelda-nes-sprite-sheet_149: 1492088614
+      72-726133_enemies-zelda-nes-sprite-sheet_15: -667470162
+      72-726133_enemies-zelda-nes-sprite-sheet_150: 2053148084
+      72-726133_enemies-zelda-nes-sprite-sheet_151: 1135123392
+      72-726133_enemies-zelda-nes-sprite-sheet_152: -1330664807
+      72-726133_enemies-zelda-nes-sprite-sheet_153: -1117325566
+      72-726133_enemies-zelda-nes-sprite-sheet_154: -1312453528
+      72-726133_enemies-zelda-nes-sprite-sheet_155: 1893631420
+      72-726133_enemies-zelda-nes-sprite-sheet_156: 1077658078
+      72-726133_enemies-zelda-nes-sprite-sheet_157: 368298563
+      72-726133_enemies-zelda-nes-sprite-sheet_158: -1395841365
+      72-726133_enemies-zelda-nes-sprite-sheet_159: 547115762
+      72-726133_enemies-zelda-nes-sprite-sheet_16: -1983507694
+      72-726133_enemies-zelda-nes-sprite-sheet_160: -1939371020
+      72-726133_enemies-zelda-nes-sprite-sheet_161: 884962505
+      72-726133_enemies-zelda-nes-sprite-sheet_162: -469757905
+      72-726133_enemies-zelda-nes-sprite-sheet_163: 1383891154
+      72-726133_enemies-zelda-nes-sprite-sheet_164: -900852429
+      72-726133_enemies-zelda-nes-sprite-sheet_165: 713318901
+      72-726133_enemies-zelda-nes-sprite-sheet_166: 958363111
+      72-726133_enemies-zelda-nes-sprite-sheet_167: -2060606426
+      72-726133_enemies-zelda-nes-sprite-sheet_168: -1234422660
+      72-726133_enemies-zelda-nes-sprite-sheet_169: -87128118
+      72-726133_enemies-zelda-nes-sprite-sheet_17: 880921411
+      72-726133_enemies-zelda-nes-sprite-sheet_170: -1557920539
+      72-726133_enemies-zelda-nes-sprite-sheet_171: -540262499
+      72-726133_enemies-zelda-nes-sprite-sheet_172: 136195050
+      72-726133_enemies-zelda-nes-sprite-sheet_173: -1418983717
+      72-726133_enemies-zelda-nes-sprite-sheet_174: 1462193552
+      72-726133_enemies-zelda-nes-sprite-sheet_175: 909005137
+      72-726133_enemies-zelda-nes-sprite-sheet_176: 1833229472
+      72-726133_enemies-zelda-nes-sprite-sheet_177: -708179550
+      72-726133_enemies-zelda-nes-sprite-sheet_178: -1876300871
+      72-726133_enemies-zelda-nes-sprite-sheet_179: -1809661342
+      72-726133_enemies-zelda-nes-sprite-sheet_18: 1688256825
+      72-726133_enemies-zelda-nes-sprite-sheet_180: 848099222
+      72-726133_enemies-zelda-nes-sprite-sheet_181: -1774339245
+      72-726133_enemies-zelda-nes-sprite-sheet_182: -509689802
+      72-726133_enemies-zelda-nes-sprite-sheet_183: -1068511257
+      72-726133_enemies-zelda-nes-sprite-sheet_184: 399880672
+      72-726133_enemies-zelda-nes-sprite-sheet_185: -814975145
+      72-726133_enemies-zelda-nes-sprite-sheet_186: 199703731
+      72-726133_enemies-zelda-nes-sprite-sheet_187: 826594546
+      72-726133_enemies-zelda-nes-sprite-sheet_188: 422691663
+      72-726133_enemies-zelda-nes-sprite-sheet_189: -1437456119
+      72-726133_enemies-zelda-nes-sprite-sheet_19: 1093254729
+      72-726133_enemies-zelda-nes-sprite-sheet_2: 452457844
+      72-726133_enemies-zelda-nes-sprite-sheet_20: 2116549667
+      72-726133_enemies-zelda-nes-sprite-sheet_21: 1992844543
+      72-726133_enemies-zelda-nes-sprite-sheet_22: -223428893
+      72-726133_enemies-zelda-nes-sprite-sheet_23: 1575076798
+      72-726133_enemies-zelda-nes-sprite-sheet_24: 773273193
+      72-726133_enemies-zelda-nes-sprite-sheet_25: -298366217
+      72-726133_enemies-zelda-nes-sprite-sheet_26: -330047989
+      72-726133_enemies-zelda-nes-sprite-sheet_27: -1596670832
+      72-726133_enemies-zelda-nes-sprite-sheet_28: -1989147588
+      72-726133_enemies-zelda-nes-sprite-sheet_29: 44794994
+      72-726133_enemies-zelda-nes-sprite-sheet_3: -589870423
+      72-726133_enemies-zelda-nes-sprite-sheet_30: -1864434762
+      72-726133_enemies-zelda-nes-sprite-sheet_31: 1876673116
+      72-726133_enemies-zelda-nes-sprite-sheet_32: -731239718
+      72-726133_enemies-zelda-nes-sprite-sheet_33: 792712494
+      72-726133_enemies-zelda-nes-sprite-sheet_34: 1706673925
+      72-726133_enemies-zelda-nes-sprite-sheet_35: -489202744
+      72-726133_enemies-zelda-nes-sprite-sheet_36: 797584166
+      72-726133_enemies-zelda-nes-sprite-sheet_37: -1352067757
+      72-726133_enemies-zelda-nes-sprite-sheet_38: 1344662334
+      72-726133_enemies-zelda-nes-sprite-sheet_39: 1516997667
+      72-726133_enemies-zelda-nes-sprite-sheet_4: 1957129014
+      72-726133_enemies-zelda-nes-sprite-sheet_40: 186933607
+      72-726133_enemies-zelda-nes-sprite-sheet_41: -1147305205
+      72-726133_enemies-zelda-nes-sprite-sheet_42: 1216181353
+      72-726133_enemies-zelda-nes-sprite-sheet_43: 451864285
+      72-726133_enemies-zelda-nes-sprite-sheet_44: -506149633
+      72-726133_enemies-zelda-nes-sprite-sheet_45: 849062504
+      72-726133_enemies-zelda-nes-sprite-sheet_46: -1537382617
+      72-726133_enemies-zelda-nes-sprite-sheet_47: -1037959347
+      72-726133_enemies-zelda-nes-sprite-sheet_48: 2076927495
+      72-726133_enemies-zelda-nes-sprite-sheet_49: 957919476
+      72-726133_enemies-zelda-nes-sprite-sheet_5: -168583630
+      72-726133_enemies-zelda-nes-sprite-sheet_50: 1522890432
+      72-726133_enemies-zelda-nes-sprite-sheet_51: -791071487
+      72-726133_enemies-zelda-nes-sprite-sheet_52: 392043600
+      72-726133_enemies-zelda-nes-sprite-sheet_53: 1011937589
+      72-726133_enemies-zelda-nes-sprite-sheet_54: -1928788691
+      72-726133_enemies-zelda-nes-sprite-sheet_55: 709345664
+      72-726133_enemies-zelda-nes-sprite-sheet_56: 1223585890
+      72-726133_enemies-zelda-nes-sprite-sheet_57: 979104449
+      72-726133_enemies-zelda-nes-sprite-sheet_58: -8751447
+      72-726133_enemies-zelda-nes-sprite-sheet_59: -668791601
+      72-726133_enemies-zelda-nes-sprite-sheet_6: -1661665493
+      72-726133_enemies-zelda-nes-sprite-sheet_60: -1835626714
+      72-726133_enemies-zelda-nes-sprite-sheet_61: -630284432
+      72-726133_enemies-zelda-nes-sprite-sheet_62: 560542396
+      72-726133_enemies-zelda-nes-sprite-sheet_63: 652143225
+      72-726133_enemies-zelda-nes-sprite-sheet_64: -149494844
+      72-726133_enemies-zelda-nes-sprite-sheet_65: 241754907
+      72-726133_enemies-zelda-nes-sprite-sheet_66: -985857780
+      72-726133_enemies-zelda-nes-sprite-sheet_67: -1627672511
+      72-726133_enemies-zelda-nes-sprite-sheet_68: 1205384259
+      72-726133_enemies-zelda-nes-sprite-sheet_69: 279878402
+      72-726133_enemies-zelda-nes-sprite-sheet_7: 1335325463
+      72-726133_enemies-zelda-nes-sprite-sheet_70: 583282068
+      72-726133_enemies-zelda-nes-sprite-sheet_71: -873177146
+      72-726133_enemies-zelda-nes-sprite-sheet_72: -1070866271
+      72-726133_enemies-zelda-nes-sprite-sheet_73: 1970168046
+      72-726133_enemies-zelda-nes-sprite-sheet_74: 123784453
+      72-726133_enemies-zelda-nes-sprite-sheet_75: 911921662
+      72-726133_enemies-zelda-nes-sprite-sheet_76: -951542486
+      72-726133_enemies-zelda-nes-sprite-sheet_77: 1363466328
+      72-726133_enemies-zelda-nes-sprite-sheet_78: 1743100275
+      72-726133_enemies-zelda-nes-sprite-sheet_79: -1245051558
+      72-726133_enemies-zelda-nes-sprite-sheet_8: 1063942818
+      72-726133_enemies-zelda-nes-sprite-sheet_80: 1940498475
+      72-726133_enemies-zelda-nes-sprite-sheet_81: -1370876180
+      72-726133_enemies-zelda-nes-sprite-sheet_82: -2086985675
+      72-726133_enemies-zelda-nes-sprite-sheet_83: -757022648
+      72-726133_enemies-zelda-nes-sprite-sheet_84: -470235700
+      72-726133_enemies-zelda-nes-sprite-sheet_85: -222467794
+      72-726133_enemies-zelda-nes-sprite-sheet_86: -1483822816
+      72-726133_enemies-zelda-nes-sprite-sheet_87: -1008979422
+      72-726133_enemies-zelda-nes-sprite-sheet_88: -966774529
+      72-726133_enemies-zelda-nes-sprite-sheet_89: 1972014814
+      72-726133_enemies-zelda-nes-sprite-sheet_9: -494446041
+      72-726133_enemies-zelda-nes-sprite-sheet_90: -948066452
+      72-726133_enemies-zelda-nes-sprite-sheet_91: -28353531
+      72-726133_enemies-zelda-nes-sprite-sheet_92: 447013759
+      72-726133_enemies-zelda-nes-sprite-sheet_93: 707362577
+      72-726133_enemies-zelda-nes-sprite-sheet_94: 537952494
+      72-726133_enemies-zelda-nes-sprite-sheet_95: 558243612
+      72-726133_enemies-zelda-nes-sprite-sheet_96: -239240421
+      72-726133_enemies-zelda-nes-sprite-sheet_97: -289423371
+      72-726133_enemies-zelda-nes-sprite-sheet_98: 1445909849
+      72-726133_enemies-zelda-nes-sprite-sheet_99: -178056008
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
