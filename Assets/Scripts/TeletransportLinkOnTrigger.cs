@@ -63,13 +63,7 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
 
             _animator.SetBool("CaveEnter", true);
 
-     
-        
         }
-
-       
-
-
     }
     private void OnTriggerExit2D()
     {

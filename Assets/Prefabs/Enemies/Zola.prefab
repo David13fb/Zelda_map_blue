@@ -218,13 +218,13 @@ MonoBehaviour:
   _lakeWidth: 0
   _lakeHeight: 0
   _playerTransform: {fileID: 0}
-  _timeToShoot: 0
+  _timeToShoot: 4
   _InACorner: 0
   _notAllowedCentre: {fileID: 0}
   _notAllowedWidth: 0
   _notAllowedHeight: 0
-  _timerToStop: 5.5
-  _timerToSpawn: 0.5
+  _timerToStop: 3
+  _timerToSpawn: 1
 --- !u!114 &-1427711897731452165
 MonoBehaviour:
   m_ObjectHideFlags: 0

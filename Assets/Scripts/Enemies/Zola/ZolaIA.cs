@@ -117,6 +117,7 @@ public class ZolaIA : MonoBehaviour
                 _shootingSw.Restart();
             }
         }
+
         if (_shootingSw.ElapsedMilliseconds >= _timeToShoot && !_outOfScreen)
         {
             _shootingComponent.Shoot();
