@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
     // Reference to the CameraController and setting the screen size
     void Start()
     {
+       
+            // Switch to 640 x 480 full-screen
+            Screen.SetResolution(640, 480, true);
+        
         _hudmanager = FindObjectOfType<HUDmanager>();
         _cameraController = FindAnyObjectByType<CameraController>();
         screenSizeHeight = Camera.main.orthographicSize * 2 * 0.7f;
