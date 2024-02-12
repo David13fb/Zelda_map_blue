@@ -51,6 +51,9 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
         _link = linkCollider.gameObject;
 
         LinkController _controller = _link.GetComponent<LinkController>();
+
+        _controller.SaveCave(this);
+
         if (_controller!=null)
         {
             _controller.SetBlockMovement(true);
@@ -63,8 +66,15 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
 
             _animator.SetBool("CaveEnter", true);
 
+            if (_movingToCave)
+            {
+                _gameManager.linkOnCave = true;
+                _audioManager.PlayOrStopMusic(false);
+            }
+
         }
     }
+    /*
     private void OnTriggerExit2D()
     {
         //_camera.GetComponent<CameraController>().enabled = false;
@@ -98,6 +108,7 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
         }
 
     }
+    */
 
     public void MoveDown()
     {
@@ -107,5 +118,49 @@ public class TeletransportLinkOnTrigger : MonoBehaviour
     private void Update()
     {
         if (_moving) MoveDown();
+    }
+
+    public void TpNow()
+    {
+        _moving = false;
+
+        LinkController _controller = _link.GetComponent<LinkController>();
+        if (_controller != null)
+        {
+            _controller.SetBlockMovement(false);
+
+            _link.transform.position = _newLinkPosition;
+            _camera.transform.position = (Vector3)_newCameraPosition + 10 * Vector3.back;
+
+
+
+            if (_caveObject != null)
+            {
+                _caveObject.GetComponent<TalkComponent>().Reset(_textToWrite);
+            }
+
+        }
+        StartCoroutine(TpDelayedStart());
+    }
+
+
+    private IEnumerator TpDelayedStart()
+    {
+        LinkController _controller = _link.GetComponent<LinkController>();
+        if (_controller != null)
+        { 
+            yield return new WaitForSeconds(1f);
+
+
+            if (!_movingToCave)
+            {
+                _gameManager.linkOnCave = false;
+                _audioManager.PlayOrStopMusic(true);
+            }
+
+
+
+            //_camera.GetComponent<CameraController>().enabled = !_movingToCave;
+        }
     }
 }

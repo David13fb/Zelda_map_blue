@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour
         // This will check if the player has moved to a new screen
         if ((previousScreenX != currentScreenX) || (previousScreenY != currentScreenY))
         {
+
+            Debug.Log("Change");
             previousScreenX = currentScreenX;
             previousScreenY = currentScreenY;
             //Debug.Log("Screen changed to " + currentScreenX + ", " + currentScreenY);

@@ -127,7 +127,7 @@ public class ZolaIA : MonoBehaviour
         if (_shootingSw.ElapsedMilliseconds >= _timeToShoot && !_outOfScreen)
         {
             _shootingComponent.Shoot();
-            _animator.Shoot();
+            _animator.Shoot(true);
             _shootingSw.Restart();
             _shootingSw.Stop();
         }

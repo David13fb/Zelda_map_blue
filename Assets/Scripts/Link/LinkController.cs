@@ -14,6 +14,8 @@ public class LinkController : MonoBehaviour
 
     public Vector2 lastInput { get; private set; }
 
+    private TeletransportLinkOnTrigger _tpLink;
+
     
     void Start()
     {
@@ -30,6 +32,16 @@ public class LinkController : MonoBehaviour
         if(inputDirection != Vector2.zero)
             lastInput = inputDirection;
   
+    }
+
+    public void SaveCave(TeletransportLinkOnTrigger tp)
+    {
+        _tpLink = tp;
+    }
+
+    public void TpNow()
+    {
+        _tpLink.TpNow();
     }
 
 
