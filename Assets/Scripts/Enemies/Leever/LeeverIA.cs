@@ -9,6 +9,7 @@ public class LeeverIA : MonoBehaviour
     private Collider2D _collider;
     private Transform _myTransform;
     [SerializeField] private Transform _playerTransform;
+    [SerializeField] private LeeverAnimator _animator;
 
     private float _timer;
 
@@ -19,6 +20,7 @@ public class LeeverIA : MonoBehaviour
     private bool _outOfScreen = false;
     //private Stopwatch _sw = new Stopwatch();
     private float _yPosition;
+
     enum State
     {
         spawn,
@@ -74,7 +76,7 @@ public class LeeverIA : MonoBehaviour
     void Start()
     {
         _chMovement = GetComponent<CharacterMovement>();
-     
+        _animator = GetComponent<LeeverAnimator>();
         _myTransform = transform;
         _yPosition = _myTransform.position.y;
         _collider = GetComponent<Collider2D>();
@@ -103,6 +105,7 @@ public class LeeverIA : MonoBehaviour
         {
             if(_currentState != State.dissapear) 
             {
+                _animator.Stopped();
                 _currentState = State.dissapear;
                 Disappear();
             }

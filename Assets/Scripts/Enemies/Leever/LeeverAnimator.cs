@@ -6,7 +6,9 @@ public class LeeverAnimator : MonoBehaviour
 {
     [SerializeField]
     private Animator _animator;
-  
+
+    private bool _stop = false;
+    private bool _firstTime = true;
 
     private void Start()
     {
@@ -32,7 +34,7 @@ public class LeeverAnimator : MonoBehaviour
 
     IEnumerator Leever()
     {
-        
+        if (!_firstTime) yield return new WaitForSeconds(3.8f);
         _animator.SetBool("Dirt", true);
         yield return new WaitForSeconds(0.3f);
         _animator.SetBool("Dirt", false);
@@ -48,15 +50,31 @@ public class LeeverAnimator : MonoBehaviour
     {
         while (true) 
         {
+            _firstTime = false;
             _animator.SetBool("Rot", true);
-            yield return new WaitForSeconds(0.3f);
+            if (!_stop) yield return new WaitForSeconds(0.3f);
             _animator.SetBool("Rot", false);
-            yield return new WaitForSeconds(0.3f);
+            if(!_stop)yield return new WaitForSeconds(0.3f);
+
+            if (_stop)
+            {
+                _animator.SetTrigger("Stop");
+                _animator.SetBool("Dirt", false);
+                _animator.SetBool("Emerge", false);
+                _stop = false;
+                break;
+            }
         }
-      
+        StartCoroutine(Leever());
 
 
 
 
+
+    }
+
+    public void Stopped()
+    {
+        _stop = true;
     }
 }
